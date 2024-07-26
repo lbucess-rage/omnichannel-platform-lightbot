@@ -44,8 +44,8 @@ const nextConfig = {
     '@typebot.io/env',
   ],
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr', 'pt', 'pt-BR', 'de', 'ro', 'es', 'it', 'el'],
+    defaultLocale: 'kr',
+    locales: ['en', 'kr', 'fr', 'pt', 'pt-BR', 'de', 'ro', 'es', 'it', 'el'],
   },
   experimental: {
     outputFileTracingRoot: join(__dirname, '../../'),
