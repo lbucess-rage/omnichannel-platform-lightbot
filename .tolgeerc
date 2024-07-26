@@ -1,6 +1,6 @@
 {
   "$schema": "https://tolgee.io/cli-schema.json",
-  "projectId": 8454,
+  "projectId": 28454,
   "pull": {
     "path": "./apps/builder/src/i18n",
     "delimiter": null
