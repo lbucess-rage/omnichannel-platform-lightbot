@@ -14,13 +14,17 @@ export const getServerSideProps = async (
     context.res,
     getAuthOptions({})
   )
+
+  // console.log(`getServerSideProps session`, session)
+  // console.log(`getServerSideProps context`, context)
   if (!session?.user) {
     return {
       redirect: {
         permanent: false,
         destination:
           context.locale !== context.defaultLocale
-            ? `/${context.locale}/signin`
+            ? // ? `/${context.locale}/signin`
+              `/kr/signin`
             : '/signin',
       },
     }
@@ -30,7 +34,8 @@ export const getServerSideProps = async (
       permanent: false,
       destination:
         context.locale !== context.defaultLocale
-          ? `/${context.locale}/typebots`
+          ? // ? `/${context.locale}/typebots`
+            `/kr/typebots`
           : '/typebots',
     },
   }
