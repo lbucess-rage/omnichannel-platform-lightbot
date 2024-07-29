@@ -72,20 +72,20 @@ export const GeneralSettingsForm = ({
           defaultSettings.general.isInputPrefillEnabled
         }
         onCheckChange={handleInputPrefillChange}
-        moreInfoContent="Inputs are automatically pre-filled whenever their associated variable has a value"
+        moreInfoContent="관련된 변수에 값이 있는 경우 입력값으로 변수가 미리 채워집니다."
       />
       <SwitchWithLabel
-        label="Hide query params on bot start"
+        label="봇이 시작될때 쿼리 파라미터 숨기기"
         initialValue={
           generalSettings?.isHideQueryParamsEnabled ??
           defaultSettings.general.isHideQueryParamsEnabled
         }
         onCheckChange={handleHideQueryParamsChange}
-        moreInfoContent="If your URL contains query params, they will be automatically hidden when the bot starts."
+        moreInfoContent="봇이 시작될 때 URL에서 쿼리 파라미터를 숨깁니다."
       />
       <SwitchWithRelatedSettings
-        label={'Remember user'}
-        moreInfoContent="If enabled, the chat state will be restored if the user comes back after exiting."
+        label={'유저 기억 모드'}
+        moreInfoContent="모드를 활성화하면 사용자가 종료 후 다시 돌아오면 채팅 상태가 복원됩니다."
         initialValue={
           generalSettings?.rememberUser?.isEnabled ??
           (isDefined(generalSettings?.isNewResultOnRefreshEnabled)
@@ -100,19 +100,18 @@ export const GeneralSettingsForm = ({
             <MoreInfoTooltip>
               <Stack>
                 <Text>
-                  Choose{' '}
+                  선택{' '}
                   <Tag size="sm" bgColor={keyBg}>
                     session
                   </Tag>{' '}
-                  to remember the user as long as he does not closes the tab or
-                  the browser.
+                  브라우저의 탭이나 창을 닫지 않는 사용자를 대상
                 </Text>
                 <Text>
-                  Choose{' '}
+                  선택{' '}
                   <Tag size="sm" bgColor={keyBg}>
                     local
                   </Tag>{' '}
-                  to remember the user forever on the same device.
+                  동일 단말기에서 다시 방문하는 사용자를 대상
                 </Text>
               </Stack>
             </MoreInfoTooltip>
