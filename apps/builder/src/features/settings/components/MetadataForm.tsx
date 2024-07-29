@@ -94,7 +94,7 @@ export const MetadataForm = ({
           <PopoverTrigger>
             <Image
               src={imageUrl}
-              alt="Website image"
+              alt="사이트 이미지"
               cursor="pointer"
               _hover={{ filter: 'brightness(.9)' }}
               transition="filter 200ms"
@@ -116,7 +116,7 @@ export const MetadataForm = ({
         </Popover>
       </Stack>
       <TextInput
-        label="Title:"
+        label="제목:"
         defaultValue={metadata?.title ?? typebotName}
         onChange={handleTitleChange}
       />
@@ -125,14 +125,14 @@ export const MetadataForm = ({
           metadata?.description ?? defaultSettings.metadata.description
         }
         onChange={handleDescriptionChange}
-        label="Description:"
+        label="설명:"
       />
       <TextInput
         defaultValue={metadata?.googleTagManagerId}
         placeholder="GTM-XXXXXX"
         onChange={handleGoogleTagManagerIdChange}
         label="Google Tag Manager ID:"
-        moreInfoTooltip="Do not include it if you are embedding your typebot in an existing website. GTM should be installed in the parent website instead."
+        moreInfoTooltip="기존 웹사이트에 Lightbot을 삽입하는 경우 포함하지 마세요. GTM은 대신 상위 웹사이트에 설치되어야 합니다."
       />
       <Stack>
         <HStack as={FormLabel} mb="0" htmlFor="head">
