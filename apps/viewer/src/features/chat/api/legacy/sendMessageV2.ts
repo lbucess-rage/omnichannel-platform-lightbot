@@ -179,6 +179,10 @@ export const sendMessageV2 = publicProcedure
           //     'Access-Control-Allow-Origin',
           //     session.state.allowedOrigins[0]
           //   )
+          console.log(
+            'session.state.allowedOrigins',
+            session.state.allowedOrigins
+          )
         }
         const {
           messages,
