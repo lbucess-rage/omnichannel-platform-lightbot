@@ -116,13 +116,15 @@ export const sendMessageV2 = publicProcedure
             newSessionState.allowedOrigins &&
             newSessionState.allowedOrigins.length > 0
           ) {
-            if (origin && newSessionState.allowedOrigins.includes(origin))
-              res.setHeader('Access-Control-Allow-Origin', origin)
-            else
-              res.setHeader(
-                'Access-Control-Allow-Origin',
-                newSessionState.allowedOrigins[0]
-              )
+            // if (origin && newSessionState.allowedOrigins.includes(origin))
+            //   res.setHeader('Access-Control-Allow-Origin', origin)
+            // else
+            //   res.setHeader(
+            //     'Access-Control-Allow-Origin',
+            //     newSessionState.allowedOrigins[0]
+            //   )
+            console.log('corsOrigin', origin)
+            res.setHeader('Access-Control-Allow-Origin', '*')
           }
         }
 
@@ -170,13 +172,13 @@ export const sendMessageV2 = publicProcedure
           session.state.allowedOrigins &&
           session.state.allowedOrigins.length > 0
         ) {
-          if (origin && session.state.allowedOrigins.includes(origin))
-            res.setHeader('Access-Control-Allow-Origin', origin)
-          else
-            res.setHeader(
-              'Access-Control-Allow-Origin',
-              session.state.allowedOrigins[0]
-            )
+          // if (origin && session.state.allowedOrigins.includes(origin))
+          //   res.setHeader('Access-Control-Allow-Origin', origin)
+          // else
+          //   res.setHeader(
+          //     'Access-Control-Allow-Origin',
+          //     session.state.allowedOrigins[0]
+          //   )
         }
         const {
           messages,

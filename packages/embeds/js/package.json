@@ -1,7 +1,7 @@
 {
   "name": "@typebot.io/js",
   "version": "0.3.6",
-  "description": "Javascript library to display typebots on your website",
+  "description": "Javascript library to display Lightbot on your website",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

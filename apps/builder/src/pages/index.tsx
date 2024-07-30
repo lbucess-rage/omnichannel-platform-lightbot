@@ -15,8 +15,6 @@ export const getServerSideProps = async (
     getAuthOptions({})
   )
 
-  // console.log(`getServerSideProps session`, session)
-  // console.log(`getServerSideProps context`, context)
   if (!session?.user) {
     return {
       redirect: {
