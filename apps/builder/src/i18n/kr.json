@@ -200,7 +200,7 @@
       "blocks.inputs.rating.settings.type.label": "유형:",
       "blocks.inputs.rating.to.label": "까지",
       "blocks.inputs.settings.button.label": "버튼 라벨:",
-      "blocks.inputs.settings.buttonText.label": "보내기",
+      "blocks.inputs.settings.buttonText.label": "Send",
       "blocks.inputs.settings.description.label": "설명:",
       "blocks.inputs.settings.displayCondition.label": "디스플레이 조건",
       "blocks.inputs.settings.input.filterOptions.label": "옵션 필터링...",

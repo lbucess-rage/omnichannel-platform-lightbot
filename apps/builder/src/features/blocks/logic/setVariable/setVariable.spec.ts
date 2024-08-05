@@ -16,7 +16,7 @@ test.describe('Set variable block', () => {
     )
 
     await page.goto(`/typebots/${typebotId}/edit`)
-    await page.click('text=Type a number...')
+    await page.click('text=숫자를 입력하세요...')
     await page.fill('input[placeholder="Select a variable"] >> nth=-1', 'Num')
     await page.getByRole('menuitem', { name: 'Create Num' }).click()
 
@@ -49,7 +49,7 @@ test.describe('Set variable block', () => {
     await page.click('text=Test')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type a number..."]')
+      .locator('input[placeholder="숫자를 입력하세요..."]')
       .fill('365')
     await page.locator('typebot-standard').locator('text=Send').click()
     await expect(

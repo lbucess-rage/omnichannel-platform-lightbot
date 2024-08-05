@@ -17,7 +17,7 @@ test('should work as expected', async ({ page }) => {
   await page.getByPlaceholder('Select a block').click()
   await page.getByRole('menuitem', { name: 'Block #2' }).click()
   await page.getByRole('button', { name: 'Test' }).click()
-  await page.getByPlaceholder('Type your answer...').fill('Hi there!')
+  await page.getByPlaceholder('메세지를 입력하세요').fill('Hi there!')
   await page.getByRole('button', { name: 'Send' }).click()
   await expect(
     page.locator('typebot-standard').getByText('How are you?').nth(1)

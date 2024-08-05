@@ -46,7 +46,7 @@ export const PlanTag = ({
           data-testid="starter-plan-tag"
           {...props}
         >
-          Starter
+          허용
         </Tag>
       )
     }
@@ -57,7 +57,7 @@ export const PlanTag = ({
           data-testid="free-plan-tag"
           {...props}
         >
-          Free
+          허용
         </Tag>
       )
     }
@@ -68,7 +68,7 @@ export const PlanTag = ({
           data-testid="custom-plan-tag"
           {...props}
         >
-          Custom
+          커스텀
         </Tag>
       )
     }
@@ -79,7 +79,7 @@ export const PlanTag = ({
           data-testid="custom-unlimite-tag"
           {...props}
         >
-          Unlimited
+          무제한
         </Tag>
       )
     }

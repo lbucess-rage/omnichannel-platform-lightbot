@@ -34,11 +34,11 @@ test.describe.parallel('Google sheets integration', () => {
     await page.click('text=Test')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type your email..."]')
+      .locator('input[placeholder="이메일 주소를 입력하세요..."]')
       .fill('georges@gmail.com')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type your email..."]')
+      .locator('input[placeholder="이메일 주소를 입력하세요..."]')
       .press('Enter')
     await expect(
       page.getByText('Succesfully inserted row in CRM > Sheet1').nth(0)
@@ -79,11 +79,11 @@ test.describe.parallel('Google sheets integration', () => {
     await page.click('text=Test')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type your email..."]')
+      .locator('input[placeholder="이메일 주소를 입력하세요..."]')
       .fill('test@test.com')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type your email..."]')
+      .locator('input[placeholder="이메일 주소를 입력하세요..."]')
       .press('Enter')
     await expect(
       page.getByText('Succesfully updated matching rows').nth(0)
@@ -135,11 +135,11 @@ test.describe.parallel('Google sheets integration', () => {
     await page.click('text=Test')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type your email..."]')
+      .locator('input[placeholder="이메일 주소를 입력하세요..."]')
       .fill('test2@test.com')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type your email..."]')
+      .locator('input[placeholder="이메일 주소를 입력하세요..."]')
       .press('Enter')
     await expect(
       page.locator('typebot-standard').locator('text=Georges2')

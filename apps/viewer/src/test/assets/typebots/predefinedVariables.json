@@ -60,8 +60,8 @@
           "groupId": "cl13bgy1s00042e6dao1wyobm",
           "type": "email input",
           "options": {
-            "labels": { "button": "Send", "placeholder": "Type your email..." },
-            "retryMessageContent": "This email doesn't seem to be valid. Can you type it again?",
+            "labels": { "button": "Send", "placeholder": "이메일 주소를 입력하세요..." },
+            "retryMessageContent": "유효하지 않은 이메일 주소입니다. 다시 입력하시겠습니까?",
             "variableId": "cl13bhr3w000b2e6d3c9kid0p"
           }
         }

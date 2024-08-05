@@ -29,9 +29,9 @@
           "groupId": "mSvUFogQH16bQDN1iGWF66",
           "type": "email input",
           "options": {
-            "labels": { "button": "Send", "placeholder": "Type your email..." },
+            "labels": { "button": "Send", "placeholder": "이메일 주소를 입력하세요..." },
             "variableId": "qyLW6xD1AyLeedso2tHmhw",
-            "retryMessageContent": "This email doesn't seem to be valid. Can you type it again?"
+            "retryMessageContent": "유효하지 않은 이메일 주소입니다. 다시 입력하시겠습니까?"
           },
           "outgoingEdgeId": "4yg9V76fdDntpDEw6H3tvU"
         }

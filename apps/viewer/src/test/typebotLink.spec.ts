@@ -31,8 +31,8 @@ test.beforeAll(async () => {
 
 test('should work as expected', async ({ page }) => {
   await page.goto(`/${typebotId}-public`)
-  await page.getByPlaceholder('Type your answer...').fill('Hello there!')
-  await page.getByPlaceholder('Type your answer...').press('Enter')
+  await page.getByPlaceholder('메세지를 입력하세요').fill('Hello there!')
+  await page.getByPlaceholder('메세지를 입력하세요').press('Enter')
   await expect(page.getByText('Cheers!')).toBeVisible()
   await page.goto(`${env.NEXTAUTH_URL}/typebots/${typebotId}/results`)
   await expect(page.locator('text=Hello there!')).toBeVisible()
@@ -41,8 +41,8 @@ test('should work as expected', async ({ page }) => {
 test.describe('Merge disabled', () => {
   test('should work as expected', async ({ page }) => {
     await page.goto(`/${typebotWithMergeDisabledId}-public`)
-    await page.getByPlaceholder('Type your answer...').fill('Hello there!')
-    await page.getByPlaceholder('Type your answer...').press('Enter')
+    await page.getByPlaceholder('메세지를 입력하세요').fill('Hello there!')
+    await page.getByPlaceholder('메세지를 입력하세요').press('Enter')
     await expect(page.getByText('Cheers!')).toBeVisible()
     await page.goto(
       `${process.env.NEXTAUTH_URL}/typebots/${typebotWithMergeDisabledId}/results`

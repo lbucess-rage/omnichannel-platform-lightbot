@@ -121,7 +121,7 @@
           "groupId": "cl4vdxpqq00083f6lrsj2y0dy",
           "options": {
             "isLong": false,
-            "labels": { "button": "Send", "placeholder": "Type your answer..." }
+            "labels": { "button": "Send", "placeholder": "메세지를 입력하세요" }
           }
         }
       ]

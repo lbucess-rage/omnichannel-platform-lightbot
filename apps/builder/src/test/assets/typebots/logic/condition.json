@@ -37,7 +37,7 @@
           "type": "number input",
           "groupId": "eh2ohNATnGg6RTdjG9h5kb",
           "options": {
-            "labels": { "button": "Send", "placeholder": "Type a number..." },
+            "labels": { "button": "Send", "placeholder": "숫자를 입력하세요..." },
             "variableId": "iDJzzyzAY2jrapm3NwhGMz"
           },
           "outgoingEdgeId": "r8LX7iuEXxjF5SW5dbS6qT"

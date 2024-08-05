@@ -4,8 +4,8 @@ import { UrlInputBlock } from './schema'
 export const defaultUrlInputOptions = {
   labels: {
     button: defaultButtonLabel,
-    placeholder: 'Type a URL...',
+    placeholder: 'URL을 입력해주세요...',
   },
   retryMessageContent:
-    "This URL doesn't seem to be valid. Can you type it again?",
+    '유효하지 않은 URL 주소형식 입니다. 다시 입력하시겠습니까?',
 } as const satisfies UrlInputBlock['options']

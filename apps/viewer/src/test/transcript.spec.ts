@@ -13,11 +13,11 @@ test('Transcript set variable should be correctly computed', async ({
   })
 
   await page.goto(`/${typebotId}-public`)
-  await page.getByPlaceholder('Type your answer...').fill('hey')
+  await page.getByPlaceholder('메세지를 입력하세요').fill('hey')
   await page.getByLabel('Send').click()
-  await page.getByPlaceholder('Type your answer...').fill('hey 2')
+  await page.getByPlaceholder('메세지를 입력하세요').fill('hey 2')
   await page.getByLabel('Send').click()
-  await page.getByPlaceholder('Type your answer...').fill('hey 3')
+  await page.getByPlaceholder('메세지를 입력하세요').fill('hey 3')
   await page.getByLabel('Send').click()
   await expect(
     page.getByText('Assistant: "How are you? You said "')

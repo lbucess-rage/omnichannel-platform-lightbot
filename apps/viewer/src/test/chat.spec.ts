@@ -226,7 +226,7 @@ test('API chat execution should work on published bot', async ({ request }) => {
       {
         children: [
           {
-            text: "This email doesn't seem to be valid. Can you type it again?",
+            text: '유효하지 않은 이메일 주소입니다. 다시 입력하시겠습니까?',
           },
         ],
         type: 'p',

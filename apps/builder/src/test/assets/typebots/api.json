@@ -85,7 +85,7 @@
           "type": "email input",
           "options": {
             "variableId": "3VFChNVSCXQ2rXv4DrJ8Ah",
-            "labels": { "placeholder": "Type your email...", "button": "Send" }
+            "labels": { "placeholder": "이메일 주소를 입력하세요...", "button": "Send" }
           }
         }
       ]
@@ -110,7 +110,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "giiLFGw5xXBCHzvp1qAbdX",
@@ -175,7 +175,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "isLong": true

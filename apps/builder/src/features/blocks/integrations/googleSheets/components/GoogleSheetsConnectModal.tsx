@@ -7,7 +7,7 @@ import {
   ModalBody,
   Stack,
   Text,
-  Image,
+  // Image,
   Button,
   ModalFooter,
   Flex,
@@ -51,23 +51,19 @@ export const GoogleSheetConnectModalContent = ({
 
   return (
     <ModalContent>
-      <ModalHeader>Connect Spreadsheets</ModalHeader>
+      <ModalHeader>구글 스프레드 시트 연결연결😃 </ModalHeader>
       <ModalCloseButton />
       <ModalBody as={Stack} spacing="6">
         <Text>
-          Make sure to check all the permissions so that the integration works
-          as expected:
+          구글 스프레드 시트와 통합을 진행할려면 모든 권한을 확인해주세요.:
         </Text>
-        <Image
+        {/* <Image
           src="/images/google-spreadsheets-scopes.png"
           alt="Google Spreadsheets checkboxes"
           rounded="md"
-        />
+        /> */}
         <AlertInfo>
-          Google does not provide more granular permissions than
-          &quot;read&quot; or &quot;write&quot; access. That&apos;s why it
-          states that Typebot can also delete your spreadsheets which it
-          won&apos;t.
+          Lightbot은 스프레드시트를 삭제할 수는 없습니다! 😅
         </AlertInfo>
         <Flex>
           {workspace?.id && (

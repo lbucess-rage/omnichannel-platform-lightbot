@@ -109,10 +109,13 @@ export const leadGenerationTypebot: StartTypebot = {
           id: 'snbsad18Bgry8yZ8DZCfdFD',
           type: InputBlockType.EMAIL,
           options: {
-            labels: { button: 'Send', placeholder: 'Type your email...' },
+            labels: {
+              button: 'Send',
+              placeholder: '이메일 주소를 입력하세요...',
+            },
             variableId: 'v3VFChNVSCXQ2rXv4DrJ8Ah',
             retryMessageContent:
-              "This email doesn't seem to be valid. Can you type it again?",
+              '유효하지 않은 이메일 주소입니다. 다시 입력하시겠습니까?',
           },
           outgoingEdgeId: 'clckrl4q5000q3b6s5czdtm8x',
         },
@@ -141,7 +144,7 @@ export const leadGenerationTypebot: StartTypebot = {
             isLong: false,
             labels: {
               button: 'Send',
-              placeholder: 'Type your answer...',
+              placeholder: '메세지를 입력하세요',
             },
             variableId: 'giiLFGw5xXBCHzvp1qAbdX',
           },
@@ -224,7 +227,7 @@ export const leadGenerationTypebot: StartTypebot = {
           type: InputBlockType.TEXT,
           options: {
             isLong: true,
-            labels: { button: 'Send', placeholder: 'Type your answer...' },
+            labels: { button: 'Send', placeholder: '메세지를 입력하세요' },
           },
           outgoingEdgeId: 'clckrl4q5000s3b6stx5nnqbz',
         },

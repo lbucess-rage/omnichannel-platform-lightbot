@@ -23,7 +23,7 @@ test.describe('Condition block', () => {
     await page.getByRole('menuitem', { name: 'Age' }).click()
     await page.click('button:has-text("Select an operator")')
     await page.click('button:has-text("Greater than")', { force: true })
-    await page.fill('input[placeholder="Type a number..."]', '80')
+    await page.fill('input[placeholder="숫자를 입력하세요..."]', '80')
 
     await page.click('button:has-text("Add comparison")')
 
@@ -35,7 +35,7 @@ test.describe('Condition block', () => {
     await page.click('button:has-text("Select an operator")')
     await page.click('button:has-text("Less than")', { force: true })
     await page.fill(
-      ':nth-match(input[placeholder="Type a number..."], 2)',
+      ':nth-match(input[placeholder="숫자를 입력하세요..."], 2)',
       '100'
     )
 
@@ -47,12 +47,12 @@ test.describe('Condition block', () => {
     await page.getByRole('menuitem', { name: 'Age' }).click()
     await page.click('button:has-text("Select an operator")')
     await page.click('button:has-text("Greater than")', { force: true })
-    await page.fill('input[placeholder="Type a number..."]', '20')
+    await page.fill('input[placeholder="숫자를 입력하세요..."]', '20')
 
     await page.click('text=Test')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type a number..."]')
+      .locator('input[placeholder="숫자를 입력하세요..."]')
       .fill('15')
     await page.locator('typebot-standard').locator('text=Send').click()
     await expect(
@@ -62,7 +62,7 @@ test.describe('Condition block', () => {
     await page.click('text=Restart')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type a number..."]')
+      .locator('input[placeholder="숫자를 입력하세요..."]')
       .fill('45')
     await page.locator('typebot-standard').locator('text=Send').click()
     await expect(
@@ -72,7 +72,7 @@ test.describe('Condition block', () => {
     await page.click('text=Restart')
     await page
       .locator('typebot-standard')
-      .locator('input[placeholder="Type a number..."]')
+      .locator('input[placeholder="숫자를 입력하세요..."]')
       .fill('90')
     await page.locator('typebot-standard').locator('text=Send').click()
     await expect(

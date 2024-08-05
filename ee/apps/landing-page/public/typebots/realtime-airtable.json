@@ -106,7 +106,7 @@
             "isLong": true,
             "labels": {
               "button": "Send",
-              "placeholder": "Type your answer..."
+              "placeholder": "메세지를 입력하세요"
             },
             "variableId": "v6NeJkZ8fSEjMVUA9D51u5k"
           }

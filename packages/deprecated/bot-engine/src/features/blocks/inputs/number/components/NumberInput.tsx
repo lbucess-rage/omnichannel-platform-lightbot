@@ -49,7 +49,7 @@ export const NumberInput = ({
         ref={inputRef as MutableRefObject<HTMLInputElement>}
         value={inputValue}
         placeholder={
-          block.options?.labels?.placeholder ?? 'Type your answer...'
+          block.options?.labels?.placeholder ?? '메세지를 입력하세요'
         }
         onChange={handleChange}
         type="number"

@@ -69,7 +69,7 @@ export const TextInputAddFileButton = (props: Props) => {
                       for="document-upload"
                       class="p-2 filter hover:brightness-95 flex gap-3 items-center"
                     >
-                      <FileIcon class="w-4" /> Document
+                      <FileIcon class="w-4" /> 문서 첨부
                     </label>
                   )}
                 />
@@ -81,7 +81,7 @@ export const TextInputAddFileButton = (props: Props) => {
                       for="photos-upload"
                       class="p-2 filter hover:brightness-95 flex gap-3 items-center"
                     >
-                      <PictureIcon class="w-4" /> Photos & videos
+                      <PictureIcon class="w-4" /> 사진 또는 영상 첨부
                     </label>
                   )}
                 />

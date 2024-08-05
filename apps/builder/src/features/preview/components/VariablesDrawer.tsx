@@ -108,7 +108,7 @@ export const VariablesDrawer = ({ onClose }: Props) => {
 
       <Stack w="full" spacing="4">
         <CloseButton pos="absolute" right="1rem" top="1rem" onClick={onClose} />
-        <Heading fontSize="md">Variables</Heading>
+        <Heading fontSize="md">변수 설정</Heading>
         <HStack as="form" onSubmit={handleCreateSubmit}>
           <Input
             width="full"
@@ -206,8 +206,8 @@ const VariableItem = ({
             <PopoverContent>
               <PopoverBody>
                 <SwitchWithLabel
-                  label="Save in results?"
-                  moreInfoContent="Check this option if you want to save the variable value in the typebot Results table."
+                  label="결과에 포함하시겠습니까?"
+                  moreInfoContent="이 옵션을 선택하면 변수 값을 Lightbot 결과 테이블에 저장할 수 있습니다."
                   initialValue={!variable.isSessionVariable}
                   onCheckChange={() =>
                     onChange({

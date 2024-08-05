@@ -40,7 +40,7 @@
           "type": "text input",
           "options": {
             "isLong": false,
-            "labels": { "button": "Send", "placeholder": "Type your answer..." }
+            "labels": { "button": "Send", "placeholder": "메세지를 입력하세요" }
           },
           "outgoingEdgeId": "cl10u7ax4000g2e6dkqoq18kp"
         }
@@ -66,7 +66,7 @@
           "groupId": "cl10u6jzd00072e6dvo0zwy0s",
           "type": "number input",
           "options": {
-            "labels": { "button": "Send", "placeholder": "Type a number..." }
+            "labels": { "button": "Send", "placeholder": "숫자를 입력하세요..." }
           }
         },
         {

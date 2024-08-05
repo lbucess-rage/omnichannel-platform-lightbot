@@ -70,7 +70,7 @@ const parseValuePlaceholder = (
       return 'Type a value...'
     case ComparisonOperators.LESS:
     case ComparisonOperators.GREATER:
-      return 'Type a number...'
+      return '숫자를 입력하세요...'
     case ComparisonOperators.IS_SET:
     case ComparisonOperators.IS_EMPTY:
       return ''

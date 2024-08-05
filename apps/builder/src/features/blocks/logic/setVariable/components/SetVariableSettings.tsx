@@ -100,8 +100,8 @@ export const SetVariableSettings = ({ options, onOptionsChange }: Props) => {
         {selectedVariable && !isSessionOnly && !isLinkedToAnswer && (
           <SwitchWithLabel
             key={selectedVariable.id}
-            label="Save in results?"
-            moreInfoContent="By default, the variable is saved only for the user chat session. Check this option if you want to also store the variable in the typebot Results table."
+            label="결과에 포함하시겠습니까?"
+            moreInfoContent="기본적으로 변수는 사용자 채팅 세션에만 저장됩니다. 이 옵션을 선택하면 변수도 Lightbot 결과 테이블에 저장됩니다."
             initialValue={!selectedVariable.isSessionVariable}
             onCheckChange={updateIsSessionVariable}
           />

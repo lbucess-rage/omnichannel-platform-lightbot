@@ -478,7 +478,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "vevnx5f5bojz0sv648x6ppcmv",
@@ -507,7 +507,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "vevnx5f5bojz0sv648x6ppcmv",
@@ -536,7 +536,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "vevnx5f5bojz0sv648x6ppcmv",

@@ -31,7 +31,7 @@
           "groupId": "clbovazhy000r3b6onjzopbsn",
           "options": {
             "isLong": false,
-            "labels": { "button": "Send", "placeholder": "Type your answer..." }
+            "labels": { "button": "Send", "placeholder": "메세지를 입력하세요" }
           },
           "outgoingEdgeId": "clbovbaw600123b6o3i4ouzoq"
         }

@@ -102,7 +102,7 @@
           "type": "email input",
           "groupId": "o4SH1UtKANnW5N5D67oZUz",
           "options": {
-            "labels": { "button": "Send", "placeholder": "Type your email..." },
+            "labels": { "button": "Send", "placeholder": "이메일 주소를 입력하세요..." },
             "variableId": "3VFChNVSCXQ2rXv4DrJ8Ah"
           },
           "outgoingEdgeId": "w3MiN1Ct38jT5NykVsgmb5"
@@ -132,7 +132,7 @@
             "isLong": false,
             "labels": {
               "button": "Send",
-              "placeholder": "Type your answer..."
+              "placeholder": "메세지를 입력하세요"
             },
             "variableId": "giiLFGw5xXBCHzvp1qAbdX"
           },
@@ -219,7 +219,7 @@
           "groupId": "7qHBEyCMvKEJryBHzPmHjV",
           "options": {
             "isLong": true,
-            "labels": { "button": "Send", "placeholder": "Type your answer..." }
+            "labels": { "button": "Send", "placeholder": "메세지를 입력하세요" }
           },
           "outgoingEdgeId": "sH5nUssG2XQbm6ZidGv9BY"
         }

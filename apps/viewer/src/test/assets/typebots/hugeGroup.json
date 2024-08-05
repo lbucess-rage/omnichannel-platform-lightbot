@@ -40,7 +40,7 @@
             "isLong": false,
             "labels": {
               "button": "Send",
-              "placeholder": "Type your answer..."
+              "placeholder": "메세지를 입력하세요"
             },
             "variableId": "93BD32WVM5JEQ1nmWtr2S5"
           }
@@ -60,7 +60,7 @@
           "type": "number input",
           "groupId": "2Vrpgk5VP9BUo3vKtM5kws",
           "options": {
-            "labels": { "button": "Send", "placeholder": "Type a number..." }
+            "labels": { "button": "Send", "placeholder": "숫자를 입력하세요..." }
           }
         },
         {

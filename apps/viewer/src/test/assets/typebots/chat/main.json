@@ -43,7 +43,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "vclauuklnc000b3b6q7xchq4yf",
@@ -91,7 +91,7 @@
           "type": "number input",
           "options": {
             "variableId": "vclauulfjk000i3b6qmujooweu",
-            "labels": { "placeholder": "Type a number...", "button": "Send" }
+            "labels": { "placeholder": "숫자를 입력하세요...", "button": "Send" }
           }
         }
       ]
@@ -229,16 +229,16 @@
           "id": "clauurluf001i3b6qjf78puug",
           "type": "email input",
           "options": {
-            "labels": { "placeholder": "Type your email...", "button": "Send" },
-            "retryMessageContent": "This email doesn't seem to be valid. Can you type it again?"
+            "labels": { "placeholder": "이메일 주소를 입력하세요...", "button": "Send" },
+            "retryMessageContent": "유효하지 않은 이메일 주소입니다. 다시 입력하시겠습니까?"
           }
         },
         {
           "id": "clauurokp001j3b6qyrw7boca",
           "type": "url input",
           "options": {
-            "labels": { "placeholder": "Type a URL...", "button": "Send" },
-            "retryMessageContent": "This URL doesn't seem to be valid. Can you type it again?"
+            "labels": { "placeholder": "URL을 입력해주세요...", "button": "Send" },
+            "retryMessageContent": "유효하지 않은 URL 주소형식 입니다. 다시 입력하시겠습니까?"
           }
         },
         {

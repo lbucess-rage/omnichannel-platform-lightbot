@@ -72,7 +72,7 @@ export const TextInputSettings = ({ options, onOptionsChange }: Props) => {
         onChange={updateButtonLabel}
       />
       <SwitchWithRelatedSettings
-        label={'Allow attachments'}
+        label={'파일첨부 허용여부'}
         initialValue={
           options?.attachments?.isEnabled ??
           defaultTextInputOptions.attachments.isEnabled
@@ -90,7 +90,7 @@ export const TextInputSettings = ({ options, onOptionsChange }: Props) => {
         </Stack>
         <DropdownList
           label="Visibility:"
-          moreInfoTooltip='This setting determines who can see the uploaded files. "Public" means that anyone who has the link can see the files. "Private" means that only a members of this workspace can see the files.'
+          moreInfoTooltip='This setting determines who can see the uploaded files. "“Public”는 링크를 가진 누구나 파일을 볼 수 있다는 것을 의미합니다. “Private”는 이 작업 공간의 구성원만 파일을 볼 수 있다는 것을 의미합니다.'
           currentItem={
             options?.attachments?.visibility ??
             defaultTextInputOptions.attachments.visibility

@@ -21,7 +21,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "isLong": false

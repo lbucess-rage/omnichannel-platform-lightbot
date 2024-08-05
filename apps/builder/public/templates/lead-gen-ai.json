@@ -129,7 +129,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "giiLFGw5xXBCHzvp1qAbdX"
@@ -268,7 +268,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Type your answer...",
+              "placeholder": "메세지를 입력하세요",
               "button": "Send"
             },
             "variableId": "vhp0ymgwq4id82l97g0kliglf"

@@ -58,12 +58,12 @@ test.describe.parallel('Text input block', () => {
     await page.getByText('var1').click()
     await page.getByRole('button', { name: 'Test' }).click()
     await page
-      .getByPlaceholder('Type your answer...')
+      .getByPlaceholder('메세지를 입력하세요')
       .fill('Help me with these')
     await page.getByLabel('Add attachments').click()
     await expect(page.getByRole('menuitem', { name: 'Document' })).toBeVisible()
     await expect(
-      page.getByRole('menuitem', { name: 'Photos & videos' })
+      page.getByRole('menuitem', { name: '사진 또는 영상' })
     ).toBeVisible()
     await page
       .locator('#document-upload')

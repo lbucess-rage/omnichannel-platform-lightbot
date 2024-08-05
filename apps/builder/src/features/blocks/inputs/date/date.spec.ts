@@ -27,7 +27,7 @@ test.describe('Date input block', () => {
     await page.getByLabel('Send').click()
     await expect(page.locator('text="01/01/2021"')).toBeVisible()
 
-    await page.click(`text=Pick a date`)
+    await page.click(`text=날짜 선택`)
     await page.click('text=Is range?')
     await page.click('text=With time?')
     await page.getByLabel('From label:').fill('Previous:')
@@ -50,7 +50,7 @@ test.describe('Date input block', () => {
       page.locator('text="01/01/2021 11:00 to 01/01/2022 09:00"')
     ).toBeVisible()
 
-    await page.click(`text=Pick a date`)
+    await page.click(`text=날짜 선택`)
     await page.getByPlaceholder('dd/MM/yyyy HH:mm').fill('dd.MM HH:mm')
     await page.click('text=Restart')
     await page.locator('[data-testid="from-date"]').fill('2023-01-01T11:00')

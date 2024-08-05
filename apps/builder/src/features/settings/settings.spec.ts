@@ -15,7 +15,7 @@ test.describe.parallel('Settings page', () => {
 
       await page.click('text="Remember user"')
 
-      await expect(page.getByPlaceholder('Type your answer...')).toHaveValue(
+      await expect(page.getByPlaceholder('메세지를 입력하세요')).toHaveValue(
         'Baptiste'
       )
       await page.click('text=Prefill input')

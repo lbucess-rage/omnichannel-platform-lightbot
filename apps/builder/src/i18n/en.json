@@ -112,7 +112,7 @@
   "billing.usage.chats.alert.updatePlan": "Make sure to update your plan to increase this limit and continue chatting with your users.",
   "billing.usage.chats.heading": "Chats",
   "billing.usage.heading": "Usage",
-  "billing.usage.unlimited": "Unlimited",
+  "billing.usage.unlimited": "전체권한",
   "blocks.bubbles.embed.blockCard.tooltip": "Embed a pdf, an iframe, a website...",
   "blocks.inputs.button.addItem.ariaLabel": "Add item",
   "blocks.inputs.button.buttonSettings.addComparisonButton.label": "Add comparison",

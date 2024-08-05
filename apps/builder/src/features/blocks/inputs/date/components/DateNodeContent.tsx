@@ -9,6 +9,6 @@ export const DateNodeContent = ({ variableId }: Props) => {
   return variableId ? (
     <WithVariableContent variableId={variableId} />
   ) : (
-    <Text color={'gray.500'}>Pick a date</Text>
+    <Text color={'gray.500'}>날짜 선택</Text>
   )
 }

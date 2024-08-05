@@ -56,7 +56,7 @@
           "type": "text input",
           "options": {
             "isLong": false,
-            "labels": { "button": "Send", "placeholder": "Type your answer..." }
+            "labels": { "button": "Send", "placeholder": "메세지를 입력하세요" }
           },
           "outgoingEdgeId": "a42zatxkw0q8w2kq886m9ek8"
         }

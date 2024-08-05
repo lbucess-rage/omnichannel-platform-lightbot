@@ -59,7 +59,7 @@
             "isLong": false,
             "labels": {
               "button": "Send",
-              "placeholder": "Type your answer..."
+              "placeholder": "메세지를 입력하세요"
             },
             "variableId": "htYvG7crtdjpsZ6XKTh1PM"
           }
