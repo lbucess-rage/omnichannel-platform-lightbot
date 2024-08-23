@@ -35,8 +35,8 @@ export const getInitialChatReplyFromStorage = (
   if (!typebotId) return
   try {
     const rawInitialChatReply =
-      sessionStorage.getItem(`typebot-${typebotId}-initialChatReply`) ??
-      localStorage.getItem(`typebot-${typebotId}-initialChatReply`)
+      sessionStorage.getItem(`lightbot-${typebotId}-initialChatReply`) ??
+      localStorage.getItem(`lightbot-${typebotId}-initialChatReply`)
     if (!rawInitialChatReply) return
     return JSON.parse(rawInitialChatReply) as StartChatResponse
   } catch {
@@ -56,7 +56,7 @@ export const setInitialChatReplyInStorage = (
   try {
     const rawInitialChatReply = JSON.stringify(initialChatReply)
     parseRememberUserStorage(storage).setItem(
-      `typebot-${typebotId}-initialChatReply`,
+      `lightbot-${typebotId}-initialChatReply`,
       rawInitialChatReply
     )
   } catch {
@@ -66,7 +66,7 @@ export const setInitialChatReplyInStorage = (
 
 export const setBotOpenedStateInStorage = () => {
   try {
-    sessionStorage.setItem(`typebot-botOpened`, 'true')
+    sessionStorage.setItem(`lightbot-botOpened`, 'true')
   } catch {
     /* empty */
   }
@@ -74,7 +74,7 @@ export const setBotOpenedStateInStorage = () => {
 
 export const removeBotOpenedStateInStorage = () => {
   try {
-    sessionStorage.removeItem(`typebot-botOpened`)
+    sessionStorage.removeItem(`lightbot-botOpened`)
   } catch {
     /* empty */
   }
@@ -82,7 +82,7 @@ export const removeBotOpenedStateInStorage = () => {
 
 export const getBotOpenedStateFromStorage = () => {
   try {
-    return sessionStorage.getItem(`typebot-botOpened`) === 'true'
+    return sessionStorage.getItem(`lightbot-botOpened`) === 'true'
   } catch {
     return false
   }
@@ -97,9 +97,9 @@ export const parseRememberUserStorage = (
 
 export const wipeExistingChatStateInStorage = (typebotId: string) => {
   Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith(`typebot-${typebotId}`)) localStorage.removeItem(key)
+    if (key.startsWith(`lightbot-${typebotId}`)) localStorage.removeItem(key)
   })
   Object.keys(sessionStorage).forEach((key) => {
-    if (key.startsWith(`typebot-${typebotId}`)) sessionStorage.removeItem(key)
+    if (key.startsWith(`lightbot-${typebotId}`)) sessionStorage.removeItem(key)
   })
 }

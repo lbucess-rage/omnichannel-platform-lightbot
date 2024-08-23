@@ -24,8 +24,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const info = await transporter.sendMail({
         from: from.name ? `"${from.name}" <${from.email}>` : from.email,
         to,
-        subject: 'Your SMTP configuration is working 🤩',
-        text: 'This email has been sent to test out your SMTP config.\n\nIf your read this then it has been successful.🚀',
+        subject: 'SMTP 설정은 정상적으로 작동합니다. 🤩',
+        text: '이 메일은 SMTP 설정을 테스트하기 위해 보내졌습니다.\n\n이 내용을 현재 읽고 있다면 성공적입니다 .🚀',
       })
       res.status(200).send({ message: 'Email sent!', info })
     } catch (err) {

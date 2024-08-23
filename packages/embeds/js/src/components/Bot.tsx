@@ -29,6 +29,8 @@ import { Portal } from 'solid-js/web'
 import { defaultSettings } from '@typebot.io/schemas/features/typebot/settings/constants'
 import { persist } from '@/utils/persist'
 import { setBotContainerHeight } from '@/utils/botContainerHeightSignal'
+import { currentMenuType } from '@/utils/currentMenuSignal'
+import { ConversationListContainer } from './ConversationListContainer/ConversationListContainer'
 import {
   defaultFontFamily,
   defaultFontType,
@@ -67,6 +69,8 @@ export const Bot = (props: BotProps & { class?: string }) => {
   const [error, setError] = createSignal<Error | undefined>()
 
   const initializeBot = async () => {
+    console.log(`initializeBot props:`, props)
+
     if (props.font) injectFont(props.font)
     setIsInitialized(true)
     const urlParams = new URLSearchParams(location.search)
@@ -96,7 +100,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
     if (error instanceof HTTPError) {
       if (isPreview) {
         return setError(
-          new Error(`An error occurred while loading the bot.`, {
+          new Error(`챗봇 로딩과정에서 에러가 발생하였습니다.`, {
             cause: {
               status: error.response.status,
               body: await error.response.json(),
@@ -105,12 +109,12 @@ export const Bot = (props: BotProps & { class?: string }) => {
         )
       }
       if (error.response.status === 400 || error.response.status === 403)
-        return setError(new Error('This bot is now closed.'))
+        return setError(new Error('이 봇은 종료되었습니다.'))
       if (error.response.status === 404)
-        return setError(new Error("The bot you're looking for doesn't exist."))
+        return setError(new Error('라잇봇을 찾을 수 없습니다.'))
       return setError(
         new Error(
-          `Error! Couldn't initiate the chat. (${error.response.statusText})`
+          `Error! 봇 초기화에 실패하였습니다. (${error.response.statusText})`
         )
       )
     }
@@ -124,15 +128,13 @@ export const Bot = (props: BotProps & { class?: string }) => {
         console.error(error)
         if (isPreview) {
           return setError(
-            new Error(`Error! Could not reach server. Check your connection.`, {
+            new Error(`Error! 서버 연결 실패, 연결을 확인해보세요.`, {
               cause: error,
             })
           )
         }
       }
-      return setError(
-        new Error('Error! Could not reach server. Check your connection.')
-      )
+      return setError(new Error('Error! 서버 연결 실패, 연결을 확인해보세요.'))
     }
 
     if (
@@ -141,27 +143,46 @@ export const Bot = (props: BotProps & { class?: string }) => {
       (data.typebot.settings.general?.rememberUser?.isEnabled ??
         defaultSettings.general.rememberUser.isEnabled)
     ) {
+      // 로컬(또는 세션) 스토리지에 resultId가 있고 이전 resultId와 다른 경우
+
       if (resultIdInStorage && resultIdInStorage !== data.resultId)
+        // 해당 resultId를 스토리지에서 삭제
         wipeExistingChatStateInStorage(data.typebot.id)
+
+      // Remember 설정의 Storage의 값을 가져옴
       const storage =
         data.typebot.settings.general?.rememberUser?.storage ??
         defaultSettings.general.rememberUser.storage
+      // 해당 resultId를 스토리지에 저장
       setResultInStorage(storage)(typebotIdFromProps, data.resultId)
+
+      // 초기 챗봇 상태를 스토리지에서 가져옴
       const initialChatInStorage = getInitialChatReplyFromStorage(
         data.typebot.id
       )
+
+      // 초기 챗봇 상태가 있으면
       if (initialChatInStorage) {
+        // 초기 챗봇 상태를 저장
         setInitialChatReply(initialChatInStorage)
       } else {
+        // 초기 챗봇 상태가 없으면
         setInitialChatReply(data)
         setInitialChatReplyInStorage(data, {
           typebotId: data.typebot.id,
           storage,
         })
       }
+      // 챗봇 상태를 저장했는지 여부를 true로 설정
       props.onChatStatePersisted?.(true)
-    } else {
+    }
+    // resultId가 존재하지 않거나 챗봇이 기억하기 설정이 비활성화된 경우
+    // 보통 기억하기(rememberUser) 설정이 비활성화된 경우에 해당
+    else {
       wipeExistingChatStateInStorage(data.typebot.id)
+
+      // 리턴된 데이터를 signal로 저장
+
       setInitialChatReply(data)
       if (data.input?.id && props.onNewInputBlock)
         props.onNewInputBlock(data.input)
@@ -201,6 +222,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
       <Show when={error()} keyed>
         {(error) => <ErrorMessage error={error} />}
       </Show>
+      {/*  초기화 후 'initialChatReply' signal이 변경되면 BotContent 컴포넌트를 렌더링 */}
       <Show when={initialChatReply()} keyed>
         {(initialChatReply) => (
           <BotContent
@@ -259,21 +281,33 @@ type BotContentProps = {
   onEnd?: () => void
   onNewLogs?: (logs: OutgoingLog[]) => void
 }
-
+/**
+ * 실제 챗봇의 콘텐츠를 렌더링하는 컴포넌트
+ * 챗봇의 진행 상태(progress)를 저장하고, 이를 'ProgressBar' 컴포넌트에 전달
+ * 'ConversationContainer' 컴포넌트를 렌더링하고, 챗봇의 상태를 업데이트하는 콜백 함수를 전달
+ * 'ResizeObserver'를 사용하여 챗봇의 크기를 감지하고, 모바일 환경인지 여부를 식별
+ */
 const BotContent = (props: BotContentProps) => {
+  console.log('BotContent props:', props)
+
   const [progressValue, setProgressValue] = persist(
     createSignal<number | undefined>(props.initialChatReply.progress),
     {
       storage: props.context.storage,
-      key: `typebot-${props.context.typebot.id}-progressValue`,
+      key: `lightbot-${props.context.typebot.id}-progressValue`,
     }
   )
   let botContainer: HTMLDivElement | undefined
-
+  /**
+   * ResizeObserver를 사용하여 챗봇 컨테이너의 크기를 감지하고,
+   * 모바일 환경인지 여부를 식별하는 함수입니다.
+   * 컨테이너의 너비가 400보다 작으면 모바일로 간주합니다.
+   */
   const resizeObserver = new ResizeObserver((entries) => {
     return setIsMobile(entries[0].target.clientWidth < 400)
   })
 
+  // 챗봇 컨테이너가 마운트되면 ResizeObserver를 사용하여 크기를 감지하고, 높이를 설정합니다.
   onMount(() => {
     if (!botContainer) return
     resizeObserver.observe(botContainer)
@@ -308,6 +342,7 @@ const BotContent = (props: BotContentProps) => {
         props.class
       )}
     >
+      {/* 프로그레스바가 활성화되어 있을 때 렌더링 */}
       <Show
         when={
           isDefined(progressValue()) &&
@@ -327,15 +362,32 @@ const BotContent = (props: BotContentProps) => {
           </Portal>
         </Show>
       </Show>
-      <ConversationContainer
-        context={props.context}
-        initialChatReply={props.initialChatReply}
-        onNewInputBlock={props.onNewInputBlock}
-        onAnswer={props.onAnswer}
-        onEnd={props.onEnd}
-        onNewLogs={props.onNewLogs}
-        onProgressUpdate={setProgressValue}
-      />
+
+      <Show when={true} fallback={<></>}>
+        <ConversationContainer
+          context={props.context}
+          initialChatReply={props.initialChatReply}
+          onNewInputBlock={props.onNewInputBlock}
+          onAnswer={props.onAnswer}
+          onEnd={props.onEnd}
+          onNewLogs={props.onNewLogs}
+          onProgressUpdate={setProgressValue}
+        />
+      </Show>
+
+      <Show when={false} fallback={<></>}>
+        <ConversationListContainer
+          initialChatReply={props.initialChatReply}
+          context={props.context}
+          menuType={currentMenuType()}
+          onNewInputBlock={props.onNewInputBlock}
+          onAnswer={props.onAnswer}
+          onEnd={props.onEnd}
+          onNewLogs={props.onNewLogs}
+          onProgressUpdate={setProgressValue}
+        />
+      </Show>
+
       <Show
         when={
           props.initialChatReply.typebot.settings.general?.isBrandingEnabled

@@ -37,7 +37,7 @@ export const BoardMenuButton = (props: StackProps) => {
     const data =
       'data:application/json;charset=utf-8,' +
       encodeURIComponent(JSON.stringify(typebot))
-    const fileName = `typebot-export-${parseDefaultPublicId(
+    const fileName = `lightbot-export-${parseDefaultPublicId(
       typebot.name,
       typebot.id
     )}.json`

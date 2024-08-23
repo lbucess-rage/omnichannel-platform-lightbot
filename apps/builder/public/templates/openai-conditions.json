@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "qfrz5nwm63g12dajsjxothb5",
-      "title": "User input",
+      "title": "사용자 입력",
       "graphCoordinates": { "x": -107.01, "y": -53.23 },
       "blocks": [
         {
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can we help?" }] }
+              { "type": "p", "children": [{ "text": "어떻게 도와드릴까요?" }] }
             ]
           }
         },
@@ -35,7 +35,7 @@
     },
     {
       "id": "bh3uva3254p0jgp46gj92way",
-      "title": "Condition 🧠",
+      "title": "조건 🧠",
       "graphCoordinates": { "x": 228.67, "y": -50.67 },
       "blocks": [
         {
@@ -46,12 +46,12 @@
             "messages": [
               {
                 "role": "system",
-                "content": "You are helpful assistant doing customer support for a software called Typebot.\n\nIf the user is asking a question about his account, please say \"ACCOUNT\".\n\nIf the user wants to talk to a human, please say \"HUMAN\".\n\nOtherwise, say \"OK\""
+                "content": "당신은 Typebot이라는 소프트웨어의 고객 지원을 하는 유용한 도우미입니다.\n\n사용자가 계정에 대해 질문하는 경우, \"계정\"이라고 말하세요.\n\n사용자가 사람과 대화하기를 원하는 경우, \"사람\"이라고 말하세요.\n\n그 외의 경우에는 \"확인\"이라고 말하세요."
               },
-              { "role": "user", "content": "Can I talk to a human?" },
-              { "role": "assistant", "content": "HUMAN" },
-              { "role": "user", "content": "I need to check my account" },
-              { "role": "assistant", "content": "ACCOUNT" },
+              { "role": "user", "content": "사람과 대화할 수 있나요?" },
+              { "role": "assistant", "content": "사람" },
+              { "role": "user", "content": "내 계정을 확인해야 합니다." },
+              { "role": "assistant", "content": "계정" },
               { "role": "user", "content": "{{User Message}}" }
             ],
             "credentialsId": "clpjnjrbt00051aliw6610w1z",
@@ -77,7 +77,7 @@
                     "id": "iiv6h6ssgusrfza4vped0iqe",
                     "variableId": "vni6kwbch8zlq92dclgcivzyr",
                     "comparisonOperator": "Contains",
-                    "value": "ACCOUNT"
+                    "value": "계정"
                   }
                 ]
               }
@@ -91,7 +91,7 @@
                     "id": "qekpq2av325h7rkmnrvtumxn",
                     "variableId": "vni6kwbch8zlq92dclgcivzyr",
                     "comparisonOperator": "Contains",
-                    "value": "HUMAN"
+                    "value": "사람"
                   }
                 ]
               }
@@ -102,7 +102,7 @@
     },
     {
       "id": "flt2vtb4pb6mvlvyrrxonzwf",
-      "title": "Account",
+      "title": "계정",
       "graphCoordinates": { "x": 585.48, "y": -214.13 },
       "blocks": [
         {
@@ -112,9 +112,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Ok feel free to check your account here" }
-                ]
+                "children": [{ "text": "계정을 여기서 확인하세요." }]
               }
             ]
           }
@@ -122,7 +120,7 @@
         {
           "id": "fn0s0ezabail96c5n0xs24aq",
           "type": "choice input",
-          "items": [{ "id": "tslv59v8oqbfpnd21la8qnz4", "content": "Account" }]
+          "items": [{ "id": "tslv59v8oqbfpnd21la8qnz4", "content": "계정" }]
         },
         {
           "id": "r16g3avw7mwzi12srqisuex0",
@@ -133,7 +131,7 @@
     },
     {
       "id": "jn9w80afa6a66czzjfto8tmt",
-      "title": "Human",
+      "title": "사람",
       "graphCoordinates": { "x": 586.68, "y": 153.73 },
       "blocks": [
         {
@@ -141,7 +139,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "I'm a human" }] }
+              { "type": "p", "children": [{ "text": "저는 사람입니다." }] }
             ]
           }
         }
@@ -149,14 +147,14 @@
     },
     {
       "id": "el01d0j1db9kp6v8wlrk9dob",
-      "title": "Else",
+      "title": "기타",
       "graphCoordinates": { "x": 581.46, "y": 315.66 },
       "blocks": [
         {
           "id": "tpy9wjrwmhw16xjgs8htao04",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Else" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "기타" }] }]
           }
         }
       ]
@@ -175,7 +173,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄\n"
+                    "text": "이 봇을 작동시키려면 OpenAI 자격 증명을 추가해야 합니다. 🪄\n"
                   }
                 ]
               }
@@ -191,12 +189,12 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Once it's done, delete this group and connect the "
+                    "text": "완료되면 이 그룹을 삭제하고 "
                   },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Intro" },
-                  { "text": " 🚀\n" }
+                  { "bold": true, "text": "시작" },
+                  { "text": " 이벤트를 " },
+                  { "bold": true, "text": "소개" },
+                  { "text": "와 연결하세요 🚀\n" }
                 ]
               }
             ]
@@ -260,9 +258,55 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
-  "settings": {},
+  "theme": {
+    "general": {
+      "background": {
+        "type": "Image",
+        "content": "https://images.unsplash.com/photo-1552083974-186346191183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdHxlbnwwfDB8fHwxNzEzMjg2NDY1fDA&ixlib=rb-4.0.3&q=80&w=1080"
+      }
+    },
+    "chat": {
+      "container": {
+        "maxWidth": "750px",
+        "maxHeight": "80%",
+        "backgroundColor": "#ffffff",
+        "blur": 5,
+        "opacity": 0.6,
+        "border": {
+          "thickness": 2,
+          "color": "#FFFFFF",
+          "roundeness": "large",
+          "opacity": 0.5
+        }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/13.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/17.png"
+      },
+      "hostBubbles": { "shadow": "sm" },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "sm",
+        "border": { "roundeness": "custom", "customRoundeness": 10 }
+      },
+      "buttons": { "backgroundColor": "#759af0", "border": { "thickness": 0 } }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzi0ruj3000dmrplnuw26t7s",
+  "settings": {
+    "general": { "isBrandingEnabled": true },
+    "metadata": {
+      "description": "",
+      "imageUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "favIconUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "customHeadCode": "<!-- Customer Center Meta Tags -->\n<meta name=\"customer-center-name\" content=\"Customer Support Center\">\n<meta name=\"customer-center-hours\" content=\"Mon-Fri: 9 AM - 6 PM, Sat: 10 AM - 4 PM\">\n"
+    }
+  },
   "createdAt": "2023-12-02T09:12:14.750Z",
   "updatedAt": "2023-12-02T09:14:20.047Z",
   "icon": "🧠",

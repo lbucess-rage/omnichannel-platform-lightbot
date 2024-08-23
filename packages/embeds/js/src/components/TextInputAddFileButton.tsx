@@ -10,9 +10,13 @@ type Props = {
   onNewFiles: (files: FileList) => void
   class?: string
 }
+
 export const TextInputAddFileButton = (props: Props) => {
   return (
     <>
+      {/* 모든 파일 형식
+        화면에 보이지 않도록 hidden 속성을 가지고 있으며, 파일이 선택되면 onNewFiles 함수를 호출한다.
+      */}
       <input
         type="file"
         id="document-upload"
@@ -23,6 +27,8 @@ export const TextInputAddFileButton = (props: Props) => {
           props.onNewFiles(e.currentTarget.files)
         }}
       />
+
+      {/* 이미지와 비디오 형식 */}
       <input
         type="file"
         id="photos-upload"
@@ -36,6 +42,7 @@ export const TextInputAddFileButton = (props: Props) => {
       />
 
       <Switch>
+        {/* 모바일과 데스크탑 구분하여 렌더링 */}
         <Match when={isMobile()}>
           <label
             aria-label="Add attachments"

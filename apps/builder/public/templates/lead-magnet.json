@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "clon5n2yo00091avnmbju5698",
-  "name": "Lead magnet",
+  "id": "clzhzh95q000bmrplq2qg4kd6",
+  "name": "템플릿 - 리드 마그넷‌‌‍‌‍‌‌‍‌",
   "events": [
     {
       "id": "emejg92oa3743x6z556xi1ig",
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hi there! 👋" }] }
+              { "type": "p", "children": [{ "text": "반갑습니다! 👋" }] }
             ]
           }
         },
@@ -33,10 +33,10 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Sign up for the newsletter and " },
+                  { "text": "엘비유세스 뉴스레터에 가입하고, " },
                   {
-                    "bold": true,
-                    "text": "get free access to our exclusive 'Community Bundle'."
+                    "text": "독점 '라잇챗 무료체험권'을 얻어가세요!",
+                    "bold": true
                   }
                 ]
               }
@@ -52,7 +52,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This bundle helps you create the best Community possible for your project."
+                    "text": "'라잇챗 무료체험권'으로 라잇봇과 채팅상담을 15일간 무료로 체험할 수 있어요"
                   }
                 ]
               }
@@ -64,7 +64,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "성함을 말씀해주세요!" }] }
             ]
           }
         },
@@ -73,7 +73,7 @@
           "outgoingEdgeId": "rczh7k3r065okzax6za00lvh",
           "type": "text input",
           "options": {
-            "labels": { "placeholder": "Your first name" },
+            "labels": { "placeholder": "성함을 입력해주세요." },
             "variableId": "vyu4paeim4jcjgmxr26bdk286"
           }
         }
@@ -91,10 +91,12 @@
             "richText": [
               {
                 "type": "p",
+                "children": [{ "text": "좋습니다, {{Name}}님. " }]
+              },
+              {
+                "type": "p",
                 "children": [
-                  {
-                    "text": "Ok, {{Name}}. What email would you like to sign up with?"
-                  }
+                  { "text": "뉴스를 받아볼 이메일 주소를 알려주세요~" }
                 ]
               }
             ]
@@ -102,17 +104,16 @@
         },
         {
           "id": "nu9ibw4r4q9piwl3b308bezp",
-          "groupId": "xaloto3qrrbtcdcrob013xcx",
+          "outgoingEdgeId": "r3r2fpp714ye3r0vby3zdk1u",
           "type": "email input",
-          "options": { "variableId": "vrhd0bug6b6dzgijevfoonvo2" },
-          "outgoingEdgeId": "dxj0x2miwwkxsesp4chyjqek"
+          "options": { "variableId": "vrhd0bug6b6dzgijevfoonvo2" }
         }
       ]
     },
     {
       "id": "tp9r95ay5vm9zlgzw8twtxn3",
       "title": "Goal",
-      "graphCoordinates": { "x": 1243.07421875, "y": 172.2421875 },
+      "graphCoordinates": { "x": 1243.07, "y": 172.24 },
       "blocks": [
         {
           "id": "o6helbp9c682dur5e8bt9yov",
@@ -121,7 +122,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What's your goal with the community?" }]
+                "children": [
+                  { "text": "엘비유세스한테 가장 바라는 점이 무엇인가요?" }
+                ]
               }
             ]
           }
@@ -131,17 +134,12 @@
           "outgoingEdgeId": "on3al6xuczmckpu3roboo9te",
           "type": "choice input",
           "items": [
-            { "id": "ux0ly8ocxfm8i8ivdbwjnmnt", "content": "Win loyal fans" },
-            {
-              "id": "izz0nwo2iy2kmlif5fav2oc5",
-              "content": "Competitive advantage"
-            },
-            { "id": "jtkx9v5uqjw84hapq3umqlb5", "content": "Better product" },
-            { "id": "k7a7rkpoigrtrulilap7q6fw", "content": "Support" }
+            { "id": "ux0ly8ocxfm8i8ivdbwjnmnt", "content": "고객 확보" },
+            { "id": "izz0nwo2iy2kmlif5fav2oc5", "content": "경쟁우위 확보" },
+            { "id": "jtkx9v5uqjw84hapq3umqlb5", "content": "더 좋은 제품" },
+            { "id": "k7a7rkpoigrtrulilap7q6fw", "content": "고객 지원" }
           ],
-          "options": {
-            "variableId": "vf49immob0ih3kxn5b0nraqkq"
-          }
+          "options": { "variableId": "vf49immob0ih3kxn5b0nraqkq" }
         }
       ]
     },
@@ -179,7 +177,7 @@
                     "id": "nt0c7o7w0elbbrfde8nned76",
                     "variableId": "vf49immob0ih3kxn5b0nraqkq",
                     "comparisonOperator": "Equal to",
-                    "value": "Win loyal fans"
+                    "value": "고객 확보"
                   }
                 ]
               }
@@ -193,7 +191,7 @@
                     "id": "yf6asq9i97ap9y2jxibmjylv",
                     "variableId": "vf49immob0ih3kxn5b0nraqkq",
                     "comparisonOperator": "Equal to",
-                    "value": "Competitive advantage"
+                    "value": "경쟁우위 확보"
                   }
                 ]
               }
@@ -207,7 +205,7 @@
                     "id": "x7tbo8q47r1wdlg6w3c48mru",
                     "variableId": "vf49immob0ih3kxn5b0nraqkq",
                     "comparisonOperator": "Equal to",
-                    "value": "Better product"
+                    "value": "더 좋은 제품"
                   }
                 ]
               }
@@ -221,7 +219,7 @@
                     "id": "hkb9qy6un3yrhhxtm0s6c8rg",
                     "variableId": "vf49immob0ih3kxn5b0nraqkq",
                     "comparisonOperator": "Equal to",
-                    "value": "Support"
+                    "value": "고객 지원"
                   }
                 ]
               }
@@ -233,7 +231,7 @@
     {
       "id": "vvlecgglxadq0x2eg7ozr535",
       "title": "Send bundle",
-      "graphCoordinates": { "x": 901.6953125, "y": 180.0546875 },
+      "graphCoordinates": { "x": 886.28, "y": 772.89 },
       "blocks": [
         {
           "id": "w53cmmn4iowq753r8jmvk7o7",
@@ -251,7 +249,7 @@
     {
       "id": "k2sbuizycrpuyf44v9eebebr",
       "title": "Win loyal fans video",
-      "graphCoordinates": { "x": 1969.18359375, "y": -205.76171875 },
+      "graphCoordinates": { "x": 1969.18, "y": -205.76 },
       "blocks": [
         {
           "id": "dzcw0vwo23vhp2nwyxl99va8",
@@ -260,7 +258,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Want to know how to win loyal fans?" }]
+                "children": [{ "text": "고객 확보를 위한 방법을 아시나요?" }]
               }
             ]
           }
@@ -270,18 +268,17 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "이 사이트를 참고해주세요" }]
+              }
             ]
           }
         },
         {
-          "id": "z3ffqugex7gipsb4ke6ov874",
-          "type": "video",
-          "content": {
-            "url": "https://www.youtube.com/watch?v=jp3ggg_42-M&t=22s",
-            "id": "jp3ggg_42-M",
-            "type": "youtube"
-          }
+          "id": "xof9ydavmcurraim7pmyu4hw",
+          "type": "embed",
+          "content": { "url": "https://lbucess.com" }
         }
       ]
     },
@@ -298,9 +295,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Want to know how to have a great competitive advantage with your community?"
-                  }
+                  { "text": "경쟁 우위를 확보하기 위해 어떻게 해야할까요?" }
                 ]
               }
             ]
@@ -311,18 +306,17 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "이 사이트를 참고해주세요" }]
+              }
             ]
           }
         },
         {
-          "id": "rvdh4tk0ebg7t9tdga9aw8ao",
-          "type": "video",
-          "content": {
-            "url": "https://www.youtube.com/watch?v=jp3ggg_42-M&t=22s",
-            "id": "jp3ggg_42-M",
-            "type": "youtube"
-          }
+          "id": "ph7fuvxwxsv9v1lwknfmg087",
+          "type": "embed",
+          "content": { "url": "https://lbucess.com" }
         }
       ]
     },
@@ -338,11 +332,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "Want to know how to improve your product by leveraging a community?"
-                  }
-                ]
+                "children": [{ "text": "더 좋은 제품, 솔루션을 원하시나요?" }]
               }
             ]
           }
@@ -352,18 +342,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "여기서 확인해 보세요" }] }
             ]
           }
         },
         {
-          "id": "jiz2uvo89456jpy081hazkd4",
-          "type": "video",
-          "content": {
-            "url": "https://www.youtube.com/watch?v=jp3ggg_42-M&t=22s",
-            "id": "jp3ggg_42-M",
-            "type": "youtube"
-          }
+          "id": "cp948450653n3yxm10v2fj9v",
+          "type": "embed",
+          "content": { "url": "https://lightcall.co.kr" }
         }
       ]
     },
@@ -379,9 +365,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Want to offer better support with a community?" }
-                ]
+                "children": [{ "text": "더 좋은 고객 지원을 원하시나요?" }]
               }
             ]
           }
@@ -391,18 +375,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Check out this video:" }] }
+              { "type": "p", "children": [{ "text": "여기서 확인해 보세요" }] }
             ]
           }
         },
         {
-          "id": "e3tlj1y4vyhtwcabzifv63q2",
-          "type": "video",
-          "content": {
-            "url": "https://www.youtube.com/watch?v=jp3ggg_42-M&t=22s",
-            "id": "jp3ggg_42-M",
-            "type": "youtube"
-          }
+          "id": "rhl9twhtnd5e3thxnowfh1cs",
+          "type": "embed",
+          "content": { "url": "https://lightcall.co.kr" }
         }
       ]
     }
@@ -461,12 +441,9 @@
       "to": { "groupId": "f4hlh2oq8viwxrpl9ppq5d42" }
     },
     {
-      "from": {
-        "blockId": "nu9ibw4r4q9piwl3b308bezp",
-        "groupId": "xaloto3qrrbtcdcrob013xcx"
-      },
-      "to": { "groupId": "vvlecgglxadq0x2eg7ozr535" },
-      "id": "dxj0x2miwwkxsesp4chyjqek"
+      "from": { "blockId": "nu9ibw4r4q9piwl3b308bezp" },
+      "to": { "groupId": "tp9r95ay5vm9zlgzw8twtxn3" },
+      "id": "r3r2fpp714ye3r0vby3zdk1u"
     }
   ],
   "variables": [
@@ -486,18 +463,52 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
-  "settings": {},
-  "createdAt": "2023-11-06T17:06:59.136Z",
-  "updatedAt": "2023-11-06T17:06:59.136Z",
+  "theme": {
+    "general": {
+      "background": {
+        "type": "Image",
+        "content": "https://images.unsplash.com/photo-1552083974-186346191183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdHxlbnwwfDB8fHwxNzEzMjg2NDY1fDA&ixlib=rb-4.0.3&q=80&w=1080"
+      }
+    },
+    "chat": {
+      "container": {
+        "maxWidth": "750px",
+        "maxHeight": "80%",
+        "backgroundColor": "#ffffff",
+        "blur": 5,
+        "opacity": 0.6,
+        "border": {
+          "thickness": 2,
+          "color": "#FFFFFF",
+          "roundeness": "large",
+          "opacity": 0.5
+        }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/13.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/17.png"
+      },
+      "guestBubbles": { "backgroundColor": "#0042DA" },
+      "buttons": { "border": { "thickness": 0 }, "backgroundColor": "#759af0" }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzi0ruj3000dmrplnuw26t7s",
+  "settings": { "general": { "isBrandingEnabled": true } },
+  "createdAt": "2024-08-06T05:32:24.350Z",
+  "updatedAt": "2024-08-06T06:10:01.483Z",
   "icon": "🧲",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

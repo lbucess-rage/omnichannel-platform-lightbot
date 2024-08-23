@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "clon5zh7w000e1avnec16apet",
-  "name": "Product recommendation",
+  "id": "clzi0wvwo000hmrploe9djtzw",
+  "name": "제품 추천‌‌‍‌‍‌‍‍‌",
   "events": [
     {
       "id": "af8ny8rpbejnlkitr2s29ro1",
@@ -21,7 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Ok {{Name}}" }] }
+              { "type": "p", "children": [{ "text": "좋습니다. {{Name}} 님" }] }
             ]
           }
         },
@@ -34,7 +34,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Because all products are not available everywhere, I need to know..."
+                    "text": "모든 제품이 모든 곳에서 구매가 가능한게 아니에요 🙅  궁금한 걸 물어볼게요 🥸"
                   }
                 ]
               }
@@ -46,7 +46,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Where do you live?" }] }
+              { "type": "p", "children": [{ "text": "어디에 사시나요?" }] }
             ]
           }
         },
@@ -55,12 +55,10 @@
           "outgoingEdgeId": "zlab2pp5tfih56jcw6vtjs03",
           "type": "choice input",
           "items": [
-            { "id": "b6mg694wlrmx4k1fgc46co57", "content": "North America" },
-            { "id": "fpey0ohbvgvg7b86y4ol8wr7", "content": "Europe" }
+            { "id": "b6mg694wlrmx4k1fgc46co57", "content": "국내" },
+            { "id": "fpey0ohbvgvg7b86y4ol8wr7", "content": "해외" }
           ],
-          "options": {
-            "variableId": "vma96g9rw8oaosc0ei2iacqig"
-          }
+          "options": { "variableId": "vma96g9rw8oaosc0ei2iacqig" }
         }
       ]
     },
@@ -78,7 +76,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Let's determine what Näak's products suit you best. 💪"
+                    "text": "엘비유세스 헬스케어 제품 중 어떤 것이 귀하에게 가장 적합한지 확인해드릴게요!. 💪"
                   }
                 ]
               }
@@ -90,7 +88,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "먼저, 성함이 어떻게 되세요?" }]
+              }
             ]
           }
         },
@@ -98,9 +99,7 @@
           "id": "xobx3g928f9zj220n5qe1ih6",
           "outgoingEdgeId": "gnh6uloe0a8ciwahgq0gnx4k",
           "type": "text input",
-          "options": {
-            "variableId": "vp1r2yrb6xgmi2aq3x6x73vaz"
-          }
+          "options": { "variableId": "vp1r2yrb6xgmi2aq3x6x73vaz" }
         }
       ]
     },
@@ -114,7 +113,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your sport?" }] }
+              {
+                "type": "p",
+                "children": [
+                  { "text": "어떤" },
+                  { "bold": true, "text": " 스포츠" },
+                  { "text": "를 좋아하세요? 🤔" }
+                ]
+              }
             ]
           }
         },
@@ -156,7 +162,9 @@
           "id": "ahuasm8oa058gl4np96qadox",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Nice! 😎" }] }]
+            "richText": [
+              { "type": "p", "children": [{ "text": "멋지네요! 😎" }] }
+            ]
           }
         },
         {
@@ -164,7 +172,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your gender?" }] }
+              { "type": "p", "children": [{ "text": "성별을 말씀해주세요~" }] }
             ]
           }
         },
@@ -173,12 +181,9 @@
           "outgoingEdgeId": "bf16js59cs2hmicrkbc7nv1q",
           "type": "choice input",
           "items": [
-            {
-              "id": "zv2np66vgqoruntfh9h9vidx",
-              "content": "♂️ Men"
-            },
-            { "id": "w5e2h4n10u1l2pap1vtm68ma", "content": "♀️ Women" },
-            { "id": "m1t9qrfs4z998ogqd4ttueus", "content": "Other" }
+            { "id": "zv2np66vgqoruntfh9h9vidx", "content": "♂️ 남성" },
+            { "id": "w5e2h4n10u1l2pap1vtm68ma", "content": "♀️ 여성" },
+            { "id": "m1t9qrfs4z998ogqd4ttueus", "content": "그 외" }
           ]
         }
       ]
@@ -196,7 +201,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How can Näak help you achieve your goals?" }
+                  { "text": "귀하의 목표 달성을 어떻게 도울수 있을까요?" }
                 ]
               }
             ]
@@ -210,17 +215,17 @@
             {
               "id": "fmhwukhd2112743tgrmv85st",
               "pictureSrc": "https://images.unsplash.com/photo-1615845522103-82f98cd2a9de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw5fHxlbmR1cmFuY2V8ZW58MHwwfHx8MTY4NTM2MzY3Nnww&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Energy"
+              "title": "에너지 강화"
             },
             {
               "id": "hkzoroc6mf9tt9g2uxppweay",
               "pictureSrc": "https://images.unsplash.com/photo-1536044635785-467d51fc5880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHwxMnx8ZHJpbmslMjBzcG9ydHxlbnwwfDB8fHwxNjg1MzYzNzIxfDA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Hydration"
+              "title": "수분 보충"
             },
             {
               "id": "nn5629jaux41qo0fhl1yj3zi",
               "pictureSrc": "https://images.unsplash.com/photo-1531403939386-c08a16cd7eef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw3fHxzdHJldGNofGVufDB8MHx8fDE2ODUzNjM2OTl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-              "title": "Recovery"
+              "title": "체력 회복"
             }
           ],
           "options": {
@@ -243,7 +248,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What protein source are you interested in?" }
+                  { "text": "어떤 " },
+                  { "bold": true, "text": "프로틴" },
+                  { "text": "에 관심이 있으세요?" }
                 ]
               }
             ]
@@ -254,8 +261,8 @@
           "outgoingEdgeId": "umuilo9l4t27kcpnx5ybnr08",
           "type": "choice input",
           "items": [
-            { "id": "exj60v3j83wx9yjbdsm8gwzj", "content": "Cricket-based" },
-            { "id": "kvqeznudz85jbqwxzfpwz8z8", "content": "Plant-based" }
+            { "id": "exj60v3j83wx9yjbdsm8gwzj", "content": "동물성 프로틴" },
+            { "id": "kvqeznudz85jbqwxzfpwz8z8", "content": "식물성 프로틴" }
           ],
           "options": {
             "variableId": "vlgo7i0r514jkd9a9f24otm4m",
@@ -276,7 +283,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What are flavors do you enjoy?" }]
+                "children": [
+                  { "text": "어떤 " },
+                  { "bold": true, "text": "맛을" },
+                  { "text": " 좋아하세요?" }
+                ]
               }
             ]
           }
@@ -286,18 +297,14 @@
           "outgoingEdgeId": "i3za7jvz8g7m7588g7i1ue9i",
           "type": "choice input",
           "items": [
-            {
-              "id": "t7fkowjzn7eygfn6q1r4a8l9",
-              "content": "Chocolate"
-            },
-            { "id": "b1a0qlhtirnxqaqudskc4hnb", "content": "Vanilla" },
-            { "id": "vef4uodxrj05lp2i5k3uhdd5", "content": "Berries" },
-            { "id": "oyyx5j4j5fee37rc47adb5m8", "content": "Caramel" },
-            { "id": "myapux2pojdtbdy0gyc47rhq", "content": "Nuts" },
-            { "id": "aegltvuw163qqx88rwzjrg3v", "content": "Coffee" },
-            { "id": "zql5o66rry2ab3ofxa1y8kll", "content": "Lime" },
-            { "id": "ecvbkdakesh18zn5bfkylvt1", "content": "Watermelon" },
-            { "id": "b1xcrk5tv1b1rkjy40uhp44d", "content": "Maple Syrup" }
+            { "id": "t7fkowjzn7eygfn6q1r4a8l9", "content": "초콜렛" },
+            { "id": "b1a0qlhtirnxqaqudskc4hnb", "content": "바닐라" },
+            { "id": "oyyx5j4j5fee37rc47adb5m8", "content": "카라멜" },
+            { "id": "myapux2pojdtbdy0gyc47rhq", "content": "땅콩" },
+            { "id": "aegltvuw163qqx88rwzjrg3v", "content": "커피" },
+            { "id": "zql5o66rry2ab3ofxa1y8kll", "content": "라임" },
+            { "id": "ecvbkdakesh18zn5bfkylvt1", "content": "수박" },
+            { "id": "b1xcrk5tv1b1rkjy40uhp44d", "content": "메이플시럽" }
           ],
           "options": {
             "variableId": "vhbd5800sc98l1lk8wf7fe742",
@@ -317,7 +324,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Great choice 😋" }] }
+              { "type": "p", "children": [{ "text": "훌륭한 선택입니다 😋" }] }
             ]
           }
         },
@@ -328,9 +335,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Do you have any dietary restrictions?" }
-                ]
+                "children": [{ "text": "특별한 제한식이 있나요?" }]
               }
             ]
           }
@@ -341,13 +346,11 @@
           "type": "choice input",
           "items": [
             { "id": "u9gi0gnaza6ottid74l82wlm", "content": "Non GMO" },
-            { "id": "yr7q8fcyi6l1sw83t37fjosj", "content": "No palm oil" },
+            { "id": "yr7q8fcyi6l1sw83t37fjosj", "content": "no palm oil" },
             { "id": "gckqnnt2but4d6wwsfia3035", "content": "Gluten free" },
             { "id": "m3qdwzep7uugpejvga0yqorg", "content": "Nut free" }
           ],
-          "options": {
-            "variableId": "vz4fqc40gkk99h0qeus2tjwhx"
-          }
+          "options": { "variableId": "vz4fqc40gkk99h0qeus2tjwhx" }
         }
       ]
     },
@@ -365,7 +368,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Alright {{Name}}, I think we know exactly what you need."
+                    "text": "좋습니다 {{Name}}님,저희는 귀하에게 필요한 것을 정확히 알고 있는거 같아요 😎"
                   }
                 ]
               }
@@ -380,9 +383,9 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Sign up to our email list to receive a copy of your product recommendations."
-                  }
+                  { "text": "제품 추천 목록을 받기 위해" },
+                  { "bold": true, "text": " 메일링 리스트에 가입" },
+                  { "text": "해보세요 🙂" }
                 ]
               }
             ]
@@ -390,20 +393,20 @@
         },
         {
           "id": "rez1phkqpkeoj7u2kzmde653",
+          "outgoingEdgeId": "og9j90fpc32jufqlgy3r9fm4",
           "type": "text",
           "content": {
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We will also send a little gift 🎁" }]
+                "children": [
+                  { "text": "저희가 " },
+                  { "bold": true, "text": "작은 선물" },
+                  { "text": "을 보내드리겠습니다. 🎁" }
+                ]
               }
             ]
           }
-        },
-        {
-          "id": "vdzzxwdocfxdvqnqwwvjymzw",
-          "outgoingEdgeId": "vnqu52ld3usezpnrgu2l7ul0",
-          "type": "email input"
         }
       ]
     },
@@ -426,13 +429,13 @@
                     "id": "g995jwhkyj8e5tv4ci7gd5fi",
                     "variableId": "vlgo7i0r514jkd9a9f24otm4m",
                     "comparisonOperator": "Contains",
-                    "value": "Cricket-based"
+                    "value": "동물성 프로틴"
                   },
                   {
                     "id": "qjhmaage7fe1i5e0nscr0954",
                     "variableId": "vma96g9rw8oaosc0ei2iacqig",
                     "comparisonOperator": "Equal to",
-                    "value": "Europe"
+                    "value": "해외"
                   }
                 ]
               }
@@ -455,7 +458,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Unfortunately, cricket-based products are not available in Europe. 😢"
+                    "text": "안타깝게도 동물성 프로틴은 해외에서 이용할 수 없습니다. 😢"
                   }
                 ]
               }
@@ -471,9 +474,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "We'll make sure to let you know once it's available!"
-                  }
+                  { "text": "제품을 사용할 수 있을 때 바로 알려드리겠습니다.!" }
                 ]
               }
             ]
@@ -500,11 +501,12 @@
                     "id": "w3ii2flw8vz608pm45j92nli",
                     "variableId": "vgz8fr5u7q0p4jdef1krz2vm3",
                     "comparisonOperator": "Contains",
-                    "value": "Energy"
+                    "value": "에너지 강화"
                   }
                 ]
               }
-            }
+            },
+            { "id": "oyfge1k2onabrzpglk4pb154" }
           ]
         }
       ]
@@ -528,7 +530,7 @@
                     "id": "w3ii2flw8vz608pm45j92nli",
                     "variableId": "vgz8fr5u7q0p4jdef1krz2vm3",
                     "comparisonOperator": "Contains",
-                    "value": "Hydration"
+                    "value": "수분 보충"
                   }
                 ]
               }
@@ -555,7 +557,7 @@
                     "id": "w3ii2flw8vz608pm45j92nli",
                     "variableId": "vgz8fr5u7q0p4jdef1krz2vm3",
                     "comparisonOperator": "Contains",
-                    "value": "Recovery"
+                    "value": "체력 회복"
                   }
                 ]
               }
@@ -577,8 +579,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Let's talk about " },
-                  { "bold": true, "text": "Energy. ⚡" }
+                  { "bold": true, "text": "에너지 강화" },
+                  { "text": "에 도움을 드릴게요" },
+                  { "bold": true, "text": ". ⚡" }
                 ]
               }
             ]
@@ -592,9 +595,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Here is a selection for you based on your answers."
-                  }
+                  { "text": "선택하신 정보에 맞춰 추천해드립니다. " }
                 ]
               }
             ]
@@ -614,37 +615,31 @@
                     "id": "ysu7q0adna5tyhaghtq9qzrj",
                     "variableId": "vhbd5800sc98l1lk8wf7fe742",
                     "comparisonOperator": "Contains",
-                    "value": "Chocolate"
-                  },
-                  {
-                    "id": "j7sune97lh32xukeil8poeif",
-                    "variableId": "vhbd5800sc98l1lk8wf7fe742",
-                    "comparisonOperator": "Contains",
-                    "value": "Berries"
+                    "value": "초콜렛"
                   },
                   {
                     "id": "tsrm85u8demtuc95aootakrj",
                     "variableId": "vhbd5800sc98l1lk8wf7fe742",
                     "comparisonOperator": "Contains",
-                    "value": "Caramel"
+                    "value": "카라멜"
                   },
                   {
                     "id": "gfqvik3txgrinlslj0jvs9gt",
                     "variableId": "vhbd5800sc98l1lk8wf7fe742",
                     "comparisonOperator": "Contains",
-                    "value": "Nuts"
+                    "value": "땅콩"
                   },
                   {
                     "id": "yv3jre55h7w9qp55t5m8ax2p",
                     "variableId": "vhbd5800sc98l1lk8wf7fe742",
                     "comparisonOperator": "Contains",
-                    "value": "Coffee"
+                    "value": "커피"
                   },
                   {
                     "id": "xksf2b1la2h8yy9lvn96yqo1",
                     "variableId": "vhbd5800sc98l1lk8wf7fe742",
                     "comparisonOperator": "Contains",
-                    "value": "Vanilla"
+                    "value": "바닐라"
                   }
                 ]
               }
@@ -666,8 +661,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "About " },
-                  { "bold": true, "text": "Hydration. 💧" }
+                  { "bold": true, "text": "수분을 충전" },
+                  { "text": "하세요" },
+                  { "bold": true, "text": ". 💧" }
                 ]
               }
             ]
@@ -681,9 +677,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Here is a selection for you based on your answers."
-                  }
+                  { "text": "선택하신 답변에 기초하여 추천드립니다." }
                 ]
               }
             ]
@@ -707,7 +701,7 @@
                       "id": "ntnhk9cqrvogutrldgpm7d56",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Lime"
+                      "value": "라임"
                     }
                   ]
                 }
@@ -720,10 +714,7 @@
               "description": "- 250 calories: get all your calories in a liquid form\n- 55g carbohydrates: simple and complex natural carbohydrates\n- 650mg electrolytes: replenish minerals lost in sweat\n- 1300mg BCAAs: prevent muscle breakdown during exercise\n- 8g protein: all essential amino acids to reduce muscle fatigue"
             }
           ],
-          "options": {
-            "isMultipleChoice": true,
-            "buttonLabel": "Next"
-          }
+          "options": { "isMultipleChoice": true, "buttonLabel": "Next" }
         }
       ]
     },
@@ -740,9 +731,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "bold": true, "text": "Recovery 🧘‍♂️ " },
+                  { "bold": true, "text": "체력 회복" },
                   {
-                    "text": "is crucial to perform at your highest level on the field."
+                    "text": " 🧘‍♂️은 경기장에서 최고의 기량을 발휘하기 위해 매우 중요합니다."
                   }
                 ]
               }
@@ -757,9 +748,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Here is a selection for you based on your answers."
-                  }
+                  { "text": "선택하신 답변에 기초하여 추천드립니다!" }
                 ]
               }
             ]
@@ -782,7 +771,7 @@
                       "id": "rm8omv5htisk7s4nzvmsvc5c",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Nuts"
+                      "value": "땅콩"
                     },
                     {
                       "id": "xde05nklbld4u80qhs422y47",
@@ -801,9 +790,7 @@
               "description": "- 25g complete protein: build & repair muscle post-workout\n- 4g BCAAs: reduce muscle damage & soreness\n- 430mg electrolytes: replenish minerals lost in sweat\n- 1g carbohydrates: no added sugar"
             }
           ],
-          "options": {
-            "isMultipleChoice": true
-          }
+          "options": { "isMultipleChoice": true }
         }
       ]
     },
@@ -821,7 +808,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Since you like all these flavors you could try our discovery packs"
+                    "text": "여기 모든 맛을 좋아하신다면 통합 디스커버리 팩을 시도해보세요! 💪🏽"
                   }
                 ]
               }
@@ -846,9 +833,7 @@
               "description": "- 140 calories: quick energy boost from high-quality ingredients\n- 16g carbohydrates: simple and complex natural carbohydrates\n- 200mg electrolytes: replenish minerals lost in sweat\n- 3g protein: all essential amino acids to reduce muscle fatigue"
             }
           ],
-          "options": {
-            "isMultipleChoice": true
-          }
+          "options": { "isMultipleChoice": true }
         }
       ]
     },
@@ -875,7 +860,7 @@
                       "id": "pkmq8tabhm9nqi5oo8cmz2gz",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Chocolate"
+                      "value": "초콜렛"
                     }
                   ]
                 }
@@ -894,7 +879,7 @@
                       "id": "l4cye2ndoqcdmhiylc4zyho9",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Vanilla"
+                      "value": "바닐라"
                     }
                   ]
                 }
@@ -913,7 +898,7 @@
                       "id": "l4cye2ndoqcdmhiylc4zyho9",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Maple Syrup"
+                      "value": "메이플 시럽"
                     }
                   ]
                 }
@@ -932,13 +917,13 @@
                       "id": "ez9ppwlsy77hzum27l7vxnu6",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Nuts"
+                      "value": "땅콩"
                     },
                     {
                       "id": "s4khjdtxicrwpdelg41fs6d8",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Chocolate"
+                      "value": "초콜렛"
                     }
                   ]
                 }
@@ -957,7 +942,7 @@
                       "id": "mz7hwzkpjycizegz5216as63",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Coffee"
+                      "value": "커피"
                     }
                   ]
                 }
@@ -976,7 +961,7 @@
                       "id": "mz7hwzkpjycizegz5216as63",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Caramel"
+                      "value": "카라멜"
                     }
                   ]
                 }
@@ -995,22 +980,20 @@
                       "id": "mz7hwzkpjycizegz5216as63",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Berries"
+                      "value": "메이플 시럽"
                     },
                     {
                       "id": "m48fa084tvurk9nzcibm0d2d",
                       "variableId": "vhbd5800sc98l1lk8wf7fe742",
                       "comparisonOperator": "Contains",
-                      "value": "Nuts"
+                      "value": "땅콩"
                     }
                   ]
                 }
               }
             }
           ],
-          "options": {
-            "isMultipleChoice": true
-          }
+          "options": { "isMultipleChoice": true }
         }
       ]
     }
@@ -1068,11 +1051,6 @@
         "itemId": "yffl8ja17g5fr9rpi4d0cl36"
       },
       "to": { "groupId": "qjoc17kdjrpkaoxesoeqzmjt" }
-    },
-    {
-      "id": "vnqu52ld3usezpnrgu2l7ul0",
-      "from": { "blockId": "vdzzxwdocfxdvqnqwwvjymzw" },
-      "to": { "groupId": "g27q0psplvzht5xg9erxw738" }
     },
     {
       "id": "apvktyu7x3wks4z9xflecu91",
@@ -1145,6 +1123,11 @@
       "id": "u57y4cl6042u5r34dahfhwus",
       "from": { "blockId": "np8236cce7e79h8i21hg5ncp" },
       "to": { "groupId": "w3f8ya4hmkuab55dh2ogsvtz" }
+    },
+    {
+      "id": "og9j90fpc32jufqlgy3r9fm4",
+      "from": { "blockId": "rez1phkqpkeoj7u2kzmde653" },
+      "to": { "groupId": "g27q0psplvzht5xg9erxw738" }
     }
   ],
   "variables": [
@@ -1181,30 +1164,59 @@
   ],
   "theme": {
     "general": {
-      "background": { "type": "Color", "content": "#010000" }
+      "background": { "type": "Color", "content": "#121212" },
+      "progressBar": { "isEnabled": true, "color": "#666460" }
     },
     "chat": {
-      "hostBubbles": { "backgroundColor": "#1B1A1A", "color": "#ffffff" },
-      "guestBubbles": { "color": "#010000", "backgroundColor": "#FFFFFF" },
-      "buttons": { "backgroundColor": "#FFEF02", "color": "#010000" },
+      "container": { "border": { "roundeness": "large" } },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/01.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/03.png"
+      },
+      "hostBubbles": {
+        "backgroundColor": "#1B1A1A",
+        "color": "#ffffff",
+        "shadow": "lg",
+        "border": { "roundeness": "medium" }
+      },
+      "guestBubbles": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#010000",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
+      "buttons": {
+        "backgroundColor": "#FFEF02",
+        "color": "#010000",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
       "inputs": {
         "backgroundColor": "#1B1A1A",
         "color": "#ffffff",
+        "shadow": "lg",
+        "border": { "thickness": 1, "roundeness": "large" },
         "placeholderColor": "#9095A0"
       }
-    }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
   },
   "selectedThemeTemplateId": "typebot-dark",
-  "settings": {},
-  "createdAt": "2023-11-06T17:16:37.483Z",
-  "updatedAt": "2023-11-06T17:20:11.754Z",
+  "settings": { "general": { "isBrandingEnabled": true } },
+  "createdAt": "2024-08-06T06:12:33.288Z",
+  "updatedAt": "2024-08-06T07:23:53.102Z",
   "icon": "🍫",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

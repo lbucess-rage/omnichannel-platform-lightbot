@@ -176,7 +176,7 @@ const LeftElements = ({
           )}
           (
           <EditableTypebotName
-            key={`typebot-name-${typebot?.name ?? ''}`}
+            key={`lightbot-name-${typebot?.name ?? ''}`}
             defaultName={typebot?.name ?? ''}
             onNewName={handleNameSubmit}
           />

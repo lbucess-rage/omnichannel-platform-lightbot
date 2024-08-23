@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "clon582of00031avnefkrpwrl",
-  "name": "Digital Marketing Quiz",
+  "id": "clzhz73xu0006mrpl7a2qaeqc",
+  "name": "퀴즈‌‌‍‌‌‍‌‍‌",
   "events": [
     {
       "id": "cl1qz4lui00017w1a505z15p0",
@@ -31,7 +31,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What does SEO stand for?" }]
+                "children": [{ "text": "SEO는 무엇의 약자인가요?" }]
               }
             ]
           }
@@ -76,9 +76,7 @@
           "id": "cl1r0d8zi00142e6d4tl2yenk",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "잘했어요!" }] }]
           }
         },
         {
@@ -86,7 +84,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What is anchor text?" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "앵커 텍스트는 무엇인가요?" }]
+              }
             ]
           }
         },
@@ -98,19 +99,19 @@
             {
               "id": "cl1r0b3x5000s2e6dyq6bklbf",
               "outgoingEdgeId": "cl1r0i4dj001r2e6dgb96tx9q",
-              "content": "The visible text that is hyperlinked to another page"
+              "content": "다른 페이지로 하이퍼링크된 보이는 텍스트"
             },
             {
               "id": "cl1r0b6jd000t2e6dkp3dxpp9",
-              "content": "The text in the top left of a webpage"
+              "content": "웹페이지 왼쪽 상단의 텍스트"
             },
             {
               "id": "cl1r0b835000u2e6d22rw2gb5",
-              "content": "The most prominent text on a page, used by search engines to assign a title to the page"
+              "content": "가장 눈에 띄는 텍스트로, 검색 엔진이 페이지에 제목을 지정하는 데 사용됨"
             },
             {
               "id": "cl1r0b9tl000v2e6dkligryj3",
-              "content": "A slogan that sticks in a consumer’s mind"
+              "content": "소비자의 마음에 남는 슬로건"
             }
           ]
         }
@@ -133,9 +134,7 @@
           "id": "cl1r0eril001b2e6dh43cqhv5",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "잘했어요!" }] }]
           }
         },
         {
@@ -143,7 +142,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What is a persona ?" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "페르소나는 무엇인가요?" }]
+              }
             ]
           }
         },
@@ -154,20 +156,17 @@
           "items": [
             {
               "id": "cl1r0erim001g2e6d5zzn8q22",
-              "content": "Your target audience"
+              "content": "귀하의 타겟 청중"
             },
             {
               "id": "cl1r0erim001h2e6dnwtiturl",
-              "content": "Someone who joins your mailing list"
+              "content": "메일링 리스트에 가입한 사람"
             },
-            {
-              "id": "cl1r0erim001i2e6dbfhck09o",
-              "content": "A repeat customer"
-            },
+            { "id": "cl1r0erim001i2e6dbfhck09o", "content": "반복 고객" },
             {
               "id": "cl1r0erim001j2e6d2waa3374",
               "outgoingEdgeId": "cl1r0k27y00262e6dflgcp3wa",
-              "content": "A fictional representation of a group of customers"
+              "content": "고객 그룹을 허구적으로 표현한 것"
             }
           ]
         }
@@ -190,9 +189,7 @@
           "id": "cl1r0j8u2001w2e6d3wnpzcj5",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "Well done!" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "잘했어요!" }] }]
           }
         },
         {
@@ -202,7 +199,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What does CTA stand for?" }]
+                "children": [{ "text": "CTA는 무엇의 약자인가요?" }]
               }
             ]
           }
@@ -214,35 +211,32 @@
           "items": [
             {
               "id": "cl1r0j8u200212e6dov1xy5m4",
-              "content": "Consequence To Advert"
+              "content": "광고에 대한 결과"
             },
             {
               "id": "cl1r0j8u300222e6dnj0i5fm8",
               "outgoingEdgeId": "cl1r0lm4e002m2e6d0g3h9pm7",
-              "content": "Call To Action"
+              "content": "행동 유도"
             },
             {
               "id": "cl1r0j8u300232e6dxd8abojt",
-              "content": "Computer Tracked Actions"
+              "content": "컴퓨터 추적 행동"
             },
-            {
-              "id": "cl1r0j8u300242e6d0pki60w6",
-              "content": "Characteristic Tracking Advert"
-            }
+            { "id": "cl1r0j8u300242e6d0pki60w6", "content": "특징 추적 광고" }
           ]
         }
       ]
     },
     {
       "id": "cl1r0c85100102e6d7uohf0cu",
-      "title": "Q1 - Wrong",
+      "title": "Q1 - 틀림",
       "graphCoordinates": { "x": 79.08, "y": 821.49 },
       "blocks": [
         {
           "id": "cl1r0c85i00112e6d8iwtrpvb",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "틀렸어요!" }] }]
           }
         },
         {
@@ -253,9 +247,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "SEO stands for Search Engine Optimization" }
-                ]
+                "children": [{ "text": "SEO는 검색 엔진 최적화의 약자입니다" }]
               }
             ]
           }
@@ -264,14 +256,14 @@
     },
     {
       "id": "cl1r0exdi001l2e6drdwj3u96",
-      "title": "Q2 - Wrong",
+      "title": "Q2 - 틀림",
       "graphCoordinates": { "x": 542.94, "y": 996.75 },
       "blocks": [
         {
           "id": "cl1r0exdi001m2e6d7kge562x",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "틀렸어요!" }] }]
           }
         },
         {
@@ -284,7 +276,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Anchor text is the visible text that is hyperlinked to another page"
+                    "text": "앵커 텍스트는 다른 페이지로 하이퍼링크된 보이는 텍스트입니다"
                   }
                 ]
               }
@@ -295,14 +287,14 @@
     },
     {
       "id": "cl1r0k3tq00272e6d1fwyajjx",
-      "title": "Q3 - Wrong",
+      "title": "Q3 - 틀림",
       "graphCoordinates": { "x": 916.73, "y": 925.61 },
       "blocks": [
         {
           "id": "cl1r0k3tq00282e6dl0av81kz",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "틀렸어요!" }] }]
           }
         },
         {
@@ -315,7 +307,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "A persona is a fictional representation of a group of customers"
+                    "text": "페르소나는 고객 그룹을 허구적으로 표현한 것입니다"
                   }
                 ]
               }
@@ -326,14 +318,14 @@
     },
     {
       "id": "cl1r0kqof002d2e6doqhpnuqy",
-      "title": "Q4 - Wrong",
+      "title": "Q4 - 틀림",
       "graphCoordinates": { "x": 1316.88, "y": 861.75 },
       "blocks": [
         {
           "id": "cl1r0kqof002e2e6dzjcw0kvs",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "WRONG!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "틀렸어요!" }] }]
           }
         },
         {
@@ -346,7 +338,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Anchor text is the visible text that is hyperlinked to another page"
+                    "text": "앵커 텍스트는 다른 페이지로 하이퍼링크된 보이는 텍스트입니다"
                   }
                 ]
               }
@@ -415,7 +407,7 @@
     },
     {
       "id": "cl1r0mn2p002p2e6dijqbjzlh",
-      "title": "Result",
+      "title": "결과",
       "graphCoordinates": { "x": 2508.594129051806, "y": 405.664166830421 },
       "blocks": [
         {
@@ -425,7 +417,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Your score is {{Score}}/20." }]
+                "children": [{ "text": "당신의 점수는 {{Score}}/20입니다." }]
               }
             ]
           }
@@ -435,7 +427,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Try again?" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "다시 시도해보시겠습니까?" }]
+              }
             ]
           }
         },
@@ -446,16 +441,16 @@
             {
               "id": "cl1r0nt85002t2e6dvb7si7ny",
               "outgoingEdgeId": "cl1r15gko005i2e6dn6rhifwe",
-              "content": "Yes!"
+              "content": "네!"
             },
-            { "id": "cl1r0nveb002u2e6dotjk6nuf", "content": "No, bye!" }
+            { "id": "cl1r0nveb002u2e6dotjk6nuf", "content": "아니요, Bye!" }
           ]
         }
       ]
     },
     {
       "id": "cl1r0rgex00382e6dkayjbys6",
-      "title": "Great score",
+      "title": "높은 점수",
       "graphCoordinates": { "x": 1999.325745846056, "y": 159.3910979368924 },
       "blocks": [
         {
@@ -464,7 +459,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Well done 👏" }] }
+              { "type": "p", "children": [{ "text": "잘했어요 👏" }] }
             ]
           }
         }
@@ -472,7 +467,7 @@
     },
     {
       "id": "cl1r0rvak003b2e6dejcdrooq",
-      "title": "Medium score",
+      "title": "중간 점수",
       "graphCoordinates": { "x": 2008.44697061989, "y": 315.9721232210492 },
       "blocks": [
         {
@@ -483,9 +478,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "You could do better but that's alright!" }
-                ]
+                "children": [{ "text": "더 잘할 수 있었지만 괜찮아요!" }]
               }
             ]
           }
@@ -494,7 +487,7 @@
     },
     {
       "id": "cl1r0seuj003h2e6dandwc43r",
-      "title": "Bad score",
+      "title": "낮은 점수",
       "graphCoordinates": { "x": 2009.967174748862, "y": 499.9168228267089 },
       "blocks": [
         {
@@ -506,9 +499,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Aouch, you need to improve your Digital Marketing game."
-                  }
+                  { "text": "아쉽지만 디지털 마케팅 실력을 더 키워야겠어요." }
                 ]
               }
             ]
@@ -517,31 +508,17 @@
       ]
     },
     {
-      "id": "cl1r15f68005f2e6dvdtal7cp",
-      "title": "Restart",
-      "graphCoordinates": { "x": 2850.766985281865, "y": 609.1892251509271 },
-      "blocks": [
-        {
-          "id": "cl1r15f87005g2e6dp3srll8r",
-          "type": "Typebot link",
-          "options": {
-            "typebotId": "current",
-            "groupId": "cl1r09bc6000h2e6dqml18p4p",
-            "mergeResults": false
-          }
-        }
-      ]
-    },
-    {
       "id": "cl1r15w3o005s2e6dr5l7csao",
-      "title": "Welcome",
+      "title": "환영합니다",
       "graphCoordinates": { "x": -361.5512664480758, "y": 166.9921185817542 },
       "blocks": [
         {
           "id": "cl1r16nes005z2e6d3aj23kfz",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hi there!" }] }]
+            "richText": [
+              { "type": "p", "children": [{ "text": "안녕하세요!" }] }
+            ]
           }
         },
         {
@@ -552,9 +529,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "You're about to answer a Quiz about Digital Marketing"
-                  }
+                  { "text": "지금 디지털 마케팅 퀴즈를 풀려고 합니다" }
                 ]
               }
             ]
@@ -567,7 +542,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "It is composed of only 4 questions." }]
+                "children": [{ "text": "총 4개의 질문으로 구성되어 있습니다." }]
               }
             ]
           }
@@ -577,7 +552,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "bold": true, "text": "Ready?" }] }
+              {
+                "type": "p",
+                "children": [{ "bold": true, "text": "준비되셨나요?" }]
+              }
             ]
           }
         },
@@ -588,7 +566,7 @@
             {
               "id": "cl1r176e9006a2e6dpvp0974z",
               "outgoingEdgeId": "cl1r17pzv006n2e6dpibxp9th",
-              "content": "Go!"
+              "content": "시작!"
             }
           ]
         }
@@ -745,18 +723,54 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
+  "theme": {
+    "general": {
+      "background": { "content": "#d2d1d1" },
+      "progressBar": { "isEnabled": true }
+    },
+    "chat": {
+      "container": {
+        "maxHeight": "90%",
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "md",
+        "border": { "roundeness": "custom", "customRoundeness": 20 }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/11.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/06.png"
+      },
+      "hostBubbles": { "shadow": "lg", "border": { "roundeness": "large" } },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
+      "buttons": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "lg",
+        "border": { "color": "#bcb9b9", "roundeness": "large" }
+      }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzgp93r70001ctqce9olrbdc",
   "settings": { "general": {} },
-  "createdAt": "2023-11-06T16:55:18.927Z",
-  "updatedAt": "2023-11-06T16:55:18.927Z",
+  "createdAt": "2024-08-06T05:24:31.026Z",
+  "updatedAt": "2024-08-06T05:26:29.673Z",
   "icon": "🕹️",
-  "folderId": null,
-  "publicId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
+  "publicId": "a2qaeqc",
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

@@ -145,8 +145,9 @@ export const connectChat = createAction({
             options: JSON.stringify(params.options) ?? '',
           },
           content: `
-          console.log('클라이언트에서 실행되는 코드 options:',options)
+          console.log('클라이언트에서 실행되는 코드 call window.initSocketContainer:',options)
           
+          window.initSocketContainer(${JSON.stringify(params.options)})
           `,
         }
       },

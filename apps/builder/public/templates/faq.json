@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "cloo0iymj000b1aoraoto4iom",
-  "name": "FAQ",
+  "id": "clzlyy8o7001fmrplkwvdr98a",
+  "name": "FAQ‌‍‍‍‌‍‌‍‌",
   "events": [
     {
       "id": "cl96ns7za000309kyewk56s22",
@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "cl96ns9qr00043b6ii07bo25o",
-      "title": "Menu",
+      "title": "메뉴",
       "graphCoordinates": { "x": 385.68, "y": 86.92 },
       "blocks": [
         {
@@ -25,7 +25,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "If you have a question about our product, you're in the right place 😊"
+                    "text": "제품에 대해 궁금한 점이 있으시면, 여기서 질문해 주세요 😊"
                   }
                 ]
               }
@@ -39,22 +39,22 @@
             {
               "id": "cl96nv877000c3b6idyepv694",
               "outgoingEdgeId": "cl96o2u6h000t3b6izmh4pguj",
-              "content": "What's Analyzr?"
+              "content": "Lightbot 무엇인가요?"
             },
             {
               "id": "cl96nvcwi000d3b6ipyfzcyaw",
               "outgoingEdgeId": "cl96o6hxh00173b6ix83nn581",
-              "content": "Can I use your tool for free?"
+              "content": "이 도구를 무료로 사용할 수 있나요?"
             },
             {
               "id": "cl96obwgy001k3b6ir1a8qk5w",
               "outgoingEdgeId": "cl96ofn4s001q3b6i482xx6jp",
-              "content": "Tell me about the company"
+              "content": "회사에 대해 알려주세요"
             },
             {
               "id": "cl96nvstv000e3b6itm8cj1s5",
               "outgoingEdgeId": "cl96ogaa0001x3b6izae2alxq",
-              "content": "I have another question"
+              "content": "다른 질문이 있어요"
             }
           ]
         }
@@ -62,7 +62,7 @@
     },
     {
       "id": "cl96nt9ob00063b6ii2pktlxq",
-      "title": "Welcom",
+      "title": "환영",
       "graphCoordinates": { "x": 43.5, "y": 89.92 },
       "blocks": [
         {
@@ -70,7 +70,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hey there 👋" }] }
+              { "type": "p", "children": [{ "text": "안녕하세요 👋" }] }
             ]
           }
         },
@@ -83,9 +83,11 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "I'm John, head of the customer success Team at Analyzr"
-                  }
+                  { "text": "저는 " },
+                  { "text": "Lightbot", "bold": true },
+                  { "text": "의 고객 성공 팀장인  " },
+                  { "text": "Ray", "bold": true },
+                  { "text": "입니다" }
                 ]
               }
             ]
@@ -95,7 +97,7 @@
     },
     {
       "id": "cl96o2cgi000r3b6iljr1iwdl",
-      "title": "What's Analyzr",
+      "title": "Analyzr란?",
       "graphCoordinates": { "x": 774.53, "y": -513.14 },
       "blocks": [
         {
@@ -107,7 +109,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Analyzr is a simple and privacy-friendly analytics tool for your website"
+                    "text": "Lightbot은 쉽고 빠르게 챗봇 구축과 채팅 상담서비스를 사용할 수 있는 서비스 입니다"
                   }
                 ]
               }
@@ -119,22 +121,17 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "It is:" }] },
-              { "type": "p", "children": [{ "text": "✅ Lightweight" }] },
-              { "type": "p", "children": [{ "text": "✅ Open-source" }] },
-              {
-                "type": "p",
-                "children": [{ "text": "✅ Fully compliant with GDPR" }]
-              }
+              { "type": "p", "children": [{ "text": "특징:" }] },
+              { "type": "p", "children": [{ "text": "✅ 가벼움" }] },
+              { "type": "p", "children": [{ "text": "✅ 오픈 소스" }] },
+              { "type": "p", "children": [{ "text": "✅ GDPR 완전 준수" }] }
             ]
           }
         },
         {
           "id": "cl96o55z3000x3b6ikq14g2tu",
           "type": "choice input",
-          "items": [
-            { "id": "cl96o55z3000y3b6idpn54byw", "content": "Sounds good!" }
-          ]
+          "items": [{ "id": "cl96o55z3000y3b6idpn54byw", "content": "좋아요!" }]
         },
         {
           "id": "qrg1xtxxbmyo8a6mztma3dvr",
@@ -148,14 +145,14 @@
     },
     {
       "id": "cl96o6a2700123b6ie4efb6bb",
-      "title": "Use for free",
+      "title": "무료 사용",
       "graphCoordinates": { "x": 775.05, "y": 7.42 },
       "blocks": [
         {
           "id": "cl96o6a2700133b6ii5n027h2",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "You can!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "그럼요!" }] }]
           }
         },
         {
@@ -167,7 +164,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Analyzr has a generous free plan that allows you to store 1,000,000 events/mo 🚀"
+                    "text": "Lightbot은 월 10개의 봇을 만들수 있는 무료 플랜을 제공합니다 🚀"
                   }
                 ]
               }
@@ -181,12 +178,12 @@
             {
               "id": "cl96o6a2700163b6i818ywnqv",
               "outgoingEdgeId": "n4rgj2fmqrmnkvo9m9ebzak7",
-              "content": "Awesome!"
+              "content": "멋지네요!"
             },
             {
               "id": "cl96o83lo00183b6igen42ivq",
               "outgoingEdgeId": "cl96oa83f001h3b6i81wodnjx",
-              "content": "What's an event?"
+              "content": "이벤트란 무엇인가요?"
             }
           ]
         }
@@ -194,7 +191,7 @@
     },
     {
       "id": "cl96o8eym001a3b6i3lxh7kw0",
-      "title": "User event",
+      "title": "사용자 이벤트",
       "graphCoordinates": { "x": 1158.01, "y": 322.44 },
       "blocks": [
         {
@@ -205,7 +202,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "An event is a user event on your website." }
+                  {
+                    "text": "이벤트는 웹사이트에서 발생하는 사용자 활동입니다."
+                  }
                 ]
               }
             ]
@@ -220,7 +219,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "It can be \"User visited this URL\" or \"User clicked on this button\""
+                    "text": "예를 들어, \"사용자가 이 URL을 방문함\" 또는 \"사용자가 이 버튼을 클릭함\"과 같은 이벤트가 있습니다"
                   }
                 ]
               }
@@ -231,7 +230,7 @@
           "id": "cl96o9xba001d3b6i9004l33e",
           "type": "choice input",
           "items": [
-            { "id": "cl96o9xbd001e3b6i6ag5ooo7", "content": "Ok, got it!" }
+            { "id": "cl96o9xbd001e3b6i6ag5ooo7", "content": "알겠어요!" }
           ]
         },
         {
@@ -246,7 +245,7 @@
     },
     {
       "id": "cl96oc274001m3b6ig3beli9v",
-      "title": "Company",
+      "title": "회사",
       "graphCoordinates": { "x": 772.59, "y": 432 },
       "blocks": [
         {
@@ -257,7 +256,8 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "The company was founded in 2020 by Josh Corn" }
+                  { "text": "엘비유세스", "bold": true },
+                  { "text": "는 2008년에 설립했습니다" }
                 ]
               }
             ]
@@ -270,7 +270,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We are now a team of 15" }]
+                "children": [{ "text": "현재 저희 IT팀은 6명입니다" }]
               }
             ]
           }
@@ -280,21 +280,23 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Our core values are:" }] },
-              { "type": "p", "children": [{ "text": "" }] },
-              { "type": "p", "children": [{ "text": "🔍 Transparency" }] },
-              { "type": "p", "children": [{ "text": "⚡ Ship fast" }] },
               {
                 "type": "p",
-                "children": [{ "text": "💙 Awesome customer support" }]
-              }
+                "children": [
+                  { "text": "저희 팀의 핵심 가치는 다음과 같습니다:" }
+                ]
+              },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "🔍 투명성" }] },
+              { "type": "p", "children": [{ "text": "⚡ 빠른 개발" }] },
+              { "type": "p", "children": [{ "text": "💙 훌륭한 고객 지원" }] }
             ]
           }
         },
         {
           "id": "cl96oftnv001r3b6ixen8g0bv",
           "type": "choice input",
-          "items": [{ "id": "cl96oftnv001s3b6i7kjyq7me", "content": "Cool!" }]
+          "items": [{ "id": "cl96oftnv001s3b6i7kjyq7me", "content": "좋아요!" }]
         },
         {
           "id": "js5pbqj76g67yvs6wz99rcbm",
@@ -308,16 +310,14 @@
     },
     {
       "id": "cl96og2yr001v3b6ivhzb1x34",
-      "title": "Question",
+      "title": "질문",
       "graphCoordinates": { "x": 773.69, "y": 1020.26 },
       "blocks": [
         {
           "id": "cl96og2yu001w3b6ijqgstubu",
           "type": "text",
           "content": {
-            "richText": [
-              { "type": "p", "children": [{ "text": "Sure, no problem!" }] }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "물론이죠!" }] }]
           }
         },
         {
@@ -325,9 +325,7 @@
           "outgoingEdgeId": "cl96ohn9900213b6ibex8g6my",
           "type": "text input",
           "options": {
-            "labels": {
-              "placeholder": "Type your question..."
-            },
+            "labels": { "placeholder": "질문을 입력하세요..." },
             "isLong": true
           }
         }
@@ -335,7 +333,7 @@
     },
     {
       "id": "cl96oh3mn001z3b6i2b0no81w",
-      "title": "Bye",
+      "title": "작별 인사",
       "graphCoordinates": { "x": 1174.378083740756, "y": 1049.08556420999 },
       "blocks": [
         {
@@ -347,7 +345,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Alright, we'll reach out to you very soon. Thank you so much 💙"
+                    "text": "알겠습니다. 곧 연락드리겠습니다. 정말 감사합니다 💙"
                   }
                 ]
               }
@@ -438,18 +436,61 @@
     }
   ],
   "variables": [],
-  "theme": {},
-  "selectedThemeTemplateId": null,
+  "theme": {
+    "general": {
+      "background": { "content": "#d2d1d1" },
+      "progressBar": { "isEnabled": true }
+    },
+    "chat": {
+      "container": {
+        "maxHeight": "90%",
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "md",
+        "border": { "roundeness": "custom", "customRoundeness": 20 }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/11.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/06.png"
+      },
+      "hostBubbles": {
+        "shadow": "lg",
+        "border": {
+          "thickness": 0,
+          "roundeness": "custom",
+          "customRoundeness": 10
+        }
+      },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
+      "buttons": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "lg",
+        "border": { "color": "#bcb9b9", "roundeness": "large" }
+      }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzgp93r70001ctqce9olrbdc",
   "settings": {},
-  "createdAt": "2023-11-07T07:31:34.987Z",
-  "updatedAt": "2023-11-07T07:34:11.360Z",
+  "createdAt": "2024-08-09T00:28:41.959Z",
+  "updatedAt": "2024-08-09T00:32:42.518Z",
   "icon": "💬",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

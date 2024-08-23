@@ -79,7 +79,7 @@ export const PlanTag = ({
           data-testid="custom-unlimite-tag"
           {...props}
         >
-          무제한
+          IT개발/운영팀
         </Tag>
       )
     }

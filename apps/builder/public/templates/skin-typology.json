@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "clwhwkq7w0003fst2e28qqj62",
-  "name": "Sking Typology",
+  "id": "clzj6pl3o000vmrpltpyf2c55",
+  "name": "템플릿 - 피부 유형 분석",
   "events": [
     {
       "id": "zi8w5km7bu2ngms13zrv7xak",
@@ -23,7 +23,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What’s your top skin concern?" }]
+                "children": [{ "text": "당신의 주요 피부 고민은 무엇입니까?" }]
               }
             ]
           }
@@ -50,7 +50,7 @@
     },
     {
       "id": "m7v9f7qpr94kgonkcidmc7c1",
-      "title": "Skin problem",
+      "title": "피부 문제",
       "graphCoordinates": { "x": -845.27, "y": 1244.58 },
       "blocks": [
         {
@@ -60,7 +60,7 @@
             {
               "id": "muzbinpvhlwxsnhka6y14cyk",
               "outgoingEdgeId": "b2lis4t1syk9qd30t3yb6e9a",
-              "content": "Pimples",
+              "content": "여드름",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -70,7 +70,7 @@
                       "id": "otxfdcr5stoaf8ojhmy1v744",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Pimples"
+                      "value": "여드름"
                     }
                   ]
                 }
@@ -78,7 +78,7 @@
             },
             {
               "id": "fotnwnbfwz1d33w0vjqypu11",
-              "content": "Blackheads",
+              "content": "블랙헤드",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -88,7 +88,7 @@
                       "id": "b7gunmey81lb6z8zxej7jrom",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Blackheads"
+                      "value": "블랙헤드"
                     }
                   ]
                 }
@@ -96,7 +96,7 @@
             },
             {
               "id": "i7zt5rhiv17xtosui349mdgs",
-              "content": "Visible pores",
+              "content": "확장된 모공",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -106,7 +106,7 @@
                       "id": "ud4brp55zctwvmcd5go5hms6",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Visible pores"
+                      "value": "확장된 모공"
                     }
                   ]
                 }
@@ -114,7 +114,7 @@
             },
             {
               "id": "r5s0sazlv4qzfeq7nvsxo0mb",
-              "content": "Shiny areas",
+              "content": "기름진 부위",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -124,7 +124,7 @@
                       "id": "ke2ofnjduuwl4cq3ww377rcg",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Shiny areas"
+                      "value": "기름진 부위"
                     }
                   ]
                 }
@@ -133,7 +133,7 @@
             {
               "id": "szqscovkv1ddnpt8mkt0vvxt",
               "outgoingEdgeId": "e2ol7wfl5ve73b1rdhhzqfk4",
-              "content": "Hyperpigmentation (dark spots/marks)",
+              "content": "색소 침착 (어두운 반점/자국)",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -143,7 +143,7 @@
                       "id": "bcx0eywmzthypk3et7vmikec",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Hyperpigmentation (dark spots/marks)"
+                      "value": "색소 침착 (어두운 반점/자국)"
                     }
                   ]
                 }
@@ -152,7 +152,7 @@
             {
               "id": "i0rzns61pszrww0y44isqh5v",
               "outgoingEdgeId": "hneunup1qv7md47yoh7544cj",
-              "content": "Wrinkles (prevention or treatment)",
+              "content": "주름 (예방 또는 치료)",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -162,7 +162,7 @@
                       "id": "fki7wy53v39t86dg0gsqqucu",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Wrinkles (prevention or treatment)"
+                      "value": "주름 (예방 또는 치료)"
                     }
                   ]
                 }
@@ -171,7 +171,7 @@
             {
               "id": "u226tpojjg7p16xz3mrxf9x0",
               "outgoingEdgeId": "agd81aldnxptroxm59r6bnmt",
-              "content": "Redness",
+              "content": "홍조",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -181,7 +181,7 @@
                       "id": "mvpyyl9am8xrrkjyd5hynblx",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Redness"
+                      "value": "홍조"
                     }
                   ]
                 }
@@ -190,7 +190,7 @@
             {
               "id": "e8f057alv81bvbnsq7qbvqgc",
               "outgoingEdgeId": "ei2w9q6ozvi8jm4btm0j9pdo",
-              "content": "Dryness and/or dehydration",
+              "content": "건조함 및/또는 탈수",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -200,7 +200,7 @@
                       "id": "b9z0ro8qdkshz445s68owvkl",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Dryness and/or dehydration"
+                      "value": "건조함 및/또는 탈수"
                     }
                   ]
                 }
@@ -208,7 +208,7 @@
             },
             {
               "id": "ccwxganzyrvzlsy67dv3nw1c",
-              "content": "Eye bags/dark circles",
+              "content": "눈 밑 다크서클",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
@@ -218,7 +218,7 @@
                       "id": "udl5idehtp1c5motq3pkneta",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Eye bags/dark circles"
+                      "value": "눈 밑 다크서클"
                     }
                   ]
                 }
@@ -227,17 +227,18 @@
             {
               "id": "y9y2zzc68iaxl27si3lumrl6",
               "outgoingEdgeId": "q4zonpkmvkgebxw6mq9xlj6g",
-              "content": "Dullness",
+              "content": "칙칙함",
               "displayCondition": {
                 "isEnabled": true,
                 "condition": {
                   "logicalOperator": "AND",
+
                   "comparisons": [
                     {
                       "id": "qy73cb8aya3dc33zluzx4cbl",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
                       "comparisonOperator": "Does not contain",
-                      "value": "Dullness"
+                      "value": "칙칙함"
                     }
                   ]
                 }
@@ -245,7 +246,7 @@
             },
             {
               "id": "ls05hhlv8ijgze1kfbkpi6ug",
-              "content": "I don't have any particular concerns",
+              "content": "특별한 고민이 없습니다",
               "displayCondition": {
                 "isEnabled": false,
                 "condition": {
@@ -254,7 +255,7 @@
                     {
                       "id": "kixcwnztsro4o91sbtdavzff",
                       "variableId": "vtyvtib894a8eeqgr21yb17tv",
-                      "value": "I don't have any partic"
+                      "value": "특별한 고민이 없습니다"
                     }
                   ]
                 }
@@ -277,7 +278,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you have a second concern?" }]
+                "children": [{ "text": "두 번째 고민이 있습니까?" }]
               }
             ]
           }
@@ -304,7 +305,7 @@
     },
     {
       "id": "kt05yubhbv5f2sh2xe2ps916",
-      "title": "Group #4",
+      "title": "그룹 #4",
       "graphCoordinates": { "x": -224.85, "y": 460.3 },
       "blocks": [
         {
@@ -322,7 +323,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "When do you break out?" }]
+                "children": [{ "text": "여드름이 언제 나나요?" }]
               }
             ]
           }
@@ -334,21 +335,21 @@
           "items": [
             {
               "id": "nlep75ws189xkac98ym7sqi9",
-              "content": "Every day or most days"
+              "content": "매일 또는 대부분의 날"
             },
-            { "id": "a56xhexuvzgh2rj7qg0g2zx2", "content": "Every week" },
+            { "id": "a56xhexuvzgh2rj7qg0g2zx2", "content": "매주" },
             {
               "id": "s40qpkdcid728qzi4o70teeb",
-              "content": "During my menstrual cycle"
+              "content": "생리 중"
             },
-            { "id": "ncd5kjzbqsev653nzkxbb75b", "content": "Occasionally" }
+            { "id": "ncd5kjzbqsev653nzkxbb75b", "content": "가끔씩" }
           ]
         }
       ]
     },
     {
       "id": "ar4itsju3ovwti5k1kpdwt74",
-      "title": "Group #5",
+      "title": "그룹 #5",
       "graphCoordinates": { "x": 246.8, "y": 418.48 },
       "blocks": [
         {
@@ -358,7 +359,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What kind of blemishes are they?" }]
+                "children": [{ "text": "여드름의 종류는 무엇인가요?" }]
               }
             ]
           }
@@ -369,17 +370,17 @@
           "items": [
             {
               "id": "krc7t1c11ux52lk7fm9gw1od",
-              "content": "Small red or pink bumps"
+              "content": "작고 붉거나 분홍색 돌기"
             },
             {
               "id": "uf2dm7zi73nx0992xje0iw9p",
-              "content": "Red and inflamed with a whitehead"
+              "content": "흰 머리가 있는 붉고 염증이 있는 여드름"
             },
             {
               "id": "n2ltb5bb1umw3busctep8776",
-              "content": "Rough, bumpy skin (whiteheads) on the forehead, chin and cheeks"
+              "content": "이마, 턱 및 볼에 거칠고 울퉁불퉁한 피부 (화이트헤드)"
             },
-            { "id": "dasjmu5og82zi8ah549byyg6", "content": "I don't know" }
+            { "id": "dasjmu5og82zi8ah549byyg6", "content": "모르겠어요" }
           ],
           "options": {
             "variableId": "vd5zutxjechfh2ihdzsw2rcc3",
@@ -390,7 +391,7 @@
     },
     {
       "id": "h9kmezz8xhw7my1serv3tefl",
-      "title": "Group #6",
+      "title": "그룹 #6",
       "graphCoordinates": { "x": -173.97, "y": 1124.74 },
       "blocks": [
         {
@@ -400,7 +401,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Your pigmentation marks occur…" }]
+                "children": [{ "text": "색소 침착이 발생하는 원인은..." }]
               }
             ]
           }
@@ -412,24 +413,24 @@
           "items": [
             {
               "id": "jkt7vj18r8infhllc788abim",
-              "content": "On areas exposed to the sun"
+              "content": "햇볕에 노출된 부위"
             },
-            { "id": "indtjedkbr4dsiynsymm6xsc", "content": "During pregnancy" },
+            { "id": "indtjedkbr4dsiynsymm6xsc", "content": "임신 중" },
             {
               "id": "ihcq3u6hhcva47f45qlavufq",
-              "content": "After taking hormonal contraceptives"
+              "content": "호르몬 피임약 복용 후"
             },
             {
               "id": "ssa3xzeabbsmzcv26vkh10et",
-              "content": "After acne breakouts"
+              "content": "여드름 후"
             },
             {
               "id": "e18s16wgx4t8358tq4rjaacs",
-              "content": "After a skin trauma (e.g. scar, burn, damaged skin)"
+              "content": "피부 외상 후 (예: 흉터, 화상, 손상된 피부)"
             },
             {
               "id": "xozv08rwn1d4wbqtxa3ynvau",
-              "content": "I don't know. (Most likely caused by sun exposure)"
+              "content": "모르겠어요. (대부분 햇볕 노출로 인한 것)"
             }
           ]
         }
@@ -437,7 +438,7 @@
     },
     {
       "id": "d3whha2i7oa7yl2g5taztdl6",
-      "title": "Group #7",
+      "title": "그룹 #7",
       "graphCoordinates": { "x": 245.63, "y": 1112.45 },
       "blocks": [
         {
@@ -447,7 +448,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Where do you have sun spots?" }]
+                "children": [{ "text": "기미는 어디에 있나요?" }]
               }
             ]
           }
@@ -458,15 +459,15 @@
           "items": [
             {
               "id": "fklzqs3jpu8dp5it0xot8i9r",
-              "content": "I have a few, just on my face"
+              "content": "얼굴에 몇 개 있어요"
             },
             {
               "id": "y9v2l0c4j2n00r32om7hf83x",
-              "content": "I have many on my forehead, temples, cheeks and nose"
+              "content": "이마, 관자놀이, 볼 및 코에 많이 있어요"
             },
             {
               "id": "ivlfhoitcbe2gg27ab3pfjsx",
-              "content": "I have them on my face, chest, and the back of my hands"
+              "content": "얼굴, 가슴, 손등에 있어요"
             }
           ]
         }
@@ -474,7 +475,7 @@
     },
     {
       "id": "b0wfn809ywofapum1xjk15og",
-      "title": "Group #8",
+      "title": "그룹 #8",
       "graphCoordinates": { "x": -135.13, "y": 1966.33 },
       "blocks": [
         {
@@ -484,9 +485,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Tell us about your wrinkles/fine lines." }
-                ]
+                "children": [{ "text": "주름/잔주름에 대해 말씀해주세요." }]
               }
             ]
           }
@@ -497,23 +496,23 @@
           "items": [
             {
               "id": "ju2u3eqjoba95glemoyuct5a",
-              "content": "I have fine lines on my forehead and/or around my eyes"
+              "content": "이마 및/또는 눈가에 잔주름이 있어요"
             },
             {
               "id": "fpd8yaz5z6qzjb5s1uc23qet",
-              "content": "I just have expression lines, when I smile"
+              "content": "웃을 때만 생기는 표정 주름이 있어요"
             },
             {
               "id": "c9mrly2xy8owl3v4b2yh94hj",
-              "content": "I have static wrinkles even when my face is at rest"
+              "content": "얼굴이 쉬고 있을 때도 보이는 정적 주름이 있어요"
             },
             {
               "id": "s4ogb3nycgkyw4rkwbtnx9m5",
-              "content": "I have deep wrinkles all over the face"
+              "content": "얼굴 전체에 깊은 주름이 있어요"
             },
             {
               "id": "y2ppxpnbmf21qa9rh94fsxid",
-              "content": "I don’t have fine lines or wrinkles, but I want to prevent them"
+              "content": "잔주름이나 주름이 없지만, 예방하고 싶어요"
             }
           ],
           "options": { "isMultipleChoice": true }
@@ -522,7 +521,7 @@
     },
     {
       "id": "ukh9p9xqcrbvjw9y5dx1ae0e",
-      "title": "Group #9",
+      "title": "그룹 #9",
       "graphCoordinates": { "x": -70.79, "y": 2835.6 },
       "blocks": [
         {
@@ -534,7 +533,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Could you tell us more about the redness on your skin?"
+                    "text": "피부의 붉은 기에 대해 더 말씀해주시겠습니까?"
                   }
                 ]
               }
@@ -547,15 +546,15 @@
           "items": [
             {
               "id": "vg6j2x257gxe3e0w2mxvvtes",
-              "content": "My skin looks irritated and feels tight or itchy"
+              "content": "피부가 자극받고 조이거나 가려운 느낌이 들어요"
             },
             {
               "id": "nri9tz8v0uyvqqt65ym7zgrj",
-              "content": "I have redness on my cheeks, and it gets worse when it's hot, when I drink alcohol, or when I'm stressed"
+              "content": "볼에 붉은 기가 있고, 더울 때, 술을 마실 때, 스트레스를 받을 때 더 심해져요"
             },
             {
               "id": "x2yyqm5m40ypmny91fc9ftoj",
-              "content": "I have red, inflamed spots, as well as redness"
+              "content": "붉고 염증이 있는 반점과 함께 붉은 기가 있어요"
             }
           ]
         }
@@ -563,7 +562,7 @@
     },
     {
       "id": "kxp3lgzl3ilatxs7yub8pvpk",
-      "title": "Group #10",
+      "title": "그룹 #10",
       "graphCoordinates": { "x": -319.86, "y": 3489.86 },
       "blocks": [
         {
@@ -573,9 +572,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "When does your skin feel uncomfortable?" }
-                ]
+                "children": [{ "text": "피부가 불편할 때는 언제인가요?" }]
               }
             ]
           }
@@ -587,11 +584,11 @@
           "items": [
             {
               "id": "q7av1ewiha9a64vruv0vzk28",
-              "content": "After cleansing using a dermatological treatment or when the temperature changes"
+              "content": "피부 치료 후 또는 온도 변화 시"
             },
             {
               "id": "h2vgep3cc1oitclupkcofwti",
-              "content": "All the time even in the summer"
+              "content": "항상, 여름에도"
             }
           ]
         }
@@ -599,7 +596,7 @@
     },
     {
       "id": "j9gcw3ztjmxguvmf1dnxcglf",
-      "title": "Group #11",
+      "title": "그룹 #11",
       "graphCoordinates": { "x": 185.52, "y": 3492.18 },
       "blocks": [
         {
@@ -611,7 +608,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "When your skin is uncomfortable, how does it feel?"
+                    "text": "피부가 불편할 때, 어떤 느낌이 드나요?"
                   }
                 ]
               }
@@ -624,16 +621,16 @@
           "items": [
             {
               "id": "f02ntm6dw8c5dnz3alba27aj",
-              "content": "My skin feels tight"
+              "content": "피부가 조이는 느낌이 들어요"
             },
             {
               "id": "fok90m47fj2gizsfq7gkarcz",
-              "content": "My skin feels itchy"
+              "content": "피부가 가려워요"
             },
-            { "id": "qtmxm4xay9ggtftp388qter4", "content": "My skin peels" },
+            { "id": "qtmxm4xay9ggtftp388qter4", "content": "피부가 벗겨져요" },
             {
               "id": "xfvm0lcmajnk85kxzjjaoj2x",
-              "content": "My skin doesn't feel soft"
+              "content": "피부가 부드럽지 않아요"
             }
           ],
           "options": { "isMultipleChoice": true }
@@ -642,7 +639,7 @@
     },
     {
       "id": "sglbdkc4yyr2k6d2jpyifmo5",
-      "title": "Group #12",
+      "title": "그룹 #12",
       "graphCoordinates": { "x": -389.81, "y": 4060.6 },
       "blocks": [
         {
@@ -654,7 +651,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Help us to understand why your skin lacks radiance."
+                    "text": "피부가 왜 윤기가 없는지 이해하는 데 도움을 주세요."
                   }
                 ]
               }
@@ -667,15 +664,15 @@
           "items": [
             {
               "id": "sn51zr3rvefzgaaqtcskqt5o",
-              "content": "I smoke and/or I live in a polluted environment"
+              "content": "흡연을 하거나 오염된 환경에 살고 있어요"
             },
             {
               "id": "smp4ssk1dbpafret89jr52gu",
-              "content": "The surface of my skin is uneven"
+              "content": "피부 표면이 고르지 않아요"
             },
             {
               "id": "c30mu2o31wb4fxy1c2lg4he5",
-              "content": "My skin needs some sunshine"
+              "content": "피부가 햇빛을 필요로 해요"
             }
           ],
           "options": { "isMultipleChoice": true }
@@ -694,7 +691,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you have another concern?" }]
+                "children": [{ "text": "다른 고민이 있습니까?" }]
               }
             ]
           }
@@ -721,7 +718,7 @@
     },
     {
       "id": "fmjx6wzmn64dn2wi4fmofloi",
-      "title": "Group #14",
+      "title": "그룹 #14",
       "graphCoordinates": { "x": 901.5, "y": -38.93 },
       "blocks": [
         {
@@ -733,7 +730,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Has a dermatologist diagnosed any of the following skin concerns?"
+                    "text": "피부과 의사가 다음 피부 고민 중 하나를 진단했습니까?"
                   }
                 ]
               }
@@ -747,22 +744,22 @@
           "items": [
             {
               "id": "q7wgxzmlsgsvmggxo1v4f4lu",
-              "content": "Eczema/atopic dermatitis"
+              "content": "습진/아토피 피부염"
             },
-            { "id": "rublicdb3i6afz4vey2gxvrp", "content": "Psoriasis" },
-            { "id": "dib7mwjl197qrpfxj5yg3jot", "content": "Rosacea" },
+            { "id": "rublicdb3i6afz4vey2gxvrp", "content": "건선" },
+            { "id": "dib7mwjl197qrpfxj5yg3jot", "content": "주사" },
             {
               "id": "esl7htipishc8d85gvi67jsn",
-              "content": "Seborrheic dermatitis"
+              "content": "지루성 피부염"
             },
-            { "id": "ybswy2crnxiesdt8s1b3uufm", "content": "No" }
+            { "id": "ybswy2crnxiesdt8s1b3uufm", "content": "아니요" }
           ]
         }
       ]
     },
     {
       "id": "lew50rhih9it6fz9u7c0fabi",
-      "title": "Group #15",
+      "title": "그룹 #15",
       "graphCoordinates": { "x": 1318.25, "y": -42.99 },
       "blocks": [
         {
@@ -772,7 +769,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "How do you describe yourself?" }]
+                "children": [{ "text": "자신을 어떻게 설명하시겠습니까?" }]
               }
             ]
           }
@@ -782,12 +779,12 @@
           "outgoingEdgeId": "ira3wejjdsnzejby5i31zgng",
           "type": "choice input",
           "items": [
-            { "id": "t63xhbb613uqvzl81qjkqo76", "content": "A woman" },
-            { "id": "p2zvlph9yysxdalxq3b7tfzn", "content": "A man" },
-            { "id": "brh3p7gj7qxwekc76u0k194o", "content": "Non-binary" },
+            { "id": "t63xhbb613uqvzl81qjkqo76", "content": "여성" },
+            { "id": "p2zvlph9yysxdalxq3b7tfzn", "content": "남성" },
+            { "id": "brh3p7gj7qxwekc76u0k194o", "content": "논바이너리" },
             {
               "id": "ufeb3cencrz0yxh9853reyvx",
-              "content": "I don’t wish to define myself"
+              "content": "자신을 정의하고 싶지 않아요"
             }
           ]
         }
@@ -795,7 +792,7 @@
     },
     {
       "id": "ya9rdndrzy273h1zzx2eq82i",
-      "title": "Group #16",
+      "title": "그룹 #16",
       "graphCoordinates": { "x": 1696.04, "y": -52.65 },
       "blocks": [
         {
@@ -807,7 +804,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "How does your skin feel throughout the day if you haven't applied any skincare products or makeup?"
+                    "text": "스킨케어 제품이나 메이크업을 하지 않은 하루 동안 피부가 어떤 느낌이 드나요?"
                   }
                 ]
               }
@@ -821,15 +818,15 @@
           "items": [
             {
               "id": "vmzalnc9qvfl667lfoxyfp4o",
-              "content": "If I don't apply a mattifying product, my skin is shiny from the middle of the day onwards"
+              "content": "매트한 제품을 바르지 않으면 낮부터 피부가 기름져요"
             },
             {
               "id": "b7vequ8pgco2e0rpnxj0sky3",
-              "content": "If I want my skin to feel comfortable, I need to moisturize morning and evening"
+              "content": "피부를 편안하게 느끼려면 아침과 저녁에 보습이 필요해요"
             },
             {
               "id": "q8tazj46hwsrcw63kysgh2gt",
-              "content": "I don't have any particular problems (my t-zone is naturally oilier than the rest of my face, that's all)"
+              "content": "특별한 문제가 없어요 (t존이 얼굴의 나머지 부분보다 자연스럽게 더 기름져요)"
             }
           ]
         }
@@ -837,7 +834,7 @@
     },
     {
       "id": "sdar8z8vwxziddba5p07nprv",
-      "title": "Group #17",
+      "title": "그룹 #17",
       "graphCoordinates": { "x": 2035.2, "y": -63.94 },
       "blocks": [
         {
@@ -847,9 +844,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "What do you see when you look in the mirror?" }
-                ]
+                "children": [{ "text": "거울을 볼 때 무엇이 보이나요?" }]
               }
             ]
           }
@@ -861,19 +856,19 @@
           "items": [
             {
               "id": "vs9o2fpleeykcxt9gufaive5",
-              "content": "No wrinkles. My skin is supple and firm"
+              "content": "주름이 없어요. 피부가 탄력 있고 단단해요"
             },
             {
               "id": "him733u0w39bvan7ribgcxiw",
-              "content": "Fine lines on my forehead and/or around my eyes"
+              "content": "이마 및/또는 눈가에 잔주름이 보여요"
             },
             {
               "id": "a55oyxj5crnkuqoo6948ejg8",
-              "content": "Expression lines, when I smile"
+              "content": "웃을 때 생기는 표정 주름이 보여요"
             },
             {
               "id": "os3af3kvgkm6ip59iu85hyzv",
-              "content": "Static wrinkles that are visible all the time, even when my face is at rest"
+              "content": "얼굴이 쉬고 있을 때도 보이는 정적 주름이 있어요"
             }
           ]
         }
@@ -881,7 +876,7 @@
     },
     {
       "id": "j47xycbp95hd9wlvfjqlp3dm",
-      "title": "Group #18",
+      "title": "그룹 #18",
       "graphCoordinates": { "x": 2413.54, "y": -71.58 },
       "blocks": [
         {
@@ -892,7 +887,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How does your skin react to cosmetic products?" }
+                  { "text": "화장품에 대한 피부 반응은 어떻습니까?" }
                 ]
               }
             ]
@@ -905,15 +900,15 @@
           "items": [
             {
               "id": "riidiklh7td0y881rfxd635j",
-              "content": "I've never had a bad reaction"
+              "content": "나쁜 반응을 한 번도 겪지 않았어요"
             },
             {
               "id": "l9l6wsxrsn2ltq63wwc83zmc",
-              "content": "It gets momentarily red if I use products that are too aggressive for my skin"
+              "content": "피부에 너무 공격적인 제품을 사용하면 순간적으로 붉어져요"
             },
             {
               "id": "jnud3df8zn0g75uo42qaokm6",
-              "content": "My skin is very reactive and prone to allergic reactions to cosmetics"
+              "content": "피부가 매우 민감하고 화장품에 알레르기 반응을 보여요"
             }
           ]
         }
@@ -921,7 +916,7 @@
     },
     {
       "id": "yly57wl5horq6h46xlz0pdof",
-      "title": "Group #19",
+      "title": "그룹 #19",
       "graphCoordinates": { "x": 2771.21, "y": -71.25 },
       "blocks": [
         {
@@ -929,7 +924,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Do you wear makeup?" }] }
+              { "type": "p", "children": [{ "text": "메이크업을 하십니까?" }] }
             ]
           }
         },
@@ -938,23 +933,26 @@
           "outgoingEdgeId": "ovypkxkt0k8w3b9yo0s0libr",
           "type": "choice input",
           "items": [
-            { "id": "ukk542pqy2ltnyi67u94veob", "content": "No, never" },
+            {
+              "id": "ukk542pqy2ltnyi67u94veob",
+              "content": "아니요, 전혀 하지 않아요"
+            },
             {
               "id": "a4jpqg1k5pzs4ywgzbfw3x0h",
-              "content": "Rarely, just for special occasions"
+              "content": "드물게, 특별한 경우에만"
             },
             {
               "id": "grv94a64xsc5iwxezi200ljl",
-              "content": "Regularly, several times a week"
+              "content": "정기적으로, 일주일에 여러 번"
             },
-            { "id": "ywlbkscrzezw5vkk30wogoje", "content": "Every day" }
+            { "id": "ywlbkscrzezw5vkk30wogoje", "content": "매일" }
           ]
         }
       ]
     },
     {
       "id": "en5pphruiiau597j614ngg3q",
-      "title": "Group #20",
+      "title": "그룹 #20",
       "graphCoordinates": { "x": 3129, "y": -74.37 },
       "blocks": [
         {
@@ -964,7 +962,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Tell us about where you live." }]
+                "children": [{ "text": "거주지에 대해 말씀해주세요." }]
               }
             ]
           }
@@ -976,15 +974,15 @@
           "items": [
             {
               "id": "p7u13e8zbrybrs9b3sr7jlwm",
-              "content": "There's a lot of pollution"
+              "content": "오염이 심한 곳"
             },
             {
               "id": "xl375gwn8kgu6kg7yuyj1qol",
-              "content": "There's some pollution"
+              "content": "오염이 조금 있는 곳"
             },
             {
               "id": "e7n697c90shslft6qlpqkk3b",
-              "content": "There isn't much pollution"
+              "content": "오염이 거의 없는 곳"
             }
           ]
         }
@@ -992,7 +990,7 @@
     },
     {
       "id": "y902leuaeotwv8k1i4gnkf4p",
-      "title": "Group #21",
+      "title": "그룹 #21",
       "graphCoordinates": { "x": 3484.44, "y": -67.32 },
       "blocks": [
         {
@@ -1000,7 +998,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Do you smoke?" }] }
+              { "type": "p", "children": [{ "text": "흡연을 하십니까?" }] }
             ]
           }
         },
@@ -1009,23 +1007,23 @@
           "outgoingEdgeId": "gkfa620lz2ejdvn890n3vb5y",
           "type": "choice input",
           "items": [
-            { "id": "fqztopzjmce2ohr12xz9gmu3", "content": "No" },
-            { "id": "mcq5lpn493w24q6lcohmc5yr", "content": "Occasionally" },
+            { "id": "fqztopzjmce2ohr12xz9gmu3", "content": "아니요" },
+            { "id": "mcq5lpn493w24q6lcohmc5yr", "content": "가끔" },
             {
               "id": "n9urk18o0g9j3y6k74wrnhm5",
-              "content": "1 to 10 cigarettes a day"
+              "content": "하루 1~10개비"
             },
             {
               "id": "hj4soju8lmrmqnizsvej442z",
-              "content": "10 to 20 cigarettes a day"
+              "content": "하루 10~20개비"
             },
             {
               "id": "sfi7a9booyqoi40fi1pdzavt",
-              "content": "More than a pack a day"
+              "content": "하루 한 갑 이상"
             },
             {
               "id": "otve51lvqfrubdbn7ruk3lcn",
-              "content": "I smoke electronic cigarettes"
+              "content": "전자담배를 피워요"
             }
           ]
         }
@@ -1033,7 +1031,7 @@
     },
     {
       "id": "yke5fhaejaghtgv3qmyv3h74",
-      "title": "Group #22",
+      "title": "그룹 #22",
       "graphCoordinates": { "x": 3841.88, "y": -68.48 },
       "blocks": [
         {
@@ -1044,7 +1042,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Select the skin tone that best represents you:" }
+                  { "text": "당신을 가장 잘 나타내는 피부 톤을 선택하세요:" }
                 ]
               }
             ]
@@ -1057,27 +1055,27 @@
           "items": [
             {
               "id": "urogsq3r6okpwkn147o4zsjg",
-              "content": "Fair with some freckles. Doesn’t really tan, gets red in the sun"
+              "content": "주근깨가 있는 밝은 피부. 태닝이 잘 안 되고 햇볕에 빨개짐"
             },
             {
               "id": "euytvrcv3covqac6c8hlr6qi",
-              "content": "Light with pink or yellow undertones. Tans gradually. Sunburns are common in the beginning of summer"
+              "content": "핑크 또는 노란색 톤이 있는 밝은 피부. 점차 태닝됨. 여름 초반에 자주 화상을 입음"
             },
             {
               "id": "dhinnrwwiokf8myup10vvkco",
-              "content": "Medium with warm or olive undertones. Tans easily but sometimes burns"
+              "content": "따뜻하거나 올리브 톤이 있는 중간 피부. 태닝이 잘 되지만 때때로 화상을 입음"
             },
             {
               "id": "nulsi1x0g5n86a04mm6h5bsi",
-              "content": "Matte with bronze undertones. Sunburns occasionally"
+              "content": "청동 톤이 있는 매트 피부. 가끔 화상을 입음"
             },
             {
               "id": "oznwtn9niiayc72jjh4gjgx4",
-              "content": "Brown. Sunburns are very rare. Tans in the sun"
+              "content": "갈색 피부. 화상을 거의 입지 않음. 햇볕에 태닝됨"
             },
             {
               "id": "pnu9f8osvs3z9my6h4iymk2r",
-              "content": "Dark with cool undertones. Doesn’t sunburn"
+              "content": "차가운 톤이 있는 어두운 피부. 화상을 입지 않음"
             }
           ]
         }
@@ -1085,7 +1083,7 @@
     },
     {
       "id": "x7qlgkrl2rk496lywuyaya6d",
-      "title": "Group #23",
+      "title": "그룹 #23",
       "graphCoordinates": { "x": 4217.97, "y": -65.72 },
       "blocks": [
         {
@@ -1096,7 +1094,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How often do you get strong sun exposure?" }
+                  { "text": "강한 햇빛에 얼마나 자주 노출되십니까?" }
                 ]
               }
             ]
@@ -1107,22 +1105,22 @@
           "outgoingEdgeId": "ff5mm3s3w4y19au133ca5d29",
           "type": "choice input",
           "items": [
-            { "id": "ab58o8ylnquxr7vaovhhtahr", "content": "Almost never" },
+            { "id": "ab58o8ylnquxr7vaovhhtahr", "content": "거의 없음" },
             {
               "id": "dnqdhzaozbh2udu0uq82k1py",
-              "content": "One week per year"
+              "content": "연간 1주"
             },
             {
               "id": "se6rgn2uixr72ft4y6mfmnzc",
-              "content": "Several weeks per year"
+              "content": "연간 몇 주"
             },
             {
               "id": "sa8q4ohl8rnn7z7ulvnifsd1",
-              "content": "More than a month per year"
+              "content": "연간 1개월 이상"
             },
             {
               "id": "e0xypcvrzurygxsncii50c2q",
-              "content": "All year round, more or less"
+              "content": "일 년 내내, 대체로"
             }
           ]
         }
@@ -1130,7 +1128,7 @@
     },
     {
       "id": "ffle7a76hw8wbfshfikyk21c",
-      "title": "Group #24",
+      "title": "그룹 #24",
       "graphCoordinates": { "x": 4571.56, "y": -61.58 },
       "blocks": [
         {
@@ -1142,7 +1140,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your skin diagnostic result, please provide your e-mail address :"
+                    "text": "피부 진단 결과를 기록하기 위해 이메일 주소를 제공해 주세요:"
                   }
                 ]
               }
@@ -1159,7 +1157,7 @@
     },
     {
       "id": "h5qb2gmhwqctl155fhfqmu7u",
-      "title": "Group #27",
+      "title": "그룹 #27",
       "graphCoordinates": { "x": 4905.35, "y": -60.75 },
       "blocks": [
         {
@@ -1174,7 +1172,6 @@
           "id": "jsm97vs0varhi8mh7knggojd",
           "type": "openai",
           "options": {
-            "credentialsId": "clwhwq9sf0005fst2cxft51xa",
             "action": "Create chat completion",
             "model": "gpt-4o",
             "messages": [
@@ -1197,14 +1194,14 @@
         },
         {
           "id": "for2wo573unezh3a2ru5c43x",
+          "outgoingEdgeId": "x9uoi6aeb4ui53c6fi7gxtzk",
           "type": "Email",
           "options": {
             "isCustomBody": true,
             "recipients": ["{{Email}}"],
-            "subject": "Your Personalized Skin Typology Diagnosis",
-            "body": "Hi,\n\nThank you for taking the time to answer our questions. Based on your responses, we have determined your skin typology. Here is a detailed recap of your diagnosis:\n\n{{Gen AI}}\n\nWe hope you find these recommendations helpful. If you have any further questions or need additional assistance, please do not hesitate to reach out.\n\nBest regards,"
-          },
-          "outgoingEdgeId": "x9uoi6aeb4ui53c6fi7gxtzk"
+            "subject": "당신의 맞춤형 피부 유형 진단",
+            "body": "안녕하세요,\n\n질문에 답해주셔서 감사합니다. 응답에 기반하여 피부 유형을 진단했습니다. 아래는 상세 진단 결과입니다:\n\n{{Gen AI}}\n\n이 추천이 도움이 되길 바랍니다. 추가 질문이나 도움이 필요하시면 언제든지 문의해 주세요.\n\n감사합니다,"
+          }
         }
       ]
     },
@@ -1222,7 +1219,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Now that you know your skin typology, would you like to check out our selection of top-rated skin-care products? 💆"
+                    "text": "이제 피부 유형을 알게 되었으니, 평점이 높은 스킨케어 제품을 확인해 보시겠습니까? 💆"
                   }
                 ]
               }
@@ -1236,7 +1233,7 @@
             {
               "id": "hmnuvpvu3ihtflhj5spx5lf3",
               "outgoingEdgeId": "f6zvru644gs2qoc5xavc87vs",
-              "content": "Go shopping"
+              "content": "쇼핑하러 가기"
             }
           ]
         }
@@ -1408,15 +1405,15 @@
       "to": { "groupId": "x5u41e030i07cxhbmujx4ngb" }
     },
     {
+      "id": "x9uoi6aeb4ui53c6fi7gxtzk",
       "from": { "blockId": "for2wo573unezh3a2ru5c43x" },
-      "to": { "groupId": "iz6tldba9ypmmvqa48j19v86" },
-      "id": "x9uoi6aeb4ui53c6fi7gxtzk"
+      "to": { "groupId": "iz6tldba9ypmmvqa48j19v86" }
     }
   ],
   "variables": [
     {
       "id": "vnzqkgmwlwlu7ut6jjelel53w",
-      "name": "Email",
+      "name": "이메일",
       "isSessionVariable": true
     },
     {
@@ -1426,15 +1423,15 @@
     },
     {
       "id": "vwgpda1jav43mrn4cx2gxp0ym",
-      "name": "Transcript",
+      "name": "전사본",
       "isSessionVariable": true
     },
     {
       "id": "vqvuz8egpkhp3d6y4dquvlomc",
-      "name": "Selected skin problem",
+      "name": "선택한 피부 고민",
       "isSessionVariable": true
     },
-    { "id": "vtyvtib894a8eeqgr21yb17tv", "name": "Skin problems" }
+    { "id": "vtyvtib894a8eeqgr21yb17tv", "name": "피부 고민" }
   ],
   "theme": {
     "general": {
@@ -1471,13 +1468,13 @@
   },
   "selectedThemeTemplateId": "typebot-light",
   "settings": {},
-  "createdAt": "2024-05-22T14:12:00.571Z",
-  "updatedAt": "2024-05-22T14:29:58.092Z",
+  "createdAt": "2024-08-07T01:42:36.564Z",
+  "updatedAt": "2024-08-07T01:57:22.732Z",
   "icon": "💆‍♀️",
-  "folderId": null,
-  "publicId": "typology-28qqj62",
+  "folderId": "clzhxn957000113qsm96bghgf",
+  "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,

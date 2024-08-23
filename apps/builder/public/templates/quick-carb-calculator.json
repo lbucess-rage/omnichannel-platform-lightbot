@@ -1,12 +1,12 @@
 {
   "version": "6",
-  "id": "clvqpyldu0005pub4sj4fi9sx",
-  "name": "Quick Carb Calculator",
+  "id": "clzi4vrei000pmrpljve70y9d",
+  "name": "템플릿 - Quick 탄수화물 계산기",
   "events": [
     {
       "id": "idpi6p77jtl07g95i59472ov",
-      "outgoingEdgeId": "u6s1xbl0f22isp1yw59wgjpc",
-      "graphCoordinates": { "x": 0, "y": 0 },
+      "outgoingEdgeId": "yi7k8i8wx6n1qfytmsn7ydn2",
+      "graphCoordinates": { "x": -148.18, "y": 28.3 },
       "type": "start"
     }
   ],
@@ -21,12 +21,7 @@
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [
-                  { "text": "Welcome to the Quick Carb Calculator!" }
-                ]
-              }
+              { "type": "p", "children": [{ "text": "환영합니다. 🤗" }] }
             ]
           }
         },
@@ -39,8 +34,10 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": " I'll help you figure out how much fuel you'll need to perform at your best. Let's get started! 🚴‍♂️🏃"
-                  }
+                    "text": "제가 최상의 성과를 내기 위해 얼마나 많은 연료가 필요한지 알아내는 것을 도와드릴게요. "
+                  },
+                  { "bold": true, "text": "시작해봅시다" },
+                  { "text": "! 🚴‍♂️🏃" }
                 ]
               }
             ]
@@ -53,7 +50,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "First, what are you fueling for?" }]
+                "children": [
+                  { "text": "첫번째로 무엇때문에 연료가 필요한가요? 🤔" }
+                ]
               }
             ]
           }
@@ -63,15 +62,15 @@
           "outgoingEdgeId": "gnwha6pow6q6occm6gn3d9o3",
           "type": "choice input",
           "items": [
-            { "id": "omopw9oy3srowddb0o3f4xs5", "content": "Swim 🏊‍♂️" },
-            { "id": "anpwbn8hvolyod2vsh06et68", "content": "Ride 🚴‍♂️" },
-            { "id": "uto1ghh5c6icwygszercxybz", "content": "Run 🏃" },
-            { "id": "sau0amab8nmeqfqyhhzle03v", "content": "Triathlon 🏊‍♂️🚴‍♂️🏃" },
-            { "id": "tqvjhk0qmvn43h5hyc9ibdd3", "content": "Swimrun 🏊‍♂️🏃" },
+            { "id": "omopw9oy3srowddb0o3f4xs5", "content": "수영 🏊‍♂️" },
+            { "id": "anpwbn8hvolyod2vsh06et68", "content": "라이드 🚴‍♂️" },
+            { "id": "uto1ghh5c6icwygszercxybz", "content": "달리기 🏃" },
+            { "id": "sau0amab8nmeqfqyhhzle03v", "content": "철인3종 🏊‍♂️🚴‍♂️🏃" },
+            { "id": "tqvjhk0qmvn43h5hyc9ibdd3", "content": "철인2종 🏊‍♂️🏃" },
             {
               "id": "mu0m5v7m55vfikbs29lpcm3h",
               "outgoingEdgeId": "hbh8d8q39wzgy1foclpy15s2",
-              "content": "Other"
+              "content": "그 외"
             }
           ],
           "options": { "variableId": "vc5qxl1y2rzmy7uqeasq8bd3q" }
@@ -88,7 +87,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What sport?" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "그 외 어떤 스포츠인가요?" }]
+              }
             ]
           }
         },
@@ -112,9 +114,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Great! How long will you be doing this activity?" }
-                ]
+                "children": [{ "text": "좋습니다! 얼마나 오래 하실건가요?" }]
               }
             ]
           }
@@ -140,7 +140,10 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Understood! Now, how hard will you be going?" }
+                  { "text": "이해했습니다! " },
+                  { "bold": true, "text": "운동 강도" },
+                  { "text": "는 어느 수준으로 하실건가요? " },
+                  { "bold": true, "text": "(1~7)" }
                 ]
               }
             ]
@@ -154,7 +157,7 @@
             "variableId": "vprpht8foqzxv4bs8hlozqoq7",
             "length": 7,
             "startsAt": 1,
-            "labels": { "left": "Easy", "right": "Racing" }
+            "labels": { "left": "저강도", "right": "고강도" }
           }
         }
       ]
@@ -168,13 +171,13 @@
           "id": "cnof27ok7s9d2ly8psdyoe4y",
           "type": "openai",
           "options": {
-            "credentialsId": "clvqq3hey0007pub4almxnhk2",
+            "credentialsId": "clzainsf300075cqm88jgja67",
             "action": "Create chat completion",
-            "model": "gpt-4-turbo",
+            "model": "gpt-4o-mini-2024-07-18",
             "messages": [
               {
                 "role": "system",
-                "content": "Your job is to estimate how much carbs an athelete has to ingest during a race. You should also generate a simple fueling strategy.\n\nYou are working for a company called Precision Hydration and you are selling a 30g gels with or without caffeine and 90g gels with or without caffeine.\n\nYour answer should be based on the context inside the <context> XML element\n\n<context>\nI am training for {{Sport}}. My time goal is {{Duration}}. On a scale of 1 to 7, 1 being easy and 7 being intense racing, I would say {{Intensity}}.\n</context>\n\nAvoid explaining your guess too much, directly provide the total carbs, then a quick explanation and finally the fueling strategy."
+                "content": "당신의 업무는 운동선수가 경주 중에 얼마나 많은 탄수화물을 섭취해야 하는지를 추정하고, 간단한 연료 보급 전략을 생성하는 것입니다. 당신은 Precision Hydration이라는 회사에서 일하고 있으며, 30g 젤과 90g 젤을 카페인 포함 또는 미포함 상태로 판매하고 있습니다.\n\n당신의 답변은 <context> XML 요소 내의 내용을 기반으로 해야 합니다.\n\n<context>\n저는 {{Sport}}을 훈련하고 있습니다. 제 목표 시간은 {{Duration}}입니다. 1이 쉬운 수준이고 7이 강도 높은 경주라고 할 때, 제 강도는 {{Intensity}}입니다.\n</context>\n\n추정된 총 탄수화물량을 직접 제공한 후, 간단한 설명과 연료 보급 전략을 제시합니다."
               }
             ],
             "responseMapping": [{ "variableId": "vi3aeka9tjab0hmuqnc1uvzjz" }]
@@ -182,22 +185,12 @@
         },
         {
           "id": "ncqf0arxg4a4gry512dqk2v7",
+          "outgoingEdgeId": "jdxygi2hhxvyjvntwmnmdags",
           "type": "text",
           "content": {
             "richText": [
               { "type": "p", "children": [{ "text": "{{Assistant message}}" }] }
             ]
-          }
-        },
-        {
-          "id": "peycxrwyv23d396c27j75nsy",
-          "outgoingEdgeId": "bk3wsui0h91kbf9zobqh15pb",
-          "type": "Email",
-          "options": {
-            "isCustomBody": true,
-            "recipients": ["{{Email}}"],
-            "subject": "Your fueling plan",
-            "body": "Hey,\n\nThank you for answering...\n\nHere is the estimation:\n\n{{Assistant message}}\n\nSee you soon,\nPerformance Hydration."
           }
         }
       ]
@@ -215,9 +208,10 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "To keep a record of your carb calculations and for easy future reference, could you please provide your email address? "
-                  }
+                  { "bold": true, "text": "탄수화물 계산 기록" },
+                  { "text": "을 보관하고, 나중에 쉽게 확인할 수 있도록 " },
+                  { "bold": true, "text": "이메일 주소" },
+                  { "text": "를 제공해 주시겠습니까?" }
                 ]
               }
             ]
@@ -232,8 +226,10 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This way, I can send you a personalized summary of your fueling plan. 📧"
-                  }
+                    "bold": true,
+                    "text": "메일을 등록하시면 맞춤형 연료 계획 요약"
+                  },
+                  { "text": "을 보내드릴 수 있습니다. . 📧" }
                 ]
               }
             ]
@@ -261,7 +257,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Now that you know how many carbs you'll need, would you like to check out our selection of top-rated carbohydrate gels and other fueling products? 🛒"
+                    "text": "이제 필요한 탄수화물 양을 알게 되었으니, 저희의 최고 평점을 받은 탄수화물 젤 및 기타 연료 제품을 확인해 보시겠습니까?  🛒"
                   }
                 ]
               }
@@ -275,7 +271,7 @@
             {
               "id": "y7w3u1i6np6umnwxfs7u7x4a",
               "outgoingEdgeId": "nnaxabsjpk161s6kygdxm68k",
-              "content": "Go shopping"
+              "content": "좋아요! 쇼핑하러 갑시다"
             }
           ]
         }
@@ -291,49 +287,6 @@
           "type": "Redirect",
           "options": {
             "url": "https://www.precisionhydration.com/eu/en/products/pf-30-gel/"
-          }
-        }
-      ]
-    },
-    {
-      "id": "irklbryotgaxozsrot5qxeoc",
-      "title": "",
-      "graphCoordinates": { "x": 269.91, "y": -3.13 },
-      "blocks": [
-        {
-          "id": "jl3b2nltipe5b5ejtqbfgx9j",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "mnakzjvql9qrsctwscctzx74",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Once it's done, delete this group and connect the "
-                  },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Sport group" },
-                  { "text": " 🚀" }
-                ]
-              }
-            ]
           }
         }
       ]
@@ -374,11 +327,6 @@
       "to": { "groupId": "er51741iln7nja5jn8qrkyeh" }
     },
     {
-      "id": "bk3wsui0h91kbf9zobqh15pb",
-      "from": { "blockId": "peycxrwyv23d396c27j75nsy" },
-      "to": { "groupId": "h709w0mid2cu06xe0vu5agj1" }
-    },
-    {
       "id": "nnaxabsjpk161s6kygdxm68k",
       "from": {
         "blockId": "g0nd8jfs64h90lxy41ztufkf",
@@ -387,9 +335,14 @@
       "to": { "groupId": "d5ihz070zlpirjzz26hx8ak4" }
     },
     {
+      "id": "yi7k8i8wx6n1qfytmsn7ydn2",
       "from": { "eventId": "idpi6p77jtl07g95i59472ov" },
-      "to": { "groupId": "irklbryotgaxozsrot5qxeoc" },
-      "id": "u6s1xbl0f22isp1yw59wgjpc"
+      "to": { "groupId": "x2x6f3wzxrtym647g57e4382" }
+    },
+    {
+      "id": "jdxygi2hhxvyjvntwmnmdags",
+      "from": { "blockId": "ncqf0arxg4a4gry512dqk2v7" },
+      "to": { "groupId": "h709w0mid2cu06xe0vu5agj1" }
     }
   ],
   "variables": [
@@ -419,16 +372,51 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
+  "theme": {
+    "general": {
+      "background": { "content": "#d2d1d1" },
+      "progressBar": { "isEnabled": true }
+    },
+    "chat": {
+      "container": {
+        "maxHeight": "90%",
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "md",
+        "border": { "roundeness": "custom", "customRoundeness": 20 }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/11.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/06.png"
+      },
+      "hostBubbles": { "shadow": "lg", "border": { "roundeness": "large" } },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
+      "buttons": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "lg",
+        "border": { "color": "#bcb9b9", "roundeness": "large" }
+      }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzgp93r70001ctqce9olrbdc",
   "settings": {},
-  "createdAt": "2024-05-03T13:37:03.426Z",
-  "updatedAt": "2024-05-03T13:48:08.061Z",
+  "createdAt": "2024-08-06T08:03:39.258Z",
+  "updatedAt": "2024-08-06T08:36:30.006Z",
   "icon": "🏃‍♂️",
-  "folderId": null,
-  "publicId": "quick-carb-calculator-j4fi9sx",
+  "folderId": "clzhxn957000113qsm96bghgf",
+  "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,

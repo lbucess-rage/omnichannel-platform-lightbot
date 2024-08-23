@@ -13,7 +13,7 @@ type Props = {
 
 export const StreamingBubble = (props: Props) => {
   const [content, setContent] = persist(createSignal<string[]>([]), {
-    key: `typebot-streaming-message-${props.streamingMessageId}`,
+    key: `lightbot-streaming-message-${props.streamingMessageId}`,
     storage: props.context.storage,
   })
 

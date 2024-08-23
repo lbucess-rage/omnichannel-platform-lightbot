@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "cloo0wet7000h1aor38uwjxjw",
-  "name": "Movie recommendation",
+  "id": "clzm0gatg001kmrpl5jg4ts3n",
+  "name": "영화 추천‌‌‍‍‌‍‍‌‌",
   "events": [
     {
       "id": "u6lpjibfjhyoqij5wjf9kvnl",
@@ -32,17 +32,10 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Welcome to our film recommendation bot 👋" }
+                  { "text": "영화 추천 봇에 오신 것을 환영합니다 👋" }
                 ]
               }
             ]
-          }
-        },
-        {
-          "id": "c7swi84rmdvrul0wz5kxtplm",
-          "type": "image",
-          "content": {
-            "url": "https://media3.giphy.com/media/BElb9DVpHezcZufOhl/giphy-downsized.gif?cid=fe3852a3uwhsp1sc3j6avr625v5e94h1v8o3wfb1ii3xwswk&rid=giphy-downsized.gif&ct=g"
           }
         },
         {
@@ -52,7 +45,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "It is powered by The Movie DB API 🚀" }]
+                "children": [
+                  { "text": "이 봇은 The Movie DB API로 구동됩니다 🚀" }
+                ]
               }
             ]
           }
@@ -69,7 +64,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I we help?" }] }
+              { "type": "p", "children": [{ "text": "어떻게 도와드릴까요?" }] }
             ]
           }
         },
@@ -80,12 +75,12 @@
             {
               "id": "kaimvzg9igdtktgou5m3s1bw",
               "outgoingEdgeId": "t8qyjpigrz7cdl8gxl1wxlwj",
-              "content": "Select a genre 💅"
+              "content": "장르 선택 💅"
             },
             {
               "id": "i8ls2f8inq2ovuijj6l7rbcq",
               "outgoingEdgeId": "tjn2ljosqyd4aj9dk8mnifsu",
-              "content": "See what's trending 🔝"
+              "content": "현재 인기 영화 🔝"
             }
           ]
         }
@@ -100,7 +95,7 @@
           "id": "ecwz96cghzp4ji3lyx7taxt1",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Sure!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "좋아요!" }] }]
           }
         },
         {
@@ -147,7 +142,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Select your desired genre 👇" }]
+                "children": [{ "text": "원하는 장르를 선택하세요 👇" }]
               }
             ]
           }
@@ -156,7 +151,7 @@
           "id": "nwuk2clo78hmnh4d0g31u9xg",
           "type": "choice input",
           "items": [
-            { "id": "ri3avm9p0i96p8gx4028b6ye", "content": "Click to edit" }
+            { "id": "ri3avm9p0i96p8gx4028b6ye", "content": "클릭하여 편집" }
           ],
           "options": {
             "variableId": "vkmbb3rb2hcfd2io1fhf7rz5x",
@@ -188,7 +183,7 @@
           "id": "edokvbp15ubqeuydw9n7wf4w",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Sure!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "좋아요!" }] }]
           }
         },
         {
@@ -235,7 +230,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Here are popular movies this week 👇" }]
+                "children": [{ "text": "이번 주 인기 영화들입니다 👇" }]
               }
             ]
           }
@@ -244,7 +239,7 @@
           "id": "krcvvncnqtn99v0qe1dzudrk",
           "type": "choice input",
           "items": [
-            { "id": "dicb6lnv5kapkq0tygnx1abh", "content": "Click to edit" }
+            { "id": "dicb6lnv5kapkq0tygnx1abh", "content": "클릭하여 편집" }
           ],
           "options": {
             "variableId": "vulnb1om2fk8mvkcesl8s15cr",
@@ -280,9 +275,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Here are trending movies for the {{Selected genre}} genre"
-                  }
+                  { "text": "{{Selected genre}} 장르의 인기 영화입니다" }
                 ]
               }
             ]
@@ -339,7 +332,7 @@
           "id": "tr5y76tx9ca336f8ob9odfa6",
           "type": "choice input",
           "items": [
-            { "id": "uy2xwxoqhqol852cqsq17r9l", "content": "Click to edit" }
+            { "id": "uy2xwxoqhqol852cqsq17r9l", "content": "클릭하여 편집" }
           ],
           "options": {
             "variableId": "vyyr3j2pu76uzvf88laai8snl",
@@ -372,7 +365,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Excellent choice 🔥" }] }
+              { "type": "p", "children": [{ "text": "훌륭한 선택입니다 🔥" }] }
             ]
           }
         },
@@ -452,12 +445,12 @@
             {
               "id": "n4818dnrb4arw1xh5v0ot8vz",
               "outgoingEdgeId": "fteu5frsbj8wejfhhwzuv8t1",
-              "content": "Watch the movie"
+              "content": "영화 보기"
             },
             {
               "id": "j9d1pf2tndax0itezys7t73c",
               "outgoingEdgeId": "zb79atxs2itliks4d00e35uy",
-              "content": "Find something else"
+              "content": "다른 영화 찾기"
             }
           ]
         }
@@ -471,9 +464,7 @@
         {
           "id": "mw0e0bzwiokhndkkncp9niu2",
           "type": "Redirect",
-          "options": {
-            "url": "https://m.imdb.com/title/{{IMDB ID}}"
-          }
+          "options": { "url": "https://m.imdb.com/title/{{IMDB ID}}" }
         }
       ]
     },
@@ -629,18 +620,60 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
-  "settings": {},
-  "createdAt": "2023-11-07T07:42:02.490Z",
-  "updatedAt": "2023-11-07T07:55:03.222Z",
+  "theme": {
+    "general": {
+      "background": {
+        "type": "Image",
+        "content": "https://images.unsplash.com/photo-1552083974-186346191183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdHxlbnwwfDB8fHwxNzEzMjg2NDY1fDA&ixlib=rb-4.0.3&q=80&w=1080"
+      }
+    },
+    "chat": {
+      "container": {
+        "maxWidth": "750px",
+        "maxHeight": "80%",
+        "backgroundColor": "#ffffff",
+        "blur": 5,
+        "opacity": 0.6,
+        "border": {
+          "thickness": 2,
+          "color": "#FFFFFF",
+          "roundeness": "large",
+          "opacity": 0.5
+        }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/13.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/17.png"
+      },
+      "guestBubbles": { "backgroundColor": "#0042DA" },
+      "buttons": { "backgroundColor": "#759af0", "border": { "thickness": 0 } }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzi0ruj3000dmrplnuw26t7s",
+  "settings": {
+    "general": { "isBrandingEnabled": true },
+    "metadata": {
+      "favIconUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "imageUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "description": "",
+      "customHeadCode": "<!-- Customer Center Meta Tags -->\n<meta name=\"customer-center-name\" content=\"Customer Support Center\">\n<meta name=\"customer-center-hours\" content=\"Mon-Fri: 9 AM - 6 PM, Sat: 10 AM - 4 PM\">\n"
+    }
+  },
+  "createdAt": "2024-08-09T01:10:44.164Z",
+  "updatedAt": "2024-08-09T01:14:24.747Z",
   "icon": "🍿",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

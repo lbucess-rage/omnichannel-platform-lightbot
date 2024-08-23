@@ -53,11 +53,15 @@ type Props = {
 }
 
 export const InputChatBlock = (props: Props) => {
+  console.log(`InputChatBlock props`, props)
+
+  // 입력 값과 관련된 상태를 관리하는 Signal 생성
   const [answer, setAnswer] = persist(createSignal<Answer>(), {
-    key: `typebot-${props.context.typebot.id}-input-${props.chunkIndex}`,
+    key: `lightbot-${props.context.typebot.id}-input-${props.chunkIndex}`,
     storage: props.context.storage,
   })
 
+  // 입력값을 제출하는 함수
   const handleSubmit = async ({
     label,
     value,
@@ -88,6 +92,7 @@ export const InputChatBlock = (props: Props) => {
 
   return (
     <Switch>
+      {/* 응답 내용이 있고 에러 상태가 아닌 경우 , 사용자의 입력한 값이나 파일(이미지 등)을 렌더링  */}
       <Match when={answer() && !props.hasError}>
         <GuestBubble
           message={answer() as Answer}
@@ -98,6 +103,8 @@ export const InputChatBlock = (props: Props) => {
           hasHostAvatar={props.hasHostAvatar}
         />
       </Match>
+
+      {/* 응답 내용이 없거나 에러가 있는 경우 Input 컴포넌트 렌더링  */}
       <Match when={isNotDefined(answer()) || props.hasError}>
         <div
           class="flex justify-end animate-fade-in gap-2 typebot-input-container"
@@ -128,22 +135,41 @@ export const InputChatBlock = (props: Props) => {
   )
 }
 
+// 사용자가 입력한 데이터를 받아들이고, 다양한 입력 블록 유형에 맞는 UI를 렌더링
+// props을 통해 전달된 'props.block.type'에 따라 다양한 입력 블록 유형에 맞는 UI를 렌더링
 const Input = (props: {
+  // 챗봇의 컨텍스트 전달
   context: BotContext
+  // 현재 렌더링할 입력 블록의 데이터
   block: NonNullable<ContinueChatResponse['input']>
+
+  // 현재 입력 블록이 속한 청크의 인덱스
   chunkIndex: number
+
+  // 입력값을 미리 채워넣을지 여부
   isInputPrefillEnabled: boolean
+
+  // 기존에 사용자가 입력한 값
   existingAnswer?: string
+
+  // 입력 블록의 전환 애니메이션 종료시 호출되는 함수
   onTransitionEnd: () => void
+
+  // 사용자가 입력한 값을 전달하는 함수
   onSubmit: (answer: InputSubmitContent) => void
+
+  // 사용자가 입력을 건너뛸 때 호출되는 함수
   onSkip: (label: string) => void
 }) => {
+  // 사용자가 입력한 값을 상위 컴포넌트로 전달하는 함수
   const onSubmit = (answer: InputSubmitContent) => props.onSubmit(answer)
 
+  // 입력 블록의 미리 채워진 값을 반환하는 함수
   const getPrefilledValue = () =>
     props.existingAnswer ??
     (props.isInputPrefillEnabled ? props.block.prefilledValue : undefined)
 
+  // 결제 입력 블록이 성공시 호출되는 함수
   const submitPaymentSuccess = () =>
     props.onSubmit({
       value:

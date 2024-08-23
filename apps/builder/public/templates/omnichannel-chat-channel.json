@@ -1,0 +1,469 @@
+{
+  "version": "6",
+  "id": "cm00kcln50028mrplkja4cc3z",
+  "name": "템플릿 - 옴니채널-채팅상담 채널 연동",
+  "events": [
+    {
+      "id": "us0f33ksy1ljr9m2i4de9m49",
+      "outgoingEdgeId": "r0zkqwxm89jpxef6lpe62me6",
+      "graphCoordinates": { "x": 0, "y": 0 },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "thz8l489q5qgxhp6nn7m679z",
+      "title": "Group #1",
+      "graphCoordinates": { "x": 812.08, "y": 53.62 },
+      "blocks": [{ "id": "ue8z5lvujkels0g7jdayfvh8", "type": "lightchat" }]
+    },
+    {
+      "id": "c0zjmapjhog4xphob8sr7mr7",
+      "title": "첫인사",
+      "graphCoordinates": { "x": 117.15, "y": 202.08 },
+      "blocks": [
+        {
+          "id": "aq8lhxbun00rg3i1y8qvcuzh",
+          "outgoingEdgeId": "k02vfe3u968ve6su30mi00xd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "안녕하세요. " },
+                  { "text": "라잇봇", "bold": true },
+                  { "text": "입니다." }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "swy6la9bwd7qr3ss5kmtnt1k",
+      "title": "고객식별데이터 변수 선언",
+      "graphCoordinates": { "x": 200.57, "y": 430.88 },
+      "blocks": [
+        {
+          "id": "hfenouzzmc6gbibgk42jw4z9",
+          "type": "Set variable",
+          "options": {
+            "variableId": "ow8fcroan6o9ozbvdey7s8ew",
+            "expressionToEvaluate": "rage",
+            "isCode": false
+          }
+        },
+        {
+          "id": "z45pjtj4v2k58i6npuydoycr",
+          "type": "Set variable",
+          "options": { "variableId": "vweb9oo73rr7v34sn6v3ggnri" }
+        },
+        {
+          "id": "bv4umgiebdv4ozml41ioim0y",
+          "type": "Set variable",
+          "options": { "variableId": "ccx1rv4roxhx5cc74ax8usfw" }
+        },
+        {
+          "id": "osa5ic10ofw9x9e7cxq9ddz1",
+          "outgoingEdgeId": "w46rnfeypzlgivko7l350cmi",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vk3af16d49mtjje0sob9hnamy",
+            "type": "Result ID"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vx211kgkcnxebukyexkcavdc",
+      "title": "customerId 랜덤할당",
+      "graphCoordinates": { "x": 1142.71, "y": 515.01 },
+      "blocks": [
+        {
+          "id": "hobf330bsqua15tquuuh76yh",
+          "outgoingEdgeId": "w62nx0wens4dz5qjtnsju6mm",
+          "type": "Set variable",
+          "options": {
+            "variableId": "ccx1rv4roxhx5cc74ax8usfw",
+            "type": "Random ID"
+          }
+        }
+      ]
+    },
+    {
+      "id": "irpxrg2fk9qztz3jn5zod0bk",
+      "title": "customerId 체크",
+      "graphCoordinates": { "x": 607.02, "y": 499.9 },
+      "blocks": [
+        {
+          "id": "qb1ou8h9vdjny3sy3zjgr7rp",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "gytnxef1bfdsoxyyqb2yxlfk",
+              "outgoingEdgeId": "gxi072lzjnwj266n952vyhex",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "dof5babgdozy6jc3u2q8qqmk",
+                    "variableId": "ccx1rv4roxhx5cc74ax8usfw",
+                    "comparisonOperator": "Is empty"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "lfhcm95l2ujvbz9a2ectww2u",
+          "outgoingEdgeId": "ilastpdubwe9lmfa8j60yrrx",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "y4gmonippcqt40erykl868gb",
+              "outgoingEdgeId": "ddknh6ti5m848no4i53kdda7",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "t0of2o3hwumcoxbu4i87qc9n",
+                    "variableId": "vweb9oo73rr7v34sn6v3ggnri",
+                    "comparisonOperator": "Is empty"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ajw9t7plyn899o0ogg1aueu1",
+      "title": "memberId 랜덤할당",
+      "graphCoordinates": { "x": 1167.82, "y": 819.97 },
+      "blocks": [
+        {
+          "id": "pk7p4gxp6qto1amplojtes02",
+          "outgoingEdgeId": "wpegk59xpt58amrxjose5ha4",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vweb9oo73rr7v34sn6v3ggnri",
+            "type": "Random ID"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xpnyycrsut9ea19p3nrqkwl6",
+      "title": "고객정보 표시(테스트용)",
+      "graphCoordinates": { "x": 675.81, "y": 943.63 },
+      "blocks": [
+        {
+          "id": "pk8zbclp70zmvkmsq2ddotha",
+          "outgoingEdgeId": "ykv0wqkfve6vez4811nlhlzu",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "고객ID:{{userKey}}" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "멤버ID:{{memberId}}" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "고객명:{{userName}}" }] }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "l9mg13eqws7qis6pg16c4o91",
+      "title": "서비스 메뉴 입력",
+      "graphCoordinates": { "x": 1198.3, "y": 1153.2 },
+      "blocks": [
+        {
+          "id": "xznp1gd8a8xx3rhkbembtmln",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "bold": true, "text": "원하시는 서비스를 선택해주세요~" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "uwm4yf479khjsduku2pi9bwu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "r3cdncgwrgels5p8e0ecs8gb",
+              "outgoingEdgeId": "k2n3tfpwlef7ehg2e19nhfsg",
+              "content": "상담어시스턴트(beta)"
+            },
+            {
+              "id": "vjplnue8bnf32ineuvgkoc4e",
+              "outgoingEdgeId": "elkh8b8kc7ruj1usmh0x14w1",
+              "content": "채팅 상담 연결"
+            },
+            {
+              "id": "ay21icygbkntjyx3fiudolrl",
+              "outgoingEdgeId": "q0now033ucoq6bufxyw31l7h",
+              "content": "ChatGPT와 대화"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p7qiu8oos2enxh10ymoolaqs",
+      "title": "채팅 상담 연결 안내",
+      "graphCoordinates": { "x": 698.26, "y": 1597.81 },
+      "blocks": [
+        {
+          "id": "vakymzfae4xpzej078wseu2g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "채팅 전문 상담사로 연결합니다~" }]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lp51q9lz4vyuihj6d30ck23s",
+      "graphCoordinates": { "x": 1655.25, "y": 1040.06 },
+      "title": "양해 멘트",
+      "blocks": [
+        {
+          "id": "f1l0elxxmc0ai7wubnpl6e2f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "상담어시스턴트 서비스 준비중", "bold": true },
+                  { "text": "입니다. " }
+                ]
+              }
+            ]
+          },
+          "outgoingEdgeId": "ki2ssvaqwaamlwoe2ynrjjbm"
+        }
+      ]
+    },
+    {
+      "id": "u1tdop0r6rb5yhji0vir7q4t",
+      "graphCoordinates": { "x": 1653.83, "y": 1270.36 },
+      "title": "양해 멘트 -2",
+      "blocks": [
+        {
+          "id": "sfjaikwj1asy547m8m5d9i3o",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "ChatGPT " },
+                  { "text": "서비스 준비중", "bold": true },
+                  { "text": "입니다. " }
+                ]
+              }
+            ]
+          },
+          "outgoingEdgeId": "dg1iq0l8w32lti7mnsygnw45"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "r0zkqwxm89jpxef6lpe62me6",
+      "from": { "eventId": "us0f33ksy1ljr9m2i4de9m49" },
+      "to": { "groupId": "c0zjmapjhog4xphob8sr7mr7" }
+    },
+    {
+      "id": "k02vfe3u968ve6su30mi00xd",
+      "from": { "blockId": "aq8lhxbun00rg3i1y8qvcuzh" },
+      "to": { "groupId": "swy6la9bwd7qr3ss5kmtnt1k" }
+    },
+    {
+      "id": "w46rnfeypzlgivko7l350cmi",
+      "from": { "blockId": "osa5ic10ofw9x9e7cxq9ddz1" },
+      "to": { "groupId": "irpxrg2fk9qztz3jn5zod0bk" }
+    },
+    {
+      "id": "gxi072lzjnwj266n952vyhex",
+      "from": {
+        "blockId": "qb1ou8h9vdjny3sy3zjgr7rp",
+        "itemId": "gytnxef1bfdsoxyyqb2yxlfk"
+      },
+      "to": {
+        "groupId": "vx211kgkcnxebukyexkcavdc",
+        "blockId": "hobf330bsqua15tquuuh76yh"
+      }
+    },
+    {
+      "id": "ddknh6ti5m848no4i53kdda7",
+      "from": {
+        "blockId": "lfhcm95l2ujvbz9a2ectww2u",
+        "itemId": "y4gmonippcqt40erykl868gb"
+      },
+      "to": {
+        "groupId": "ajw9t7plyn899o0ogg1aueu1",
+        "blockId": "pk7p4gxp6qto1amplojtes02"
+      }
+    },
+    {
+      "id": "ilastpdubwe9lmfa8j60yrrx",
+      "from": { "blockId": "lfhcm95l2ujvbz9a2ectww2u" },
+      "to": { "groupId": "xpnyycrsut9ea19p3nrqkwl6" }
+    },
+    {
+      "id": "wpegk59xpt58amrxjose5ha4",
+      "from": { "blockId": "pk7p4gxp6qto1amplojtes02" },
+      "to": { "groupId": "xpnyycrsut9ea19p3nrqkwl6" }
+    },
+    {
+      "id": "w62nx0wens4dz5qjtnsju6mm",
+      "from": { "blockId": "hobf330bsqua15tquuuh76yh" },
+      "to": {
+        "groupId": "irpxrg2fk9qztz3jn5zod0bk",
+        "blockId": "lfhcm95l2ujvbz9a2ectww2u"
+      }
+    },
+    {
+      "id": "ykv0wqkfve6vez4811nlhlzu",
+      "from": { "blockId": "pk8zbclp70zmvkmsq2ddotha" },
+      "to": {
+        "groupId": "l9mg13eqws7qis6pg16c4o91",
+        "blockId": "xznp1gd8a8xx3rhkbembtmln"
+      }
+    },
+    {
+      "from": {
+        "blockId": "uwm4yf479khjsduku2pi9bwu",
+        "itemId": "vjplnue8bnf32ineuvgkoc4e"
+      },
+      "to": { "groupId": "p7qiu8oos2enxh10ymoolaqs" },
+      "id": "elkh8b8kc7ruj1usmh0x14w1"
+    },
+    {
+      "from": { "blockId": "f1l0elxxmc0ai7wubnpl6e2f" },
+      "to": { "groupId": "l9mg13eqws7qis6pg16c4o91" },
+      "id": "ki2ssvaqwaamlwoe2ynrjjbm"
+    },
+    {
+      "from": {
+        "blockId": "uwm4yf479khjsduku2pi9bwu",
+        "itemId": "r3cdncgwrgels5p8e0ecs8gb"
+      },
+      "to": { "groupId": "lp51q9lz4vyuihj6d30ck23s" },
+      "id": "k2n3tfpwlef7ehg2e19nhfsg"
+    },
+    {
+      "from": {
+        "blockId": "uwm4yf479khjsduku2pi9bwu",
+        "itemId": "ay21icygbkntjyx3fiudolrl"
+      },
+      "to": { "groupId": "u1tdop0r6rb5yhji0vir7q4t" },
+      "id": "q0now033ucoq6bufxyw31l7h"
+    },
+    {
+      "from": { "blockId": "sfjaikwj1asy547m8m5d9i3o" },
+      "to": { "groupId": "l9mg13eqws7qis6pg16c4o91" },
+      "id": "dg1iq0l8w32lti7mnsygnw45"
+    }
+  ],
+  "variables": [
+    {
+      "id": "vk3af16d49mtjje0sob9hnamy",
+      "name": "resultSessionId",
+      "isSessionVariable": false
+    },
+    {
+      "id": "vweb9oo73rr7v34sn6v3ggnri",
+      "name": "memberId",
+      "isSessionVariable": false
+    },
+    {
+      "id": "ccx1rv4roxhx5cc74ax8usfw",
+      "name": "userKey",
+      "isSessionVariable": false
+    },
+    {
+      "id": "ow8fcroan6o9ozbvdey7s8ew",
+      "name": "userName",
+      "isSessionVariable": false
+    }
+  ],
+  "theme": {
+    "general": {
+      "background": {
+        "type": "Image",
+        "content": "https://images.unsplash.com/photo-1552083974-186346191183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdHxlbnwwfDB8fHwxNzEzMjg2NDY1fDA&ixlib=rb-4.0.3&q=80&w=1080"
+      }
+    },
+    "chat": {
+      "container": {
+        "maxWidth": "750px",
+        "maxHeight": "80%",
+        "backgroundColor": "#ffffff",
+        "blur": 5,
+        "opacity": 0.6,
+        "border": {
+          "thickness": 2,
+          "color": "#FFFFFF",
+          "roundeness": "large",
+          "opacity": 0.5
+        }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/11.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/16.png"
+      },
+      "hostBubbles": { "shadow": "sm" },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "sm",
+        "border": { "roundeness": "custom", "customRoundeness": 10 }
+      },
+      "buttons": { "backgroundColor": "#759af0", "border": { "thickness": 0 } }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzi0ruj3000dmrplnuw26t7s",
+  "settings": {
+    "general": { "isBrandingEnabled": true },
+    "metadata": {
+      "description": "",
+      "imageUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "favIconUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "customHeadCode": "<!-- Customer Center Meta Tags -->\n<meta name=\"customer-center-name\" content=\"Customer Support Center\">\n<meta name=\"customer-center-hours\" content=\"Mon-Fri: 9 AM - 6 PM, Sat: 10 AM - 4 PM\">\n"
+    }
+  },
+  "createdAt": "2024-08-19T05:36:30.353Z",
+  "updatedAt": "2024-08-19T05:49:10.870Z",
+  "icon": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
+  "publicId": null,
+  "customDomain": null,
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
+}

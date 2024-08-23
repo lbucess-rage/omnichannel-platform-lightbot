@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "clon6cteb000i1avnrdaj92au",
-  "name": "Lead Gen with AI",
+  "id": "clzi3o5da000jmrplupo09n9h",
+  "name": "템플릿 - AI를 이용한 리드 생성‌‍‍‍‌‌‌‍‌",
   "events": [
     {
       "id": "i6xofskq0vdlnfyvf28hzcle",
@@ -20,14 +20,9 @@
           "id": "sc1y8VwDabNJgiVTBi4qtif",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hey 👋" }] }]
-          }
-        },
-        {
-          "id": "s7YqZTBeyCa4Hp3wN2j922c",
-          "type": "image",
-          "content": {
-            "url": "https://media0.giphy.com/media/2f7RQiiWMJc40/giphy.gif?cid=fe3852a34jqk83z51tbm8a1jxmqpuckxxwef79p5myafdlw5&rid=giphy.gif&ct=g"
+            "richText": [
+              { "type": "p", "children": [{ "text": "안녕하세요 👋" }] }
+            ]
           }
         },
         {
@@ -39,7 +34,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Thank you for your interest in our marketing services."
+                    "text": "당사의 BPO 서비스에 관심을 가져주셔서 감사합니다. "
                   }
                 ]
               }
@@ -54,9 +49,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Let's have a quick chat about your current situation 🙏"
-                  }
+                  { "text": "고객님의 현재 상황에 대해서 여쭤볼게요. 🙏" }
                 ]
               }
             ]
@@ -66,14 +59,21 @@
           "id": "vw9s76hgwu749gw15bqk4vd3",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Ready?" }] }]
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "준비되셨나요? (5분도 안걸려요!😃)" }]
+              }
+            ]
           }
         },
         {
           "id": "sbjZWLJGVkHAkDqS4JQeGow",
           "outgoingEdgeId": "vgi4r3yjle17balwlhpas25t",
           "type": "choice input",
-          "items": [{ "id": "hQw2zbp7FDX7XYK9cFpbgC", "content": "Yes!" }]
+          "items": [
+            { "id": "hQw2zbp7FDX7XYK9cFpbgC", "content": "네 좋습니다!" }
+          ]
         }
       ]
     },
@@ -90,7 +90,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "What's the best email we can reach you at?" }
+                  { "text": "받기 가장 편한 " },
+                  { "text": "이메일 주소", "bold": true },
+                  { "text": "를 알려주세요~" }
                 ]
               }
             ]
@@ -100,9 +102,7 @@
           "id": "snbsad18Bgry8yZ8DZCfdFD",
           "outgoingEdgeId": "piew4sf9dpafiweghqvucmax",
           "type": "email input",
-          "options": {
-            "variableId": "v3VFChNVSCXQ2rXv4DrJ8Ah"
-          }
+          "options": { "variableId": "v3VFChNVSCXQ2rXv4DrJ8Ah" }
         }
       ]
     },
@@ -118,7 +118,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What company do you work for?" }]
+                "children": [
+                  { "text": "어떤 회사에서 일하시나요? 회사명을 알려주세요. " }
+                ]
               }
             ]
           }
@@ -129,7 +131,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "메세지를 입력하세요",
+              "placeholder": "회사명을 알려주세요",
               "button": "Send"
             },
             "variableId": "giiLFGw5xXBCHzvp1qAbdX"
@@ -149,20 +151,20 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "What services are you interested in?" }]
+                "children": [{ "text": "어떤 서비스에 관심이 있으신가요?" }]
               }
             ]
           }
         },
         {
           "id": "s5VQGsVF4hQgziQsXVdwPDW",
-          "outgoingEdgeId": "wtw2lm86g46ehgvp43fcfks6",
+          "outgoingEdgeId": "mxre46fqq26ckzrkr0jybexu",
           "type": "choice input",
           "items": [
-            { "id": "fnLCBF4NdraSwcubnBhk8H", "content": "Website dev" },
-            { "id": "a782h8ynMouY84QjH7XSnR", "content": "Content Marketing" },
-            { "id": "jGvh94zBByvVFpSS3w97zY", "content": "Social Media" },
-            { "id": "6PRLbKUezuFmwWtLVbvAQ7", "content": "UI / UX Design" }
+            { "id": "fnLCBF4NdraSwcubnBhk8H", "content": "웹사이트 개발" },
+            { "id": "a782h8ynMouY84QjH7XSnR", "content": "컨텐츠 마케팅" },
+            { "id": "jGvh94zBByvVFpSS3w97zY", "content": "소셜 미디어 마케팅" },
+            { "id": "6PRLbKUezuFmwWtLVbvAQ7", "content": "UI / UX 디자인" }
           ],
           "options": {
             "variableId": "vi0mmx9o2m4s8z9cccsjcvpj5",
@@ -189,7 +191,7 @@
                     "id": "r9ju98p1i6tevti45tt6jwk8",
                     "variableId": "vi5ta5lktses2h6skf5ky2zs0",
                     "comparisonOperator": "Greater than",
-                    "value": "5"
+                    "value": "10"
                   }
                 ]
               }
@@ -201,17 +203,17 @@
           "type": "OpenAI",
           "options": {
             "task": "Create chat completion",
-            "model": "gpt-3.5-turbo",
+            "model": "gpt-4o-mini-2024-07-18",
             "messages": [
               {
                 "id": "i522qy1dzn42qy7rkw79uk9n",
                 "role": "user",
-                "content": "You are a marketing agency, and I am a prospect.\n\nAsk simple questions to understand my needs."
+                "content": "당신은 마케팅 에이전시이고, 저는 잠재 고객입니다.\n\n제 필요를 이해하기 위해 간단한 질문을 해주세요."
               },
               {
                 "id": "d6a2qfsdo251q0iopi77gtpd",
                 "role": "assistant",
-                "content": "What company do you work for?"
+                "content": "어느 회사에서 일하시나요?"
               },
               {
                 "id": "ba3objkk8jp8piyxlbe9diu6",
@@ -221,7 +223,7 @@
               {
                 "id": "bqqgavh96n76l9ma987km87y",
                 "role": "assistant",
-                "content": "What services are you interested in?"
+                "content": "어떤 서비스에 관심 있으신가요?"
               },
               {
                 "id": "zdsbh8wrmhqop24kg3t9b08f",
@@ -242,7 +244,8 @@
                 "variableId": "vpvkbogoj3rmogz0ssh5odmnn"
               }
             ],
-            "credentialsId": "clocxtxlc00031an2uc59hdpb"
+            "credentialsId": "clz85oa470001am3wdaichdo1",
+            "baseUrl": "https://api.openai.com/v1"
           }
         },
         {
@@ -295,7 +298,7 @@
           "id": "seLegenCgUwMopRFeAefqZ7",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Perfect!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "좋습니다!" }] }]
           }
         },
         {
@@ -305,7 +308,11 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "We'll get back to you at {{Email}}" }]
+                "children": [
+                  {
+                    "text": "빠른 시일내에 {{Email}}로 메일드리겠습니다. Bye 👋"
+                  }
+                ]
               }
             ]
           }
@@ -391,12 +398,9 @@
       "to": { "groupId": "m4oxxhg9wfv3wc6n8rhzy6ga" }
     },
     {
-      "from": {
-        "blockId": "s5VQGsVF4hQgziQsXVdwPDW",
-        "groupId": "trcslng32mdxkjmrw8zxpnpj"
-      },
-      "to": { "groupId": "l0223zmqvndj1irhk68yh10v" },
-      "id": "wtw2lm86g46ehgvp43fcfks6"
+      "from": { "blockId": "s5VQGsVF4hQgziQsXVdwPDW" },
+      "to": { "groupId": "m4oxxhg9wfv3wc6n8rhzy6ga" },
+      "id": "mxre46fqq26ckzrkr0jybexu"
     }
   ],
   "variables": [
@@ -431,18 +435,57 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
+  "theme": {
+    "general": {
+      "background": { "content": "#d2d1d1" },
+      "progressBar": { "isEnabled": true }
+    },
+    "chat": {
+      "container": {
+        "maxHeight": "90%",
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "md",
+        "border": { "roundeness": "custom", "customRoundeness": 20 }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/11.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/06.png"
+      },
+      "hostBubbles": {
+        "shadow": "lg",
+        "border": { "thickness": 0.1, "roundeness": "medium", "opacity": 0.6 }
+      },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
+      "buttons": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "lg",
+        "border": { "color": "#bcb9b9", "roundeness": "large" }
+      }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzi47tqa000lmrpls8g8ujiv",
   "settings": {},
-  "createdAt": "2023-11-06T17:26:59.795Z",
-  "updatedAt": "2023-11-07T06:50:56.154Z",
+  "createdAt": "2024-08-06T07:29:44.495Z",
+  "updatedAt": "2024-08-06T07:48:29.133Z",
   "icon": "🦾",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

@@ -1,59 +1,16 @@
 {
   "version": "6",
-  "id": "clpntkei400011aboogh27ead",
-  "name": "Basic ChatGPT",
+  "id": "clzm2k4nt001smrpl5c8m1617",
+  "name": "템플릿 - 기본 ChatGPT‌‌‍‍‍‌‌‌‌",
   "events": [
     {
       "id": "ewnfbo0exlu7ihfu2lu2lusm",
-      "outgoingEdgeId": "pn7omb9mx5xxc4mzq028fcmq",
+      "outgoingEdgeId": "e6ayjt69ky18irp1jqzurkga",
       "graphCoordinates": { "x": -228.25, "y": -123.31 },
       "type": "start"
     }
   ],
   "groups": [
-    {
-      "id": "t3tv4dm3khwmiotjle5jb65g",
-      "title": "",
-      "graphCoordinates": { "x": 10.94, "y": -121.96 },
-      "blocks": [
-        {
-          "id": "s6eky7dd3md9hto9y4wsuj7h",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "You need to add your OpenAI credentials to make this bot work. 🪄"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "nqsu9f13q5j8tt56bcbuto62",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Once it's done, delete this group and connect the "
-                  },
-                  { "bold": true, "text": "Start" },
-                  { "text": " event with " },
-                  { "bold": true, "text": "Intro" },
-                  { "text": " 🚀" }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
     {
       "id": "qfrz5nwm63g12dajsjxothb5",
       "title": "User input",
@@ -85,7 +42,9 @@
           "id": "p4q3wbk4wcw818qocrvu7dxs",
           "type": "openai",
           "options": {
+            "credentialsId": "clzainsf300075cqm88jgja67",
             "action": "Create chat completion",
+            "model": "gpt-4o-mini-2024-07-18",
             "messages": [
               {
                 "role": "Dialogue",
@@ -107,18 +66,17 @@
             "richText": [
               { "type": "p", "children": [{ "text": "{{Assistant Message}}" }] }
             ]
-          },
-          "groupId": "a6ymhjwtkqwp8t127plz8qmk"
+          }
         },
         {
           "id": "yblc864bzipaqfja7b2o3oo0",
+          "outgoingEdgeId": "at8takz56suqmaul5teazymb",
           "type": "Set variable",
           "options": {
             "variableId": "vabkycu0qqff5d6ar2ama16pf",
             "type": "Append value(s)",
             "item": "{{Assistant Message}}"
-          },
-          "outgoingEdgeId": "at8takz56suqmaul5teazymb"
+          }
         }
       ]
     },
@@ -132,7 +90,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hi there 👋" }] }
+              { "type": "p", "children": [{ "text": "안녕하세요~ 👋" }] }
             ]
           }
         },
@@ -142,7 +100,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "How can I help?" }] }
+              { "type": "p", "children": [{ "text": "무엇을 도와드릴까요?" }] }
             ]
           }
         }
@@ -161,17 +119,14 @@
       "to": { "groupId": "a6ymhjwtkqwp8t127plz8qmk" }
     },
     {
-      "id": "pn7omb9mx5xxc4mzq028fcmq",
-      "from": { "eventId": "ewnfbo0exlu7ihfu2lu2lusm" },
-      "to": { "groupId": "t3tv4dm3khwmiotjle5jb65g" }
+      "id": "at8takz56suqmaul5teazymb",
+      "from": { "blockId": "yblc864bzipaqfja7b2o3oo0" },
+      "to": { "groupId": "qfrz5nwm63g12dajsjxothb5" }
     },
     {
-      "from": {
-        "blockId": "yblc864bzipaqfja7b2o3oo0",
-        "groupId": "a6ymhjwtkqwp8t127plz8qmk"
-      },
-      "to": { "groupId": "qfrz5nwm63g12dajsjxothb5" },
-      "id": "at8takz56suqmaul5teazymb"
+      "id": "e6ayjt69ky18irp1jqzurkga",
+      "from": { "eventId": "ewnfbo0exlu7ihfu2lu2lusm" },
+      "to": { "groupId": "c5f00f3oclwi1srcz10jjt9u" }
     }
   ],
   "variables": [
@@ -191,17 +146,65 @@
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
-  "settings": { "general": {} },
-  "createdAt": "2023-12-02T08:56:27.244Z",
-  "updatedAt": "2023-12-02T09:00:25.221Z",
+  "theme": {
+    "general": {
+      "background": {
+        "type": "Image",
+        "content": "https://images.unsplash.com/photo-1552083974-186346191183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdHxlbnwwfDB8fHwxNzEzMjg2NDY1fDA&ixlib=rb-4.0.3&q=80&w=1080"
+      }
+    },
+    "chat": {
+      "container": {
+        "maxWidth": "750px",
+        "maxHeight": "80%",
+        "backgroundColor": "#ffffff",
+        "blur": 5,
+        "opacity": 0.6,
+        "border": {
+          "thickness": 2,
+          "color": "#FFFFFF",
+          "roundeness": "large",
+          "opacity": 0.5
+        }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/13.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/17.png"
+      },
+      "hostBubbles": { "shadow": "sm" },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "sm",
+        "border": { "roundeness": "custom", "customRoundeness": 10 }
+      },
+      "buttons": { "backgroundColor": "#759af0", "border": { "thickness": 0 } }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzi0ruj3000dmrplnuw26t7s",
+  "settings": {
+    "general": { "isBrandingEnabled": true },
+    "metadata": {
+      "description": "",
+      "imageUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "favIconUrl": "https://s3.ap-northeast-2.amazonaws.com/lightbot-rage/public/workspaces/clxcr0w2r0001x6khnqxv40kl/typebots/clxcr1dph0007x6kh0nbvq2rk/favIcon?v=1718669668633",
+      "customHeadCode": "<!-- Customer Center Meta Tags -->\n<meta name=\"customer-center-name\" content=\"Customer Support Center\">\n<meta name=\"customer-center-hours\" content=\"Mon-Fri: 9 AM - 6 PM, Sat: 10 AM - 4 PM\">\n"
+    }
+  },
+  "createdAt": "2024-08-09T02:09:42.041Z",
+  "updatedAt": "2024-08-09T02:16:43.997Z",
   "icon": "🤖",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "clxn6xejx0001zejjw0ymvxf7",
-  "name": "Savings Estimator",
+  "id": "clzks1zv5000zmrpl1wst4xzc",
+  "name": "비용 절감 추정기",
   "events": [
     {
       "id": "gxnioe7j4j37m4rukf9osvud",
@@ -25,7 +25,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Hi there! Are you curious to see how much you can save by switching to reusable sponges and paper towels? 🌱"
+                    "text": "안녕하세요! 재사용 가능한 스펀지와 종이 타월로 바꾸면 얼마나 절약할 수 있는지 궁금하신가요? 🌱"
                   }
                 ]
               }
@@ -37,10 +37,7 @@
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Let's find out together!" }]
-              }
+              { "type": "p", "children": [{ "text": "함께 알아보아요!" }] }
             ]
           }
         },
@@ -49,7 +46,7 @@
           "outgoingEdgeId": "k0ikr8x3bu9s5o86g5njqfts",
           "type": "choice input",
           "items": [
-            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "Yes, let's go!" }
+            { "id": "ih0cv1bnpyc83qwz4qq6ywk3", "content": "네, 시작해요!" }
           ]
         }
       ]
@@ -67,9 +64,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Where do you typically use sponges in your house?"
-                  }
+                  { "text": "집에서 주로 스펀지를 어디에 사용하시나요?" }
                 ]
               }
             ]
@@ -82,25 +77,25 @@
           "items": [
             {
               "id": "x10afn6nfah52jsu0avz6br9",
-              "content": "Kitchen - for dishes, counter, and appliances"
+              "content": "주방 - 설거지, 카운터, 가전제품"
             },
             {
               "id": "eeogjc9povplcvgqny1dc6uj",
-              "content": "Bathroom - for sinks, showers, and tubs"
+              "content": "욕실 - 싱크대, 샤워, 욕조"
             },
             {
               "id": "asy0lmqlzprtlfepmz8c6mfz",
-              "content": "Living Room and Bedrooms - for furniture and windows"
+              "content": "거실 및 침실 - 가구와 창문"
             },
             {
               "id": "qqp3qjm4z7r60py4sg21pqd6",
-              "content": "Laundry Room - for cleaning spills and surfaces"
+              "content": "세탁실 - 유출물 및 표면 청소"
             },
             {
               "id": "jk7vgqy5cgfrklnkuddkfj9q",
-              "content": "Garage and Outdoors - for vehicles and garden tools"
+              "content": "차고 및 야외 - 차량 및 정원 도구"
             },
-            { "id": "cnx6lctjxc23opp5gdnvvxbu", "content": "dishes" }
+            { "id": "cnx6lctjxc23opp5gdnvvxbu", "content": "설거지" }
           ],
           "options": { "isMultipleChoice": true }
         }
@@ -118,11 +113,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "How often would you say that you are throwing a sponge away?"
-                  }
-                ]
+                "children": [{ "text": "스펀지를 얼마나 자주 버리시나요?" }]
               }
             ]
           }
@@ -131,22 +122,22 @@
           "id": "qiayx3hjmo5ef1n3w3uxux4g",
           "type": "choice input",
           "items": [
-            { "id": "huq3z8tuxmumghzu1tvdcxd9", "content": "Once a week" },
-            { "id": "g1ceimdl36gwcfgzf8jpqsbg", "content": "Every 2 weeks" },
+            { "id": "huq3z8tuxmumghzu1tvdcxd9", "content": "주 1회" },
+            { "id": "g1ceimdl36gwcfgzf8jpqsbg", "content": "2주에 한 번" },
             {
               "id": "ky6khj0qwt2zteo8ffjg4xdc",
               "outgoingEdgeId": "pyh36n2t83a0ig4edaj461ho",
-              "content": "Once a month"
+              "content": "월 1회"
             },
             {
               "id": "lz0kymgy0nlismoen7rr5mcf",
               "outgoingEdgeId": "cmv8ea1pfiwslctusogdkg9u",
-              "content": "Every 2 months"
+              "content": "2개월에 한 번"
             },
             {
               "id": "oaqrb7n82xgzxxwgd12i4z43",
               "outgoingEdgeId": "blsd3tlps0jaq1mu6y91tuca",
-              "content": "Every 3 months or more"
+              "content": "3개월 이상"
             }
           ]
         }
@@ -166,7 +157,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Did you know that used sponges can harbor a significant number of bacteria if not replaced regularly?"
+                    "text": "사용된 스펀지를 정기적으로 교체하지 않으면 많은 세균이 번식할 수 있다는 것을 알고 계셨나요?"
                   }
                 ]
               }
@@ -182,9 +173,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "We definitely suggest you to change your sponge more frequently ✨"
-                  }
+                  { "text": "스펀지를 더 자주 교체하는 것을 권장합니다 ✨" }
                 ]
               }
             ]
@@ -205,7 +194,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Now, let's talk about paper towels. 🧻" }
+                  { "text": "이제 종이 타월에 대해 이야기해 봅시다. 🧻" }
                 ]
               }
             ]
@@ -219,9 +208,7 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "How often would you say that you are ending a roll?"
-                  }
+                  { "text": "종이 타월 롤을 얼마나 자주 사용하시나요?" }
                 ]
               }
             ]
@@ -232,14 +219,11 @@
           "outgoingEdgeId": "yeqwcskb3lut4m5838y64pp2",
           "type": "choice input",
           "items": [
-            { "id": "vywwo2km0q0j1fxu7kpgaaun", "content": "Once a week" },
-            { "id": "wzg1uhu2hdgmkc7tps3wyo3e", "content": "Every 2 weeks" },
-            { "id": "sdx6okf2a2jdypry8yd9vi81", "content": "Once a month" },
-            { "id": "vva4hfgvpx5r3uzyumf2mpjj", "content": "Every 2 months" },
-            {
-              "id": "kvf1ev4hskteaopfnbzoy2xt",
-              "content": "Every 3 months or more"
-            }
+            { "id": "vywwo2km0q0j1fxu7kpgaaun", "content": "주 1회" },
+            { "id": "wzg1uhu2hdgmkc7tps3wyo3e", "content": "2주에 한 번" },
+            { "id": "sdx6okf2a2jdypry8yd9vi81", "content": "월 1회" },
+            { "id": "vva4hfgvpx5r3uzyumf2mpjj", "content": "2개월에 한 번" },
+            { "id": "kvf1ev4hskteaopfnbzoy2xt", "content": "3개월 이상" }
           ]
         }
       ]
@@ -266,7 +250,7 @@
             "messages": [
               {
                 "role": "system",
-                "content": "You work for INGA an ecommerce that sells reusable sponges and reusable paper towels.\n\nYour job is to estimate how much the client would save if he decide to buy INGA products knowing that:\n\n4 INGA sponges = 100 disposable sponges\n1 INGA paper towel roll = 200 disposable paper towel rolls\n\nThe average price of a disposable sponge is 0.90€ and the average price of a disposable paper towels roll is 0.80€\n\nINGA offers a pack of 4 sponges and 1 paper towel roll at 50€\n\nHere is what the user replied:\n\n<context>\n{{Transcript}}\n</context>\n\nProvide the savings first and only then a quick summary of how it was computed"
+                "content": "당신은 INGA의 전자 상거래 직원으로, 재사용 가능한 스펀지와 재사용 가능한 종이 타월을 판매합니다.\n\n당신의 역할은 고객이 INGA 제품을 구입하면 얼마나 절약할 수 있는지 추정하는 것입니다:\n\n4개의 INGA 스펀지 = 일회용 스펀지 100개\n1개의 INGA 종이 타월 롤 = 일회용 종이 타월 롤 200개\n\n일회용 스펀지의 평균 가격은 0.90€이며, 일회용 종이 타월 롤의 평균 가격은 0.80€입니다.\n\nINGA는 4개의 스펀지와 1개의 종이 타월 롤을 50€에 제공합니다.\n\n다음은 사용자의 답변입니다:\n\n<context>\n{{Transcript}}\n</context>\n\n절약 금액을 먼저 제공한 후, 계산 방법을 간략히 설명하세요."
               }
             ],
             "responseMapping": [
@@ -303,7 +287,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Do you have any concerns or hesitations about switching to reusable INGA products?"
+                    "text": "재사용 가능한 INGA 제품으로 전환하는 것에 대한 우려나 망설임이 있으신가요?"
                   }
                 ]
               }
@@ -315,18 +299,12 @@
           "outgoingEdgeId": "i8dgsa6vkrytpk21d5ko8nja",
           "type": "choice input",
           "items": [
-            {
-              "id": "r4f918h8pxbpkyb2t3943f8h",
-              "content": "Durability and Effectiveness"
-            },
-            { "id": "boe0nf1y87sf6o8klmo5sg81", "content": "One-time cost" },
-            { "id": "udz9u4nhyg4zqh1qc6iwqi1x", "content": "Hygiene" },
-            { "id": "uuhrshjb2hxgrs85nvk95uyq", "content": "Convenience" },
-            {
-              "id": "y9cmigd58j10u8bre90obxpp",
-              "content": "Environmental Impact"
-            },
-            { "id": "mkubt8mqhwz34s7xqotbpaw0", "content": "Other" }
+            { "id": "r4f918h8pxbpkyb2t3943f8h", "content": "내구성과 효과" },
+            { "id": "boe0nf1y87sf6o8klmo5sg81", "content": "일회성 비용" },
+            { "id": "udz9u4nhyg4zqh1qc6iwqi1x", "content": "위생" },
+            { "id": "uuhrshjb2hxgrs85nvk95uyq", "content": "편리성" },
+            { "id": "y9cmigd58j10u8bre90obxpp", "content": "환경 영향" },
+            { "id": "mkubt8mqhwz34s7xqotbpaw0", "content": "기타" }
           ]
         }
       ]
@@ -343,7 +321,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Thanks for sharing. 🙏" }]
+                "children": [{ "text": "공유해 주셔서 감사합니다. 🙏" }]
               }
             ]
           }
@@ -355,7 +333,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us more about that?" }]
+                "children": [
+                  { "text": "그에 대해 좀 더 자세히 말씀해 주실 수 있나요?" }
+                ]
               }
             ]
           }
@@ -380,7 +360,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "That's super clear, thank you" }]
+                "children": [{ "text": "명확하게 설명해 주셔서 감사합니다." }]
               }
             ]
           }
@@ -394,7 +374,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Feel free to check out our selection of reusable cleaning products. 🧽"
+                    "text": "재사용 가능한 청소 제품의 선택을 확인해 보세요. 🧽"
                   }
                 ]
               }
@@ -405,7 +385,7 @@
           "id": "z95sfiyhk4mk3y693ku9ugud",
           "type": "choice input",
           "items": [
-            { "id": "vagoik95tnerdxebvdqghipf", "content": "Go shopping" }
+            { "id": "vagoik95tnerdxebvdqghipf", "content": "쇼핑하러 가기" }
           ]
         }
       ]
@@ -424,7 +404,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "To keep a record of your carb calculations and for easy future reference, could you please provide your email address? "
+                    "text": "탄수화물 계산 기록을 남기고 쉽게 참조할 수 있도록 이메일 주소를 제공해 주시겠어요?"
                   }
                 ]
               }
@@ -440,7 +420,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "This way, I can send you a personalized summary of your fueling plan. 📧"
+                    "text": "이렇게 하면 개인화된 연료 계획 요약을 보내드릴 수 있습니다. 📧"
                   }
                 ]
               }
@@ -572,13 +552,13 @@
   },
   "selectedThemeTemplateId": null,
   "settings": {},
-  "createdAt": "2024-06-20T11:40:21.357Z",
-  "updatedAt": "2024-06-20T13:10:21.948Z",
+  "createdAt": "2024-08-08T04:27:53.681Z",
+  "updatedAt": "2024-08-08T04:27:53.681Z",
   "icon": null,
-  "folderId": null,
-  "publicId": "my-typebot-0ymvxf7",
+  "folderId": "clzhxn957000113qsm96bghgf",
+  "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,

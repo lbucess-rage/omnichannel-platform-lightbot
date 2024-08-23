@@ -1,7 +1,7 @@
 {
   "version": "6",
-  "id": "cloo0bge500071aorb4dadsju",
-  "name": "NPS Survey",
+  "id": "clzl08udz0017mrplnusoxe9g",
+  "name": "NPS 설문조사",
   "events": [
     {
       "id": "yu8qfeteutmum1ghb0wqshu9",
@@ -13,14 +13,16 @@
   "groups": [
     {
       "id": "g7l1tc86ty1r6x0yn0r2g1xo",
-      "title": "Intro",
+      "title": "소개",
       "graphCoordinates": { "x": 10.99, "y": 85.96 },
       "blocks": [
         {
           "id": "vep990mmfbe64nqczp66xebw",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Hey! 👋" }] }]
+            "richText": [
+              { "type": "p", "children": [{ "text": "안녕하세요! 👋" }] }
+            ]
           }
         },
         {
@@ -31,11 +33,9 @@
               {
                 "type": "p",
                 "children": [
-                  {
-                    "text": "Since you are part of our daily users, can I ask you "
-                  },
-                  { "bold": true, "text": "2 questions" },
-                  { "text": "?" }
+                  { "text": "당신은 우리의 일상적인 사용자이므로 " },
+                  { "bold": true, "text": "2개의 질문" },
+                  { "text": "을 해도 될까요?" }
                 ]
               }
             ]
@@ -48,7 +48,7 @@
             {
               "id": "wvjhc2vrkqy8512y0wvmciex",
               "outgoingEdgeId": "sjeyoptun1yu805ry37je1ni",
-              "content": "Sure!"
+              "content": "물론이죠!"
             }
           ]
         }
@@ -56,7 +56,7 @@
     },
     {
       "id": "xgqei015z6d58gefpviz8053",
-      "title": "Recommendation",
+      "title": "추천",
       "graphCoordinates": { "x": 360.5, "y": 86.64 },
       "blocks": [
         {
@@ -67,9 +67,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "How likely will you recommend our product" },
+                  { "text": "우리 제품을 친구나 동료에게 " },
                   { "bold": true, "text": " " },
-                  { "text": "to a friend or colleague?" }
+                  { "text": "추천할 가능성이 얼마나 되나요?" }
                 ]
               }
             ]
@@ -80,10 +80,7 @@
           "type": "rating input",
           "options": {
             "variableId": "vwqc8tzl0380h30vxh07fekmm",
-            "labels": {
-              "left": "Very unlikely",
-              "right": "Very likely"
-            },
+            "labels": { "left": "매우 낮음", "right": "매우 높음" },
             "isOneClickSubmitEnabled": true
           }
         },
@@ -126,19 +123,14 @@
     },
     {
       "id": "rp2r31gn1w5t1aeej96bhjj3",
-      "title": "Good",
+      "title": "좋아요",
       "graphCoordinates": { "x": 1078.85, "y": 292.9 },
       "blocks": [
         {
           "id": "izehojk23xug74tylpm0wbib",
           "type": "text",
           "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "I'm glad to hear that 😍" }]
-              }
-            ]
+            "richText": [{ "type": "p", "children": [{ "text": "기뻐요 😍" }] }]
           }
         },
         {
@@ -149,7 +141,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us why?" }]
+                "children": [{ "text": "그 이유를 알려주시겠어요?" }]
               }
             ]
           }
@@ -158,22 +150,20 @@
     },
     {
       "id": "sk1n3wpfit3uvfrh42fgcykm",
-      "title": "Why?",
+      "title": "이유?",
       "graphCoordinates": { "x": 1425.22, "y": 445.48 },
       "blocks": [
         {
           "id": "ro6a6dt7j3x99unduh5jm6an",
           "outgoingEdgeId": "y6gsa6pjrfeu8zi6evtzirs1",
           "type": "text input",
-          "options": {
-            "isLong": true
-          }
+          "options": { "isLong": true }
         }
       ]
     },
     {
       "id": "qj9qgsbfv6u1f5oe1bjnwnu9",
-      "title": "Bad",
+      "title": "나쁨",
       "graphCoordinates": { "x": 1067.22, "y": 575.86 },
       "blocks": [
         {
@@ -184,7 +174,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Could you tell us what went wrong?" }]
+                "children": [{ "text": "무엇이 잘못되었는지 알려주시겠어요?" }]
               }
             ]
           }
@@ -193,7 +183,7 @@
     },
     {
       "id": "tavt0nuh54ck1hvq74kt74vf",
-      "title": "Set type",
+      "title": "유형 설정",
       "graphCoordinates": { "x": 726.83, "y": 234.02 },
       "blocks": [
         {
@@ -209,7 +199,7 @@
     },
     {
       "id": "e887eoxfamv45hj8bz47jize",
-      "title": "Set type",
+      "title": "유형 설정",
       "graphCoordinates": { "x": 722.39, "y": 399.91 },
       "blocks": [
         {
@@ -225,7 +215,7 @@
     },
     {
       "id": "z4qtvedlz3mzcj4jdnfet2dc",
-      "title": "Set type",
+      "title": "유형 설정",
       "graphCoordinates": { "x": 722.56, "y": 566.11 },
       "blocks": [
         {
@@ -241,7 +231,7 @@
     },
     {
       "id": "l7fupza0yi6os0ix6heyd7jz",
-      "title": "Final segmentation",
+      "title": "최종 세분화",
       "graphCoordinates": { "x": 1777.5859375, "y": 396.8453917968819 },
       "blocks": [
         {
@@ -304,7 +294,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Thank you! 🙏" }] }
+              { "type": "p", "children": [{ "text": "감사합니다! 🙏" }] }
             ]
           }
         },
@@ -316,7 +306,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Would you be ok to leave a review on Capterra?" }
+                  { "text": "Capterra에 리뷰를 남겨주실 수 있나요?" }
                 ]
               }
             ]
@@ -329,12 +319,12 @@
             {
               "id": "y34d4iij8y9qrt28y240x7vm",
               "outgoingEdgeId": "lw33kviri91z1mvxb87kaew0",
-              "content": "Sure!"
+              "content": "물론이죠!"
             },
             {
               "id": "l7txnq6jtm0niynklcpzb21u",
               "outgoingEdgeId": "wjcvbnj1drs6if1p21a8yokf",
-              "content": "Maybe later"
+              "content": "나중에요"
             }
           ]
         }
@@ -342,7 +332,7 @@
     },
     {
       "id": "znljx8q0q2ggih0ipu28ryby",
-      "title": "Bye cheerful",
+      "title": "안녕, 기분 좋은 인사",
       "graphCoordinates": { "x": 2167.570274174784, "y": 543.712381679639 },
       "blocks": [
         {
@@ -352,9 +342,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  { "text": "Thank you for taking the time to answer!" }
-                ]
+                "children": [{ "text": "응답해주셔서 감사합니다!" }]
               }
             ]
           }
@@ -364,22 +352,15 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Have a beautiful day!" }] }
+              { "type": "p", "children": [{ "text": "아름다운 하루 되세요!" }] }
             ]
-          }
-        },
-        {
-          "id": "qobvos2ihgxb8e729ur8b2rv",
-          "type": "image",
-          "content": {
-            "url": "https://media3.giphy.com/media/qC2REWsp3fQ1v2mm74/giphy.gif?cid=fe3852a38k350b15tly68dp7plh5iskmlonklrofvce975cq&rid=giphy.gif&ct=g"
           }
         }
       ]
     },
     {
       "id": "vvbtgh5ptk49shyjn3zn6d71",
-      "title": "Bye sad",
+      "title": "안녕, 슬픈 인사",
       "graphCoordinates": { "x": 2173.366603864535, "y": 949.7063235658585 },
       "blocks": [
         {
@@ -389,11 +370,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [
-                  {
-                    "text": "Sorry that your experience hasn't been amazing 🙁"
-                  }
-                ]
+                "children": [{ "text": "경험이 좋지 않아서 죄송합니다 🙁" }]
               }
             ]
           }
@@ -407,26 +384,19 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Here is a promo code if you'd like to give our product another chance: "
+                    "text": "우리 제품을 다시 시도해보시려면 프로모션 코드를 사용하세요: "
                   },
                   { "bold": true, "text": "PROMO123" }
                 ]
               }
             ]
           }
-        },
-        {
-          "id": "lfk1wt96u8yrtfkof6lrianc",
-          "type": "image",
-          "content": {
-            "url": "https://media1.giphy.com/media/kaBU6pgv0OsPHz2yxy/giphy-downsized.gif?cid=fe3852a30aonhd3he63idx7116fsc1sydsan2ggr9uq4hs9j&rid=giphy-downsized.gif&ct=g"
-          }
         }
       ]
     },
     {
       "id": "mwfu8ot0z37zfq2fbo5rcyrl",
-      "title": "Redirect Capterra",
+      "title": "Capterra 리디렉션",
       "graphCoordinates": { "x": 2531.28515625, "y": 300.828125 },
       "blocks": [
         {
@@ -434,7 +404,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Amazing 🤩" }] }
+              { "type": "p", "children": [{ "text": "놀랍군요 🤩" }] }
             ]
           }
         },
@@ -445,7 +415,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let me take you there..." }]
+                "children": [{ "text": "거기로 안내해드릴게요..." }]
               }
             ]
           }
@@ -458,9 +428,7 @@
         {
           "id": "bfyw1eabougkp2aqlrcrf6lz",
           "type": "Redirect",
-          "options": {
-            "url": "https://www.capterra.com/p/233968/Typebot/"
-          }
+          "options": { "url": "https://www.capterra.com/p/233968/Typebot/" }
         }
       ]
     }
@@ -577,27 +545,63 @@
   "variables": [
     {
       "id": "vwqc8tzl0380h30vxh07fekmm",
-      "name": "Recommend rate",
+      "name": "추천 점수",
       "isSessionVariable": true
     },
     {
       "id": "vcgkjbh8intf2cql1oteyj4mu",
-      "name": "Type",
+      "name": "유형",
       "isSessionVariable": true
     }
   ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
+  "theme": {
+    "general": {
+      "background": { "content": "#d2d1d1" },
+      "progressBar": { "isEnabled": true }
+    },
+    "chat": {
+      "container": {
+        "maxHeight": "90%",
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "md",
+        "border": { "roundeness": "custom", "customRoundeness": 20 }
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/11.png"
+      },
+      "guestAvatar": {
+        "isEnabled": true,
+        "url": "https://chatapp-static-hosting-rage.s3.ap-northeast-2.amazonaws.com/webchat-common/avatar/06.png"
+      },
+      "hostBubbles": { "shadow": "lg", "border": { "roundeness": "large" } },
+      "guestBubbles": {
+        "backgroundColor": "#0042DA",
+        "shadow": "lg",
+        "border": { "roundeness": "large" }
+      },
+      "buttons": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#666460",
+        "shadow": "lg",
+        "border": { "color": "#bcb9b9", "roundeness": "large" }
+      }
+    },
+    "customCss": ".typebot-guest-bubble {\n  border-radius : 40px;\n  background-image :linear-gradient(to right, #e052a0, #f15c41);\n  border : none;\n}\n\n"
+  },
+  "selectedThemeTemplateId": "clzgp93r70001ctqce9olrbdc",
   "settings": {},
-  "createdAt": "2023-11-07T07:25:44.765Z",
-  "updatedAt": "2023-11-07T07:26:12.044Z",
+  "createdAt": "2024-08-08T08:17:10.103Z",
+  "updatedAt": "2024-08-08T08:17:46.113Z",
   "icon": "⭐",
-  "folderId": null,
+  "folderId": "clzhxn957000113qsm96bghgf",
   "publicId": null,
   "customDomain": null,
-  "workspaceId": "proWorkspace",
+  "workspaceId": "clz6l22mh0001n2cdij4m6jvq",
   "resultsTablePreferences": null,
   "isArchived": false,
   "isClosed": false,
-  "whatsAppCredentialsId": null
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

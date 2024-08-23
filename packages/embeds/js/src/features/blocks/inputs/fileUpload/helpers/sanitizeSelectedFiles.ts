@@ -20,8 +20,8 @@ export const sanitizeNewFile = ({
 
   if (sizeLimit && newFile.size > sizeLimit * 1024 * 1024) {
     onError({
-      title: 'File too large',
-      description: `${newFile.name} is larger than ${sizeLimit}MB`,
+      title: '파일 크기 초과',
+      description: `${newFile.name} 는 ${sizeLimit}MB를 초과하여 업로드 할 수 없습니다.`,
     })
     return
   }
