@@ -44,7 +44,6 @@ import {
   sessionRequestChatServerSignal,
   setSessionRequestChatServerSignal,
 } from '@/utils/sessionRequestChatServerSignal'
-import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
 
 const autoScrollBottomToleranceScreenPercent = 0.6
 const bottomSpacerHeight = 128
@@ -112,8 +111,8 @@ export const ConversationContainer = (props: Props) => {
   const [blockedPopupUrl, setBlockedPopupUrl] = createSignal<string>()
   const [hasError, setHasError] = createSignal(false)
 
-  // 입력 조합중인지 여부 시그널
-  const [isComposing, setIsComposing] = createSignal(false)
+  // // 입력 조합중인지 여부 시그널
+  // const [isComposing, setIsComposing] = createSignal(false)
 
   // 채팅 상담 메세지 입력 영역 활성화 여부
   const [isInputActive, setIsInputActive] = createSignal(false)
@@ -122,7 +121,7 @@ export const ConversationContainer = (props: Props) => {
   const [chatMessage, setChatMessage] = createSignal('')
 
   // 상단 센터 정보 표시 여부
-  const [isCenterInfoVisible, setIsCenterInfoVisible] = createSignal(false)
+  const [isCenterInfoVisible] = createSignal(false)
 
   // 컴포넌트가 DOM에 마운트된 후에 실행되는 훅
   // 초기 상태의 클라이언트 사이드 액션을 처리
@@ -243,6 +242,7 @@ export const ConversationContainer = (props: Props) => {
   }
 
   // 채팅 메세지 전송 핸들러
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMessageSend = async () => {
     if (!chatMessage()) return
     if (!connectChatServer()) return
@@ -264,20 +264,20 @@ export const ConversationContainer = (props: Props) => {
     inputRef?.focus()
   }
 
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Enter' && !event.shiftKey && !isComposing()) {
-      event.preventDefault() // 기본 Enter 동작(줄바꿈) 방지
-      handleMessageSend() // 메시지 전송 처리
-    }
-  }
+  // const handleKeyDown = (event: KeyboardEvent) => {
+  //   if (event.key === 'Enter' && !event.shiftKey && !isComposing()) {
+  //     event.preventDefault() // 기본 Enter 동작(줄바꿈) 방지
+  //     handleMessageSend() // 메시지 전송 처리
+  //   }
+  // }
 
-  const handleCompositionStart = () => {
-    setIsComposing(true)
-  }
+  // const handleCompositionStart = () => {
+  //   setIsComposing(true)
+  // }
 
-  const handleCompositionEnd = () => {
-    setIsComposing(false)
-  }
+  // const handleCompositionEnd = () => {
+  //   setIsComposing(false)
+  // }
 
   // executeClientSideAction 함수의 onMessageStream 콜백 함수으로 사용
   // 스트리밍 메세지를 처리하는 함수
@@ -331,6 +331,15 @@ export const ConversationContainer = (props: Props) => {
     setIsRecovered(false)
     //에러 상태 초기화
     setHasError(false)
+
+    if (message) {
+      setChatMessage(message)
+      handleMessageSend()
+    }
+
+    if (attachments) {
+      sendFileUserMessage(attachments)
+    }
 
     // chatChunks에서 현재 입력 블록을 가져옴
     const currentInputBlock = [...chatChunks()].pop()?.input
@@ -560,19 +569,21 @@ export const ConversationContainer = (props: Props) => {
     // if (connectChatServer()) {
     //   connectChatServer()!.closeSocket()
     // }
-    const textArea = inputRef as unknown as HTMLTextAreaElement
-    if (textArea) {
-      textArea.removeEventListener('keydown', handleKeyDown)
-    }
+    // const textArea = inputRef as unknown as HTMLTextAreaElement
+    // if (textArea) {
+    //   textArea.removeEventListener('keydown', handleKeyDown)
+    // }
   })
 
   const handleSkip = () => sendMessage(undefined)
 
   // 상담시스템으로 이미지 정보 보냄
-  const sendFileUserMessage = (message: ContinueChatResponse) => {
-    message.messages.forEach((msg) => {
-      if (msg.type !== BubbleBlockType.IMAGE) return
-      if (!msg.content.url) return
+  const sendFileUserMessage = (attachments: Answer['attachments']) => {
+    if (!attachments) return
+
+    attachments.forEach((attachment) => {
+      // if (msg.type !== BubbleBlockType.IMAGE) return
+      // if (!msg.content.url) return
 
       const message = {
         text: '',
@@ -585,12 +596,10 @@ export const ConversationContainer = (props: Props) => {
         sendAt: new Date().getTime().toString(),
         files: [
           {
-            contentType: 'image/jpeg',
-            name: msg.content.url.substring(
-              msg.content.url.lastIndexOf('/') + 1
-            ),
-            type: 'image',
-            fileUrl: msg.content.url,
+            contentType: attachment.type,
+            name: attachment.url.substring(attachment.url.lastIndexOf('/') + 1),
+            type: attachment.type,
+            fileUrl: attachment.url,
           },
         ],
       }
@@ -604,7 +613,7 @@ export const ConversationContainer = (props: Props) => {
       ref={chatContainer}
       class="flex flex-col overflow-y-auto w-full px-3 pt-10 relative scrollable-container typebot-chat-view scroll-smooth gap-2"
     >
-      <Show when={isCenterInfoVisible()}>
+      <Show when={isCenterInfoVisible() || isInputActive()}>
         <div>
           <header>
             <div>센터 정보(임시)</div>
