@@ -70,9 +70,18 @@ export const getServerSideProps: GetServerSideProps = async (
     const customDomain = `${forwardedHost ?? host}${
       pathname === '/' ? '' : pathname
     }`
-    const publishedTypebot = isMatchingViewerUrl
-      ? await getTypebotFromPublicId(context.query.publicId?.toString())
-      : await getTypebotFromCustomDomain(customDomain)
+    log(`customDomain: ${customDomain}`)
+
+    if (!isMatchingViewerUrl) {
+      log(`Not matching viewer url -> viewerUrls 로 조정`)
+    }
+
+    const publishedTypebot = await getTypebotFromPublicId(
+      context.query.publicId?.toString()
+    )
+    // const publishedTypebot = isMatchingViewerUrl
+    //   ? await getTypebotFromPublicId(context.query.publicId?.toString())
+    //   : await getTypebotFromCustomDomain(customDomain)
 
     return {
       props: {
@@ -140,6 +149,7 @@ const getTypebotFromPublicId = async (publicId?: string) => {
     : publishedTypebot
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const getTypebotFromCustomDomain = async (customDomain: string) => {
   const publishedTypebot = (await prisma.publicTypebot.findFirst({
     where: { typebot: { customDomain } },
