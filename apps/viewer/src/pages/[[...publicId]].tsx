@@ -73,15 +73,15 @@ export const getServerSideProps: GetServerSideProps = async (
     log(`customDomain: ${customDomain}`)
 
     if (!isMatchingViewerUrl) {
-      log(`Not matching viewer url -> viewerUrls 로 조정`)
+      log(`Not matching viewer url`)
     }
 
-    const publishedTypebot = await getTypebotFromPublicId(
-      context.query.publicId?.toString()
-    )
-    // const publishedTypebot = isMatchingViewerUrl
-    //   ? await getTypebotFromPublicId(context.query.publicId?.toString())
-    //   : await getTypebotFromCustomDomain(customDomain)
+    // const publishedTypebot = await getTypebotFromPublicId(
+    //   context.query.publicId?.toString()
+    // )
+    const publishedTypebot = isMatchingViewerUrl
+      ? await getTypebotFromPublicId(context.query.publicId?.toString())
+      : await getTypebotFromCustomDomain(customDomain)
 
     return {
       props: {
@@ -123,6 +123,8 @@ const getTypebotFromPublicId = async (publicId?: string) => {
       },
     },
   })) as TypebotPageProps['publishedTypebot'] | null
+
+  console.log(`getTypebotFromPublicId publishedTypebot`, publishedTypebot)
   if (isNotDefined(publishedTypebot)) return null
   return publishedTypebot.version
     ? ({
@@ -172,6 +174,8 @@ const getTypebotFromCustomDomain = async (customDomain: string) => {
       },
     },
   })) as TypebotPageProps['publishedTypebot'] | null
+
+  console.log(`getTypebotFromCustomDomain publishedTypebot`, publishedTypebot)
   if (isNotDefined(publishedTypebot)) return null
   return publishedTypebot.version
     ? ({
