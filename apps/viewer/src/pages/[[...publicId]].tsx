@@ -43,6 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (
     )?.name ?? null
   const pathname = context.resolvedUrl.split('?')[0]
   const { host, forwardedHost } = getHost(context.req)
+  log(`context: ${context.req}`)
   log(`host: ${host}`)
   log(`forwardedHost: ${forwardedHost}`)
   const protocol =
@@ -76,18 +77,19 @@ export const getServerSideProps: GetServerSideProps = async (
       log(`Not matching viewer url`)
     }
 
-    // const publishedTypebot = await getTypebotFromPublicId(
-    //   context.query.publicId?.toString()
-    // )
-    const publishedTypebot = isMatchingViewerUrl
-      ? await getTypebotFromPublicId(context.query.publicId?.toString())
-      : await getTypebotFromCustomDomain(customDomain)
-
+    const publishedTypebot = await getTypebotFromPublicId(
+      context.query.publicId?.toString()
+    )
+    // const publishedTypebot = isMatchingViewerUrl
+    //   ? await getTypebotFromPublicId(context.query.publicId?.toString())
+    //   : await getTypebotFromCustomDomain(customDomain)
+    const url = `${protocol}://${viewerUrls ?? host}${pathname}`
     return {
       props: {
         publishedTypebot,
         incompatibleBrowser,
-        url: `${protocol}://${forwardedHost ?? host}${pathname}`,
+        // url: `${protocol}://${forwardedHost ?? host}${pathname}`,
+        url: url,
       },
     }
   } catch (err) {
