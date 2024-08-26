@@ -77,19 +77,19 @@ export const getServerSideProps: GetServerSideProps = async (
       log(`Not matching viewer url`)
     }
 
-    const publishedTypebot = await getTypebotFromPublicId(
-      context.query.publicId?.toString()
-    )
-    // const publishedTypebot = isMatchingViewerUrl
-    //   ? await getTypebotFromPublicId(context.query.publicId?.toString())
-    //   : await getTypebotFromCustomDomain(customDomain)
-    const url = `${protocol}://${viewerUrls ?? host}${pathname}`
+    // const publishedTypebot = await getTypebotFromPublicId(
+    //   context.query.publicId?.toString()
+    // )
+    const publishedTypebot = isMatchingViewerUrl
+      ? await getTypebotFromPublicId(context.query.publicId?.toString())
+      : await getTypebotFromCustomDomain(customDomain)
+    // const url = `${protocol}://${viewerUrls ?? host}${pathname}`
     return {
       props: {
         publishedTypebot,
         incompatibleBrowser,
-        // url: `${protocol}://${forwardedHost ?? host}${pathname}`,
-        url: url,
+        url: `${protocol}://${forwardedHost ?? host}${pathname}`,
+        // url: url,
       },
     }
   } catch (err) {
