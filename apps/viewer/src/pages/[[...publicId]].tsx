@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (
     )?.name ?? null
   const pathname = context.resolvedUrl.split('?')[0]
   const { host, forwardedHost } = getHost(context.req)
-  // log(`context: ${context.req}`)
+  log(`context: ${JSON.stringify(context.req.headers)}`)
   log(`host: ${host}`)
   log(`forwardedHost: ${forwardedHost}`)
   log(`context.query.publicId: ${context.query.publicId}`)

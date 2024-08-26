@@ -9,5 +9,13 @@
   },
   "github": {
     "silent": false
-  }
+  },
+
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://omnichannel-platform-lightbot-viewer.vercel.app/$1",
+      "permanent": true
+    }
+  ]
 }
