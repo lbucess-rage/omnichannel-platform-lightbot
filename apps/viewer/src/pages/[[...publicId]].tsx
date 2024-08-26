@@ -78,12 +78,12 @@ export const getServerSideProps: GetServerSideProps = async (
       log(`Not matching viewer url`)
     }
 
-    const publishedTypebot = await getTypebotFromPublicId(
-      context.query.publicId?.toString()
-    )
-    // const publishedTypebot = isMatchingViewerUrl
-    //   ? await getTypebotFromPublicId(context.query.publicId?.toString())
-    //   : await getTypebotFromCustomDomain(customDomain)
+    // const publishedTypebot = await getTypebotFromPublicId(
+    //   context.query.publicId?.toString()
+    // )
+    const publishedTypebot = isMatchingViewerUrl
+      ? await getTypebotFromPublicId(context.query.publicId?.toString())
+      : await getTypebotFromCustomDomain(customDomain)
     // const url = `${protocol}://${viewerUrls ?? host}${pathname}`
     return {
       props: {
