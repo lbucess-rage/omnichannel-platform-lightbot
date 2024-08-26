@@ -3,10 +3,11 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import Cors from 'cors'
 import { initMiddleware, methodNotAllowed, notFound } from '@typebot.io/lib/api'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const cors = initMiddleware(Cors())
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  await cors(req, res)
+  // await cors(req, res)
   if (req.method === 'GET') {
     const typebotId = req.query.typebotId as string
     const typebot = await prisma.publicTypebot.findUnique({
