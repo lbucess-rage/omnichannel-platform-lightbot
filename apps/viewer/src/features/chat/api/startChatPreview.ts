@@ -30,9 +30,10 @@ export const startChatPreview = publicProcedure
         sessionId,
         textBubbleContentFormat,
       },
-      ctx: { user },
-    }) =>
-      startChatPreviewFn({
+      ctx: { user, res },
+    }) => {
+      res.setHeader('Access-Control-Allow-Origin', '*')
+      return startChatPreviewFn({
         message,
         isOnlyRegistering,
         isStreamEnabled,
@@ -44,4 +45,5 @@ export const startChatPreview = publicProcedure
         sessionId,
         textBubbleContentFormat,
       })
+    }
   )
