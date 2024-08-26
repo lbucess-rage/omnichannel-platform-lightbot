@@ -1,15 +1,13 @@
 {
   "functions": {
     "src/pages/api/[...trpc].ts": {
-      "maxDuration": 15,
       "memory": 200
     },
     "src/pages/api/typebots/[typebotId]/blocks/[blockId]/executeWebhook.ts": {
-      "maxDuration": 15,
       "memory": 200
     }
   },
   "github": {
-    "silent": true
+    "silent": false
   }
 }

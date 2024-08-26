@@ -12,6 +12,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     router: appRouter,
     createContext,
     onError({ error }) {
+      console.error('Something went wrong', error)
       if (error.code === 'INTERNAL_SERVER_ERROR') {
         Sentry.captureException(error)
         console.error('Something went wrong', error)
