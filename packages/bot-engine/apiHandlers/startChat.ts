@@ -53,7 +53,7 @@ export const startChat = async ({
   })
 
   let corsOrigin
-
+  console.log(`startChat executed with origin: ${typebot}`)
   if (
     newSessionState.allowedOrigins &&
     newSessionState.allowedOrigins.length > 0

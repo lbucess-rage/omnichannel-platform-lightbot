@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (
     )?.name ?? null
   const pathname = context.resolvedUrl.split('?')[0]
   const { host, forwardedHost } = getHost(context.req)
-  log(`context: ${context.req}`)
+  // log(`context: ${context.req}`)
   log(`host: ${host}`)
   log(`forwardedHost: ${forwardedHost}`)
   const protocol =
@@ -126,7 +126,7 @@ const getTypebotFromPublicId = async (publicId?: string) => {
     },
   })) as TypebotPageProps['publishedTypebot'] | null
 
-  console.log(`getTypebotFromPublicId publishedTypebot`, publishedTypebot)
+  // console.log(`getTypebotFromPublicId publishedTypebot`, publishedTypebot)
   if (isNotDefined(publishedTypebot)) return null
   return publishedTypebot.version
     ? ({
@@ -177,7 +177,7 @@ const getTypebotFromCustomDomain = async (customDomain: string) => {
     },
   })) as TypebotPageProps['publishedTypebot'] | null
 
-  console.log(`getTypebotFromCustomDomain publishedTypebot`, publishedTypebot)
+  // console.log(`getTypebotFromCustomDomain publishedTypebot`, publishedTypebot)
   if (isNotDefined(publishedTypebot)) return null
   return publishedTypebot.version
     ? ({

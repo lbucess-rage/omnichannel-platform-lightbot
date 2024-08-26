@@ -8,6 +8,7 @@ import { createContext } from '@/helpers/server/context'
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   // await cors(req, res)
 
+  console.log(`API ${req.method} ${req.url}`)
   return createOpenApiNextHandler({
     router: appRouter,
     createContext,
