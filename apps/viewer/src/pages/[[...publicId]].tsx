@@ -61,12 +61,20 @@ export const getServerSideProps: GetServerSideProps = async (
     const isMatchingViewerUrl = env.NEXT_PUBLIC_E2E_TEST
       ? true
       : viewerUrls.some(
-          (url) =>
-            host.split(':')[0].includes(url.split('//')[1].split(':')[0]) ||
-            (forwardedHost &&
-              forwardedHost
-                .split(':')[0]
-                .includes(url.split('//')[1].split(':')[0]))
+          // (url) =>
+          //   host.split(':')[0].includes(url.split('//')[1].split(':')[0]) ||
+          //   (forwardedHost &&
+          //     forwardedHost
+          //       .split(':')[0]
+          //       .includes(url.split('//')[1].split(':')[0]))
+
+          (url) => {
+            const domain = url.split('//')[1].split(':')[0] // https:// 제거 후 도메인만 가져오기
+            return (
+              host.split(':')[0].includes(domain) ||
+              (forwardedHost && forwardedHost.split(':')[0].includes(domain))
+            )
+          }
         )
     log(`isMatchingViewerUrl: ${isMatchingViewerUrl}`)
     const customDomain = `${forwardedHost ?? host}${
