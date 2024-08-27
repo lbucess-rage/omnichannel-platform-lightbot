@@ -58,37 +58,38 @@ export const getServerSideProps: GetServerSideProps = async (
     if (!host) return { props: {} }
     const viewerUrls = env.NEXT_PUBLIC_VIEWER_URL
     log(`viewerUrls: ${viewerUrls}`)
-    const isMatchingViewerUrl = env.NEXT_PUBLIC_E2E_TEST
-      ? true
-      : viewerUrls.some(
-          // (url) =>
-          //   host.split(':')[0].includes(url.split('//')[1].split(':')[0]) ||
-          //   (forwardedHost &&
-          //     forwardedHost
-          //       .split(':')[0]
-          //       .includes(url.split('//')[1].split(':')[0]))
+    // const isMatchingViewerUrl = env.NEXT_PUBLIC_E2E_TEST
+    //   ? true
+    //   : viewerUrls.some(
+    //       // (url) =>
+    //       //   host.split(':')[0].includes(url.split('//')[1].split(':')[0]) ||
+    //       //   (forwardedHost &&
+    //       //     forwardedHost
+    //       //       .split(':')[0]
+    //       //       .includes(url.split('//')[1].split(':')[0]))
 
-          // (url) => {
-          //   const domain = url.split('//')[1].split(':')[0] // https:// 제거 후 도메인만 가져오기
-          //   return (
-          //     host.split(':')[0].includes(domain) ||
-          //     (forwardedHost && forwardedHost.split(':')[0].includes(domain))
-          //   )
-          // }
+    //       // (url) => {
+    //       //   const domain = url.split('//')[1].split(':')[0] // https:// 제거 후 도메인만 가져오기
+    //       //   return (
+    //       //     host.split(':')[0].includes(domain) ||
+    //       //     (forwardedHost && forwardedHost.split(':')[0].includes(domain))
+    //       //   )
+    //       // }
 
-          (url) => {
-            const cleanUrl = url.replace(/^https?:\/\//, '').split(':')[0] // 프로토콜 제거
-            const cleanHost = host
-              .split(':')[0]
-              .replace(/-[a-z0-9]+\.vercel\.app$/, '.vercel.app') // 서브도메인 제거
-            const cleanForwardedHost = forwardedHost
-              ? forwardedHost
-                  .split(':')[0]
-                  .replace(/-[a-z0-9]+\.vercel\.app$/, '.vercel.app')
-              : ''
-            return cleanHost === cleanUrl || cleanForwardedHost === cleanUrl
-          }
-        )
+    //       (url) => {
+    //         const cleanUrl = url.replace(/^https?:\/\//, '').split(':')[0] // 프로토콜 제거
+    //         const cleanHost = host
+    //           .split(':')[0]
+    //           .replace(/-[a-z0-9]+\.vercel\.app$/, '.vercel.app') // 서브도메인 제거
+    //         const cleanForwardedHost = forwardedHost
+    //           ? forwardedHost
+    //               .split(':')[0]
+    //               .replace(/-[a-z0-9]+\.vercel\.app$/, '.vercel.app')
+    //           : ''
+    //         return cleanHost === cleanUrl || cleanForwardedHost === cleanUrl
+    //       }
+    //     )
+    const isMatchingViewerUrl = true
     log(`isMatchingViewerUrl: ${isMatchingViewerUrl}`)
     const customDomain = `${forwardedHost ?? host}${
       pathname === '/' ? '' : pathname
