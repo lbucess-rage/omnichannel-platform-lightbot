@@ -68,12 +68,25 @@ export const getServerSideProps: GetServerSideProps = async (
           //       .split(':')[0]
           //       .includes(url.split('//')[1].split(':')[0]))
 
+          // (url) => {
+          //   const domain = url.split('//')[1].split(':')[0] // https:// 제거 후 도메인만 가져오기
+          //   return (
+          //     host.split(':')[0].includes(domain) ||
+          //     (forwardedHost && forwardedHost.split(':')[0].includes(domain))
+          //   )
+          // }
+
           (url) => {
-            const domain = url.split('//')[1].split(':')[0] // https:// 제거 후 도메인만 가져오기
-            return (
-              host.split(':')[0].includes(domain) ||
-              (forwardedHost && forwardedHost.split(':')[0].includes(domain))
-            )
+            const cleanUrl = url.replace(/^https?:\/\//, '').split(':')[0] // 프로토콜 제거
+            const cleanHost = host
+              .split(':')[0]
+              .replace(/-[a-z0-9]+\.vercel\.app$/, '.vercel.app') // 서브도메인 제거
+            const cleanForwardedHost = forwardedHost
+              ? forwardedHost
+                  .split(':')[0]
+                  .replace(/-[a-z0-9]+\.vercel\.app$/, '.vercel.app')
+              : ''
+            return cleanHost === cleanUrl || cleanForwardedHost === cleanUrl
           }
         )
     log(`isMatchingViewerUrl: ${isMatchingViewerUrl}`)
