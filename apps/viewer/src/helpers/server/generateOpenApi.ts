@@ -5,7 +5,7 @@ import { appRouter } from './appRouter'
 const openApiDocument = generateOpenApiDocument(appRouter, {
   title: 'Chat API',
   version: '3.0.0',
-  baseUrl: 'https://typebot.io/api',
+  baseUrl: 'https://omnichannel-platform-lightbot-viewer.vercel.app/api',
   docsUrl: 'https://docs.typebot.io/api-reference',
 })
 

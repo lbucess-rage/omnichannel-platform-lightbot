@@ -30,6 +30,7 @@ export const startChatPreview = async ({
   sessionId,
   textBubbleContentFormat,
 }: Props) => {
+  console.log(`startChatPreview executed with sessionId: ${sessionId}`)
   const {
     typebot,
     messages,
