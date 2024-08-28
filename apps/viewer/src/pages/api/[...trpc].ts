@@ -6,11 +6,13 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { createContext } from '@/helpers/server/context'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  await cors(req, res, {
-    origin: '*',
-    methods: ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    optionsSuccessStatus: 200,
-  })
+  // await cors(req, res, {
+  //   origin: '*',
+  //   methods: ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  //   optionsSuccessStatus: 200,
+  // })
+
+  await cors(req, res)
 
   res.setHeader('Access-Control-Allow-Origin', '*')
   // console.log(`API ${req.method} ${req.url}`)
