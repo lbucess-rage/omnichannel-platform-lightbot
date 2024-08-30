@@ -52,6 +52,8 @@ export const continueChat = async ({
     else corsOrigin = session.state.allowedOrigins[0]
   }
 
+  console.log(`session state`, session)
+
   const {
     messages,
     input,

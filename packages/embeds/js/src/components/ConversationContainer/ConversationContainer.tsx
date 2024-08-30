@@ -44,6 +44,7 @@ import {
   sessionRequestChatServerSignal,
   setSessionRequestChatServerSignal,
 } from '@/utils/sessionRequestChatServerSignal'
+import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
 
 const autoScrollBottomToleranceScreenPercent = 0.6
 const bottomSpacerHeight = 128
@@ -207,9 +208,63 @@ export const ConversationContainer = (props: Props) => {
         break
 
       case WsPayloadType.SESSION_TERMINATE:
-        console.log(`[SOCKET-(SESSION_TERMINATE)] event:`, event)
-        setIsInputActive(false)
-        connectChatServer()?.closeSocket()
+        {
+          console.log(`[SOCKET-(SESSION_TERMINATE)] event:`, event)
+          setIsInputActive(false)
+          connectChatServer()?.closeSocket()
+
+          // 상담이 종료되었다는 메세지 출력
+          // const agentResponse: ContinueChatResponse = {
+          //   messages: [
+          //     {
+          //       id: event.message.messageId,
+          //       type: BubbleBlockType.TEXT,
+          //       content: {
+          //         type: 'richText',
+          //         richText: [
+          //           {
+          //             type: 'p',
+          //             children: [
+          //               {
+          //                 text: '👉 채팅 상담이 종료되었습니다.👋 계속 챗봇과 대화가 가능합니다 😎',
+          //               },
+          //             ],
+          //           },
+          //         ],
+          //       },
+          //     },
+          //   ],
+          // }
+
+          setChatChunks((displayedChunks) => [
+            // ...displayedChunks,
+            // {
+            //   input: displayedChunks[displayedChunks.length - 1].input,
+            //   messages: agentStartResponse.messages,
+            //   clientSideActions:
+            //     displayedChunks[displayedChunks.length - 1].clientSideActions,
+            // },
+            ...displayedChunks.slice(0, -1), // 마지막 요소를 제외한 기존 배열 복사
+            {
+              input: undefined, // 이전 요소의 input을 undefined로 설정
+              messages: displayedChunks[displayedChunks.length - 1].messages,
+              clientSideActions:
+                displayedChunks[displayedChunks.length - 1].clientSideActions,
+            },
+            // ,
+            // {
+            //   input: undefined,
+            //   messages: agentResponse.messages,
+            //   clientSideActions:
+            //     displayedChunks[displayedChunks.length - 1].clientSideActions,
+            // },
+          ])
+
+          sendMessage('[action]-sessionTerminate')
+        }
+
+        // 입력 블락에 특정 메세지를 전달하여 다음 시나리오로 이동
+
         break
 
       case WsPayloadType.SESSION_CONFIRM:
@@ -220,15 +275,137 @@ export const ConversationContainer = (props: Props) => {
 
       // 상담사 응답 메세지 처리 필요
       case WsPayloadType.AGENT_START_RESPONSE:
-        console.log(`[SOCKET-(AGENT_START_RESPONSE)] event:`, event)
+        {
+          console.log(`[SOCKET-(AGENT_START_RESPONSE)] event:`, event)
+
+          const agentStartResponse: ContinueChatResponse = {
+            messages: [
+              {
+                id: event.sessionId + new Date().getTime().toString(),
+
+                type: BubbleBlockType.TEXT,
+
+                content: {
+                  type: 'richText',
+                  richText: [
+                    {
+                      type: 'p',
+                      children: [
+                        {
+                          text: '채팅 상담사 연결 진행중입니다! ⌛️ ',
+                        },
+                      ],
+                    },
+                  ],
+                },
+              },
+
+              // 이미지 출력 테스트
+              // {
+              //   id: event.sessionId + new Date().getTime().toString(),
+
+              //   type: BubbleBlockType.IMAGE,
+              //   content: {
+              //     url: 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif',
+              //     clickLink: {
+              //       url: 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif',
+              //       alt: '채팅 상담사 연결 진행중입니다! ⌛️',
+              //     },
+              //   },
+              // },
+            ],
+            progress: 100,
+          }
+          console.log(
+            `[SOCKET-(AGENT_START_RESPONSE)] event agentStartResponse:`,
+            agentStartResponse
+          )
+          setChatChunks((displayedChunks) => [
+            // ...displayedChunks,
+            // {
+            //   input: displayedChunks[displayedChunks.length - 1].input,
+            //   messages: agentStartResponse.messages,
+            //   clientSideActions:
+            //     displayedChunks[displayedChunks.length - 1].clientSideActions,
+            // },
+            ...displayedChunks.slice(0, -1), // 마지막 요소를 제외한 기존 배열 복사
+            {
+              input: undefined, // 이전 요소의 input을 undefined로 설정
+              messages: displayedChunks[displayedChunks.length - 1].messages,
+              clientSideActions:
+                displayedChunks[displayedChunks.length - 1].clientSideActions,
+            },
+            {
+              input: displayedChunks[displayedChunks.length - 1].input,
+              messages: agentStartResponse.messages,
+              clientSideActions:
+                displayedChunks[displayedChunks.length - 1].clientSideActions,
+            },
+          ])
+        }
+
         break
 
       case WsPayloadType.STATUS_CHANGE_EVENT:
         console.log(`[SOCKET-(STATUS_CHANGE_EVENT)] event:`, event)
         break
 
+      // 상담사 메세지 응답 처리
+
       case WsPayloadType.AGENT_RESPONSE:
-        console.log(`[SOCKET-(AGENT_RESPONSE)] event:`, event)
+        {
+          console.log(`[SOCKET-(AGENT_RESPONSE)] event:`, event)
+
+          const agentResponse: ContinueChatResponse = {
+            messages: [
+              {
+                id: event.message.messageId,
+                type: BubbleBlockType.TEXT,
+                content: {
+                  type: 'richText',
+                  richText: [
+                    {
+                      type: 'p',
+                      children: [
+                        {
+                          text: event.message.text,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              },
+            ],
+          }
+
+          setChatChunks((displayedChunks) => [
+            // ...displayedChunks,
+            // {
+            //   input: displayedChunks[displayedChunks.length - 1].input,
+            //   messages: agentStartResponse.messages,
+            //   clientSideActions:
+            //     displayedChunks[displayedChunks.length - 1].clientSideActions,
+            // },
+            ...displayedChunks.slice(0, -1), // 마지막 요소를 제외한 기존 배열 복사
+            {
+              input: undefined, // 이전 요소의 input을 undefined로 설정
+              messages: displayedChunks[displayedChunks.length - 1].messages,
+              clientSideActions:
+                displayedChunks[displayedChunks.length - 1].clientSideActions,
+            },
+            {
+              input: displayedChunks[displayedChunks.length - 1].input,
+              messages: agentResponse.messages,
+              clientSideActions:
+                displayedChunks[displayedChunks.length - 1].clientSideActions,
+            },
+          ])
+
+          console.log(
+            `[SOCKET-(AGENT_RESPONSE)] event agentMessage:`,
+            agentResponse
+          )
+        }
         break
 
       case WsPayloadType.USER_MESSAGE:
@@ -332,12 +509,12 @@ export const ConversationContainer = (props: Props) => {
     //에러 상태 초기화
     setHasError(false)
 
-    if (message) {
+    if (message && !message.includes('[action]-')) {
       setChatMessage(message)
       handleMessageSend()
     }
 
-    if (attachments) {
+    if (attachments && message && !message.includes('[action]-')) {
       sendFileUserMessage(attachments)
     }
 

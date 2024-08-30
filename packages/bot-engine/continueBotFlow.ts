@@ -79,6 +79,10 @@ export const continueBotFlow = async (
     newSessionState.currentBlockId,
     state.typebotsQueue[0].typebot.groups
   )
+  console.log(`reply info:`, reply)
+  console.log(`block info:`, block)
+  console.log(`group info:`, group)
+  console.log(`blockIndex info`, blockIndex)
 
   if (!block)
     throw new TRPCError({
@@ -174,6 +178,8 @@ export const continueBotFlow = async (
   if (isInputBlock(block)) {
     const parsedReplyResult = await parseReply(newSessionState)(reply, block)
 
+    console.log(`continue Bot flow parsedReplyResult:`, parsedReplyResult)
+
     if (parsedReplyResult.status === 'fail')
       return {
         ...(await parseRetryMessage(newSessionState)(
@@ -242,6 +248,8 @@ export const continueBotFlow = async (
     isOffDefaultPath,
   })
 
+  console.log(`nextGroup info:`, nextGroup)
+
   if (nextGroup.visitedEdge) visitedEdges.push(nextGroup.visitedEdge)
 
   newSessionState = nextGroup.newSessionState
@@ -265,6 +273,8 @@ export const continueBotFlow = async (
     startTime,
     textBubbleContentFormat,
   })
+
+  console.log(`chatReply info:`, chatReply)
 
   return {
     ...chatReply,
