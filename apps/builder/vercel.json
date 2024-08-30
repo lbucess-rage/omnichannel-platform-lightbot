@@ -1,4 +1,18 @@
 {
+  "functions": {
+    "src/pages/api/intergrations/email/test-config.ts": {
+      "maxDuration": 30 ,
+      "memory": 200
+    },
+    "src/pages/api/intergrations/google-sheets/spreadsheets.ts": {
+      "maxDuration": 30 ,
+      "memory": 200
+    },
+    "src/pages/api/intergrations/google-sheets/spreadsheets/[id]/sheets.ts": {
+      "maxDuration": 30 ,
+      "memory": 200
+    }
+  },
   "build" : {
     "env" : {
       "PRISMA_CLIENT_ENGINE_TYPE" : "binary"
