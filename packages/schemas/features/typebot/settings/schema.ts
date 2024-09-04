@@ -33,6 +33,16 @@ const metadataSchema = z.object({
   googleTagManagerId: z.string().optional(),
 })
 
+// HomeUI settings
+const homeUISchema = z.object({
+  isHomeUIEnabled: z.boolean().optional(),
+  title: z.string().optional(),
+  subTitle: z.string().optional(),
+  centerId: z.string().optional(),
+  centerName: z.string().optional(),
+  centerUrl: z.string().optional(),
+})
+
 export const settingsSchema = z
   .object({
     general: generalSettings.optional(),
@@ -49,6 +59,7 @@ export const settingsSchema = z
         allowedOrigins: z.array(z.string()).optional(),
       })
       .optional(),
+    homeUI: homeUISchema.optional(),
   })
   .openapi({
     title: 'Settings',

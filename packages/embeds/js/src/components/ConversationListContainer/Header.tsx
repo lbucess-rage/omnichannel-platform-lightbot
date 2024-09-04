@@ -67,9 +67,19 @@ const Header = (props: Props) => {
               />
             </div>
             <div>
-              <h4 class="text-bold text-white opacity-100 text-left">
-                {props.context.typebot.settings.metadata?.title}
+              {/* <h4 class="text-bold text-white opacity-100 text-left">
+                {props.context.typebot.settings.homeUI?.centerName}
               </h4>
+               */}
+              <a
+                href={props.context.typebot.settings.homeUI?.centerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block text-left font-bold text-black bg-white hover:bg-gray-100 opacity-100 px-4 py-2 rounded-md w-full"
+                style={{ 'text-decoration': 'none' }} // 언더라인 제거
+              >
+                {props.context.typebot.settings.homeUI?.centerName}
+              </a>
             </div>
             <div class="ml-0">
               <div class="flex flex-none items-center mr-1.5 whitespace-nowrap w-fit overflow-hidden leading-none">
@@ -106,9 +116,11 @@ const Header = (props: Props) => {
             </div>
           </div>
           <div class="text-[32px] leading-[38px]">
-            <h1 class="opacity-100 text-white font-bold">Hi there 👋</h1>
+            <h1 class="opacity-100 text-white font-bold">
+              {props.context.typebot.settings.homeUI?.title}
+            </h1>
             <h3 class="opacity-100 text-white font-bold">
-              무엇을 도와드릴까요~?
+              {props.context.typebot.settings.homeUI?.subTitle}
             </h3>
           </div>
         </div>

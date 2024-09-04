@@ -363,7 +363,10 @@ const BotContent = (props: BotContentProps) => {
         </Show>
       </Show>
 
-      <Show when={true} fallback={<></>}>
+      <Show
+        when={!props.context.typebot.settings.homeUI?.isHomeUIEnabled ?? true}
+        fallback={<></>}
+      >
         <ConversationContainer
           context={props.context}
           initialChatReply={props.initialChatReply}
@@ -375,7 +378,10 @@ const BotContent = (props: BotContentProps) => {
         />
       </Show>
 
-      <Show when={false} fallback={<></>}>
+      <Show
+        when={props.context.typebot.settings.homeUI?.isHomeUIEnabled ?? false}
+        fallback={<></>}
+      >
         <ConversationListContainer
           initialChatReply={props.initialChatReply}
           context={props.context}

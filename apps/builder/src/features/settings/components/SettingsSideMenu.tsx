@@ -21,6 +21,7 @@ import { MetadataForm } from './MetadataForm'
 import { TypingEmulationForm } from './TypingEmulationForm'
 import { useTypebot } from '@/features/editor/providers/TypebotProvider'
 import { SecurityForm } from './SecurityForm'
+import { HomeUIForm } from './HomeUIForm'
 
 export const SettingsSideMenu = () => {
   const { typebot, updateTypebot } = useTypebot()
@@ -46,6 +47,13 @@ export const SettingsSideMenu = () => {
   const handleMetadataChange = (metadata: Settings['metadata']) =>
     typebot &&
     updateTypebot({ updates: { settings: { ...typebot.settings, metadata } } })
+
+  // HomeUI Change Handler
+  const handleHomeUIChange = (homeUI: Settings['homeUI']) =>
+    typebot &&
+    updateTypebot({
+      updates: { settings: { ...typebot.settings, homeUI } },
+    })
 
   return (
     <Stack
@@ -129,6 +137,35 @@ export const SettingsSideMenu = () => {
                 typebotName={typebot.name}
                 metadata={typebot.settings.metadata}
                 onMetadataChange={handleMetadataChange}
+              />
+            )}
+          </AccordionPanel>
+        </AccordionItem>
+
+        {/* HomeUI Accordion 표시 */}
+        <AccordionItem>
+          <AccordionButton py={6}>
+            <HStack flex="1" pl={2}>
+              <CodeIcon />
+              <Heading fontSize="lg">Home UI 설정</Heading>
+            </HStack>
+            <AccordionIcon />
+          </AccordionButton>
+          <AccordionPanel pb={4} px="6">
+            {typebot && (
+              // <MetadataForm
+              //   workspaceId={typebot.workspaceId}
+              //   typebotId={typebot.id}
+              //   typebotName={typebot.name}
+              //   metadata={typebot.settings.metadata}
+              //   onMetadataChange={handleMetadataChange}
+              // />
+              <HomeUIForm
+                workspaceId={typebot.workspaceId}
+                typebotId={typebot.id}
+                typebotName={typebot.name}
+                homeUI={typebot.settings.homeUI}
+                onHomeUIChange={handleHomeUIChange}
               />
             )}
           </AccordionPanel>

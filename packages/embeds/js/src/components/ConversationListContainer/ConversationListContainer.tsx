@@ -5,7 +5,7 @@ import Navigation from './Navigation'
 import BotInfo from './BotInfo'
 import { currentMenuType } from '@/utils/currentMenuSignal'
 import Messages from './Messages'
-import { ConversationContainer } from '../ConversationContainer'
+// import { ConversationContainer } from '../ConversationContainer'
 import { InputBlock, StartChatResponse } from '@typebot.io/schemas'
 type Props = {
   initialChatReply: StartChatResponse
@@ -42,9 +42,11 @@ export const ConversationListContainer = (props: Props) => {
           <Match when={currentMenuType() === MenuType.CONVERSATION}>
             {/* <Header context={props.context} /> */}
 
-            {/* <Messages context={props.context} /> */}
-            {/* <Navigation /> */}
-            <ConversationContainer
+            <Messages context={props.context} />
+            <Navigation />
+
+            {/* 대화창 렌더링 테스트 */}
+            {/* <ConversationContainer
               context={props.context}
               initialChatReply={props.initialChatReply}
               onNewInputBlock={props.onNewInputBlock}
@@ -53,7 +55,7 @@ export const ConversationListContainer = (props: Props) => {
               onNewLogs={props.onNewLogs}
               onProgressUpdate={props.onProgressUpdate}
             />
-            <Navigation />
+            <Navigation /> */}
           </Match>
           <Match when={currentMenuType() === MenuType.HELP}>
             {/* <Header context={props.context} /> */}
