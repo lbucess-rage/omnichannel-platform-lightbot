@@ -32,25 +32,25 @@ import { headerHeight } from '../constants'
 import { RightPanel, useEditor } from '../providers/EditorProvider'
 import { useTypebot } from '../providers/TypebotProvider'
 import { SupportBubble } from '@/components/SupportBubble'
-import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
+// import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
 import { useTranslate } from '@tolgee/react'
 import { GuestTypebotHeader } from './UnauthenticatedTypebotHeader'
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
-import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
-import { Plan } from '@typebot.io/prisma'
+// import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
+// import { Plan } from '@typebot.io/prisma'
 
 export const TypebotHeader = () => {
   const { typebot, publishedTypebot, currentUserMode } = useTypebot()
-  const { workspace } = useWorkspace()
+  // const { workspace } = useWorkspace()
 
-  const { isOpen, onOpen } = useDisclosure()
+  const { isOpen } = useDisclosure()
   const headerBgColor = useColorModeValue('white', 'gray.900')
 
-  const handleHelpClick = () => {
-    isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
-      ? onOpen()
-      : window.open('https://docs.typebot.io/guides/how-to-get-help', '_blank')
-  }
+  // const handleHelpClick = () => {
+  //   isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
+  //     ? onOpen()
+  //     : window.open('https://docs.typebot.io/guides/how-to-get-help', '_blank')
+  // }
 
   if (currentUserMode === 'guest') return <GuestTypebotHeader />
   return (
@@ -66,7 +66,9 @@ export const TypebotHeader = () => {
       flexShrink={0}
     >
       {isOpen && <SupportBubble autoShowDelay={0} />}
-      <LeftElements pos="absolute" left="1rem" onHelpClick={handleHelpClick} />
+      {/* <LeftElements pos="absolute" left="1rem" onHelpClick={handleHelpClick} /> */}
+      <LeftElements pos="absolute" left="1rem" />
+
       <TypebotNav
         display={{ base: 'none', xl: 'flex' }}
         pos={{ base: 'absolute' }}
@@ -276,7 +278,8 @@ const RightElements = ({
         isResultsDisplayed={isResultsDisplayed}
       />
       <Flex pos="relative">
-        <ShareTypebotButton isLoading={isNotDefined(typebot)} />
+        {/* <ShareTypebotButton isLoading={isNotDefined(typebot)} /> */}
+        <ShareTypebotButton />
       </Flex>
       {router.pathname.includes('/edit') &&
         rightPanel !== RightPanel.PREVIEW && (
