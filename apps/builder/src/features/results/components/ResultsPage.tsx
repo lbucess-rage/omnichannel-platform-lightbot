@@ -92,7 +92,7 @@ export const ResultsPage = () => {
               size="sm"
               href={`/typebots/${typebot?.id}/results`}
             >
-              <Text>Submissions</Text>
+              <Text>실행 결과</Text>
               {(stats?.totalStarts ?? 0) > 0 && (
                 <Tag size="sm" colorScheme="blue" ml="1">
                   {stats?.totalStarts}
@@ -106,7 +106,7 @@ export const ResultsPage = () => {
               href={`/typebots/${typebot?.id}/results/analytics`}
               size="sm"
             >
-              Analytics
+              봇 시나리오 분석
             </Button>
           </HStack>
         </Flex>

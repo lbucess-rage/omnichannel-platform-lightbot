@@ -9,6 +9,7 @@ import {
   PopoverContent,
   HStack,
   Text,
+  Code,
 } from '@chakra-ui/react'
 import { CodeEditor } from '@/components/inputs/CodeEditor'
 import { ImageUploadContent } from '@/components/ImageUploadContent'
@@ -138,8 +139,8 @@ export const MetadataForm = ({
         <HStack as={FormLabel} mb="0" htmlFor="head">
           <Text>Custom head code:</Text>
           <MoreInfoTooltip>
-            Will be pasted at the bottom of the header section, just above the
-            closing head tag. Only `meta` and `script` tags are allowed.
+            헤더 섹션의 하단, 닫는 <Code>{'</head>'}</Code> 태그 바로 위에
+            붙여넣습니다. meta 및 script 태그만 허용됩니다.
           </MoreInfoTooltip>
         </HStack>
         <CodeEditor

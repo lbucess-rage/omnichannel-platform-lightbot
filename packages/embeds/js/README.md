@@ -101,7 +101,7 @@ Here is an example:
   Typebot.initBubble({
     typebot: 'my-typebot',
     previewMessage: {
-      message: 'I have a question for you!',
+      message: '👋 무엇이든 물어보세요~',
       autoShowDelay: 5000,
       avatarUrl: 'https://avatars.githubusercontent.com/u/16015833?v=4',
     },

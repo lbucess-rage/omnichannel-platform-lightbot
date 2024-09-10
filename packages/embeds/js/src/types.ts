@@ -248,6 +248,13 @@ export enum MenuType {
   SETTINGS = 'settings',
 }
 
+export enum ChatUIModeType {
+  INIT = 'init',
+  NEW = 'new',
+  CONTINUE = 'continue',
+  END = 'end',
+}
+
 export class Message extends Payload {
   constructor(init?: Partial<Message>) {
     super(init?.type)

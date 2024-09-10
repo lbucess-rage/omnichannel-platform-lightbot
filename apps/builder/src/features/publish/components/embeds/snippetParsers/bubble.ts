@@ -112,7 +112,7 @@ export const parseInitBubbleCode = ({
   const botProps = parseBotProps({ typebot, apiHost })
   const bubbleProps = parseBubbleProps({ previewMessage, theme })
 
-  return prettier.format(`Typebot.initBubble({${botProps}${bubbleProps}});`, {
+  return prettier.format(`Lightbot.initBubble({${botProps}${bubbleProps}});`, {
     parser: 'babel',
     plugins: [parserBabel],
   })

@@ -163,10 +163,10 @@ export const DropOffEdge = ({
         <Tooltip
           label={
             isWorkspaceProPlan
-              ? `At this input, ${totalDroppedUser} user${
+              ? `이 입력 시점에, ${totalDroppedUser} 명의${
                   (totalDroppedUser ?? 2) > 1 ? 's' : ''
-                } left. This represents ${dropOffRate}% of the users who saw this input.`
-              : 'Upgrade your plan to PRO to reveal drop-off rate.'
+                } 유저가 이탈하였습니다. 이것은 입력 상태에서 사용자의 ${dropOffRate}%(이탈률)를 나타냅니다.`
+              : '이 기능은 업그레이드 이 후 사용할 수 있습니다.'
           }
           placement="top"
         >

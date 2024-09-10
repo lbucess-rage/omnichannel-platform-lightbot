@@ -224,7 +224,7 @@ const LeftElements = ({
             </Tooltip>
           </HStack>
         )}
-        <Button
+        {/* <Button
           leftIcon={<BuoyIcon />}
           onClick={onHelpClick}
           size="sm"
@@ -233,7 +233,7 @@ const LeftElements = ({
           <chakra.span display={{ base: 'none', xl: 'inline' }}>
             {t('editor.header.helpButton.label')}
           </chakra.span>
-        </Button>
+        </Button> */}
       </HStack>
       {isSavingLoading && (
         <HStack>
@@ -349,7 +349,7 @@ const TypebotNav = ({
       >
         {t('editor.header.settingsButton.label')}
       </Button>
-      <Button
+      {/* <Button
         as={Link}
         href={`/typebots/${typebotId}/share`}
         colorScheme={router.pathname.endsWith('share') ? 'blue' : 'gray'}
@@ -357,7 +357,7 @@ const TypebotNav = ({
         size="sm"
       >
         {t('share.button.label')}
-      </Button>
+      </Button> */}
       {isResultsDisplayed && (
         <Button
           as={Link}

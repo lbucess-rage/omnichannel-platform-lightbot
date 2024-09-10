@@ -43,15 +43,18 @@ export const parseReactBotProps = ({ typebot, apiHost }: BotProps) => {
 }
 
 export const typebotImportCode = isCloudProdInstance()
-  ? `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'`
-  : `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@${packageJson.version}/dist/web.js'`
+  ? // ? `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'`
+    // : `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@${packageJson.version}/dist/web.js'`
+
+    `import Lightbot from 'https://omnichannel-platform-lightbot-embeds-js.vercel.app/web.js'`
+  : `import Lightbot from 'https://omnichannel-platform-lightbot-embeds-js.vercel.app/web.js'`
 
 export const parseInlineScript = (script: string) =>
   prettier.format(
-    `const typebotInitScript = document.createElement("script");
-  typebotInitScript.type = "module";
-  typebotInitScript.innerHTML = \`${script}\`;
-  document.body.append(typebotInitScript);`,
+    `const lightbotInitScript = document.createElement("script");
+  lightbotInitScript.type = "module";
+  lightbotInitScript.innerHTML = \`${script}\`;
+  document.body.append(lightbotInitScript);`,
     { parser: 'babel', plugins: [parserBabel] }
   )
 

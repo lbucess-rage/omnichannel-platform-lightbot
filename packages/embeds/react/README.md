@@ -65,7 +65,7 @@ const App = () => {
     <Bubble
       typebot="lead-generation-copy-3luzm6b"
       previewMessage={{
-        message: 'I have a question for you!',
+        message: '👋 무엇이든 물어보세요~',
         autoShowDelay: 5000,
         avatarUrl: 'https://avatars.githubusercontent.com/u/16015833?v=4',
       }}

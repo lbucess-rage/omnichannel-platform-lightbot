@@ -46,7 +46,7 @@ export const messageSchema = z.preprocess(
 )
 export type Message = z.infer<typeof messageSchema>
 
-const chatSessionSchema = z.object({
+export const chatSessionSchema = z.object({
   id: z.string(),
   createdAt: z.date(),
   updatedAt: z.date(),

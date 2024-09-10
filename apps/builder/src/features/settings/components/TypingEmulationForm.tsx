@@ -42,14 +42,14 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
   return (
     <Stack spacing={6}>
       <SwitchWithRelatedSettings
-        label={'Typing emulation'}
+        label={'타이핑 효과 활성화'}
         initialValue={
           typingEmulation?.enabled ?? defaultSettings.typingEmulation.enabled
         }
         onCheckChange={updateIsEnabled}
       >
         <NumberInput
-          label="Words per minutes:"
+          label="분당 글자 수(스피드):"
           data-testid="speed"
           defaultValue={
             typingEmulation?.speed ?? defaultSettings.typingEmulation.speed
@@ -62,7 +62,7 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
         />
         <HStack>
           <NumberInput
-            label="Max delay:"
+            label="최대 지연설정:"
             data-testid="max-delay"
             defaultValue={
               typingEmulation?.maxDelay ??
@@ -75,12 +75,12 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
             direction="row"
             size="sm"
           />
-          <Text>seconds</Text>
+          <Text>초</Text>
         </HStack>
 
         <SwitchWithLabel
-          label={'Disable on first message'}
-          moreInfoContent="When checked, typing emulation will be disabled for the first message sent by the bot."
+          label={'첫 번째 메시지에서 비활성화'}
+          moreInfoContent="이 옵션을 선택하면 첫 번째 메시지에서 타이핑 효과를 비활성화합니다."
           onCheckChange={updateIsDisabledOnFirstMessage}
           initialValue={
             typingEmulation?.isDisabledOnFirstMessage ??
@@ -90,7 +90,7 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
       </SwitchWithRelatedSettings>
       <HStack>
         <NumberInput
-          label="Delay between messages:"
+          label="메세지 간격 지연설정:"
           defaultValue={
             typingEmulation?.delayBetweenBubbles ??
             defaultSettings.typingEmulation.delayBetweenBubbles
@@ -103,7 +103,7 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
           max={5}
           size="sm"
         />
-        <Text>seconds</Text>
+        <Text>초</Text>
       </HStack>
     </Stack>
   )

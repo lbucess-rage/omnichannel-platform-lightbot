@@ -1,5 +1,6 @@
 import { z } from '../zod'
 import { answerInputSchema, answerSchema } from './answer'
+
 import { listVariableValue, variableWithValueSchema } from './typebot/variable'
 import {
   Result as ResultPrisma,
@@ -8,6 +9,8 @@ import {
   VisitedEdge,
 } from '@typebot.io/prisma'
 import { InputBlockType } from './blocks/inputs/constants'
+import { chatSessionSchema } from './chat/schema'
+import { typebotSchema } from './typebot'
 
 export const resultSchema = z.object({
   id: z.string(),
@@ -20,11 +23,41 @@ export const resultSchema = z.object({
   lastChatSessionId: z.string().nullable(),
 }) satisfies z.ZodType<ResultPrisma>
 
-export const resultWithAnswersSchema = resultSchema.merge(
+export const resultWithAnswersSchema = resultSchema
+  .merge(
+    z.object({
+      answers: z.array(answerSchema),
+    })
+  )
+  .merge(
+    z.object({
+      typebot: z.any(),
+    })
+  )
+
+export const resultWithAnswersChatSessionSchema = resultWithAnswersSchema.merge(
   z.object({
-    answers: z.array(answerSchema),
+    chatSession: z.object({
+      id: z.string(),
+      createdAt: z.date(),
+      updatedAt: z.date(),
+      // state: sessionStateSchema,
+      state: z.any(),
+      isReplying: z
+        .boolean()
+        .nullable()
+        .describe(
+          'Used in WhatsApp runtime to avoid concurrent replies from the bot'
+        ),
+    }),
   })
 )
+
+// export const resultWithAnswersChatSessionSchema = resultWithAnswersSchema.merge(
+//   z.object({
+//     chatSessions: z.array(chatSessionSchema),
+//   })
+// )
 
 export const visitedEdgeSchema = z.object({
   edgeId: z.string(),
@@ -49,6 +82,9 @@ export const logSchema = z.object({
 
 export type Result = z.infer<typeof resultSchema>
 export type ResultWithAnswers = z.infer<typeof resultWithAnswersSchema>
+export type ResultWithAnswersChatSessions = z.infer<
+  typeof resultWithAnswersChatSessionSchema
+>
 export type ResultWithAnswersInput = z.infer<
   typeof resultWithAnswersInputSchema
 >

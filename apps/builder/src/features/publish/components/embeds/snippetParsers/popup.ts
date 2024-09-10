@@ -40,7 +40,7 @@ export const parseInitPopupCode = ({
   const botProps = parseBotProps({ typebot, apiHost })
   const bubbleProps = parsePopupProps({ theme, autoShowDelay })
 
-  return prettier.format(`Typebot.initPopup({${botProps}${bubbleProps}});`, {
+  return prettier.format(`Lightbot.initPopup({${botProps}${bubbleProps}});`, {
     parser: 'babel',
     plugins: [parserBabel],
   })

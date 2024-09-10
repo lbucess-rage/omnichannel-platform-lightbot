@@ -30,14 +30,14 @@ export const PopupSettings = ({ onUpdateSettings, ...props }: Props) => {
       <Heading size="sm">Popup settings</Heading>
 
       <HStack pl={4}>
-        <Text flexShrink={0}>Auto show</Text>
+        <Text flexShrink={0}>자동 팝업</Text>
         <Switch
           isChecked={isEnabled}
           onChange={(e) => setIsEnabled(e.target.checked)}
         />
         {isEnabled && (
           <>
-            <Text>after</Text>
+            {/* <Text>after</Text> */}
             <NumberInput
               size="sm"
               w="70px"
@@ -45,7 +45,7 @@ export const PopupSettings = ({ onUpdateSettings, ...props }: Props) => {
               onValueChange={(val) => isDefined(val) && setInputValue(val)}
               withVariableButton={false}
             />
-            <Text>seconds</Text>
+            <Text>초 이후</Text>
           </>
         )}
       </HStack>

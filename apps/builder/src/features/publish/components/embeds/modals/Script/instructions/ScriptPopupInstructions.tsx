@@ -29,7 +29,7 @@ ${parseInitPopupCode({
       <PopupSettings
         onUpdateSettings={(settings) => setInputValue(settings.autoShowDelay)}
       />
-      <Text>Run this script to initialize the typebot:</Text>
+      <Text>라잇봇 초기화를 위해 아래 코드를 추가하세요:</Text>
       <CodeEditor isReadOnly value={scriptSnippet} lang="javascript" />
     </Stack>
   )

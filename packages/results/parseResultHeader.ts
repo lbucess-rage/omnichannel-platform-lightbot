@@ -32,7 +32,7 @@ export const parseResultHeader = (
     variables: parsedVariables,
   })
   return [
-    { label: 'Submitted at', id: 'date' },
+    { label: '동작 일시', id: 'date' },
     ...inputsResultHeader,
     ...parseVariablesHeaders(parsedVariables, inputsResultHeader),
     ...parseResultsFromPreviousBotVersions({

@@ -39,20 +39,20 @@ export const UnlockPlanAlertInfo = ({
         <AlertIcon />
         <Text>{props.children}</Text>
       </HStack>
-      <Button
+      {/* <Button
         colorScheme={props.status === 'warning' ? 'orange' : 'blue'}
         onClick={onOpen}
         flexShrink={0}
         ml="2"
       >
         {buttonLabel ?? t('billing.upgradeAlert.buttonDefaultLabel')}
-      </Button>
-      <ChangePlanModal
+      </Button> */}
+      {/* <ChangePlanModal
         isOpen={isOpen}
         onClose={onClose}
         type={type}
         excludedPlans={excludedPlans}
-      />
+      /> */}
     </Alert>
   )
 }

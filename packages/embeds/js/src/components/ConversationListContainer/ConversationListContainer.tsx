@@ -6,12 +6,18 @@ import BotInfo from './BotInfo'
 import { currentMenuType } from '@/utils/currentMenuSignal'
 import Messages from './Messages'
 // import { ConversationContainer } from '../ConversationContainer'
-import { InputBlock, StartChatResponse } from '@typebot.io/schemas'
+import {
+  InputBlock,
+  ResultWithAnswers,
+  ResultWithAnswersChatSessions,
+  StartChatResponse,
+} from '@typebot.io/schemas'
 type Props = {
   initialChatReply: StartChatResponse
 
   context: BotContext
   menuType: MenuType
+  chatListByMemberId?: ResultWithAnswersChatSessions[] | undefined
   onNewInputBlock?: (inputBlock: InputBlock) => void
   onAnswer?: (answer: { message: string; blockId: string }) => void
   onEnd?: () => void
@@ -42,7 +48,10 @@ export const ConversationListContainer = (props: Props) => {
           <Match when={currentMenuType() === MenuType.CONVERSATION}>
             {/* <Header context={props.context} /> */}
 
-            <Messages context={props.context} />
+            <Messages
+              context={props.context}
+              chatListByMemberId={props.chatListByMemberId}
+            />
             <Navigation />
 
             {/* 대화창 렌더링 테스트 */}

@@ -12,13 +12,13 @@ export const timeFilterLabels: Record<
   (typeof timeFilterValues)[number],
   string
 > = {
-  today: 'Today',
-  last7Days: 'Last 7 days',
-  last30Days: 'Last 30 days',
-  monthToDate: 'Month to date',
-  lastMonth: 'Last month',
-  yearToDate: 'Year to date',
-  allTime: 'All time',
+  today: '오늘',
+  last7Days: '지난 7일',
+  last30Days: '지난 30일',
+  monthToDate: '이번 달',
+  lastMonth: '지난 달',
+  yearToDate: '올해',
+  allTime: '전체',
 }
 
 export const defaultTimeFilter = 'last7Days' as const

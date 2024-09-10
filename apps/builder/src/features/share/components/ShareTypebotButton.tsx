@@ -16,7 +16,7 @@ export const ShareTypebotButton = ({ isLoading }: { isLoading: boolean }) => {
 
   return (
     <Popover isLazy placement="bottom-end">
-      <PopoverTrigger>
+      {/* <PopoverTrigger>
         <Button
           isLoading={isLoading}
           leftIcon={<UsersIcon />}
@@ -28,7 +28,7 @@ export const ShareTypebotButton = ({ isLoading }: { isLoading: boolean }) => {
             {t('share.button.label')}
           </chakra.span>
         </Button>
-      </PopoverTrigger>
+      </PopoverTrigger> */}
       <Portal>
         <PopoverContent
           shadow="lg"

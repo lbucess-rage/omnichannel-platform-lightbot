@@ -12,7 +12,7 @@ export const JavascriptPopupInstructions = () => {
         onUpdateSettings={(settings) => setInputValue(settings.autoShowDelay)}
       />
       <Text>
-        Paste this anywhere in the <Code>{'<body>'}</Code>:
+        HTML 코드 내 <Code>{'<body>'}</Code>에 붙여넣으세요:
       </Text>
       <JavascriptPopupSnippet autoShowDelay={inputValue} />
     </Stack>

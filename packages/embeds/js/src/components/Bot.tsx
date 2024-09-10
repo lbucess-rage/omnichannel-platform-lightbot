@@ -2,6 +2,7 @@ import { LiteBadge } from './LiteBadge'
 import { createEffect, createSignal, onCleanup, onMount, Show } from 'solid-js'
 import { isDefined, isNotDefined, isNotEmpty } from '@typebot.io/lib'
 import { startChatQuery } from '@/queries/startChatQuery'
+import { getResultsQueryByMemberId } from '@/queries/getResultsQuery'
 import { ConversationContainer } from './ConversationContainer'
 import { setIsMobile } from '@/utils/isMobileSignal'
 import { BotContext, OutgoingLog } from '@/types'
@@ -18,6 +19,8 @@ import immutableCss from '../assets/immutable.css'
 import {
   Font,
   InputBlock,
+  ResultWithAnswers,
+  ResultWithAnswersChatSessions,
   StartChatResponse,
   StartFrom,
 } from '@typebot.io/schemas'
@@ -61,12 +64,54 @@ export type BotProps = {
 }
 
 export const Bot = (props: BotProps & { class?: string }) => {
+  /**
+   * case 별 props 상태
+   * 1. 배포 URL로 접근
+   * 2. 빌더 프리뷰에서 미리보기
+   * 3. 테마, 설정에서 미리보기
+   *
+   */
+  console.log(`before initializeBot Bot props:`, props)
   const [initialChatReply, setInitialChatReply] = createSignal<
     StartChatResponse | undefined
   >()
   const [customCss, setCustomCss] = createSignal('')
   const [isInitialized, setIsInitialized] = createSignal(false)
   const [error, setError] = createSignal<Error | undefined>()
+
+  const [chatListByMemberId, setChatListByMemberId] = createSignal<
+    ResultWithAnswersChatSessions[] | []
+  >()
+
+  // prefilledVariables 을 확인하여 memberId가 있는지 체크 후 존재하는 경우 해당 memberId로 result 테이브을 조회하여 최근 대화 목록을 가져옴
+  // 해당 정보는 initializeBot 이전에 얻어옴
+  const getResultsByMemberId = async () => {
+    const urlParams = new URLSearchParams(location.search)
+    const prefilledVariables: { [key: string]: string } = {}
+    urlParams.forEach((value, key) => {
+      prefilledVariables[key] = value
+    })
+
+    const isPreview =
+      typeof props.typebot !== 'string' || (props.isPreview ?? false)
+    // preview 모드에서는 memberId를 고정하여 prefilledVariables에 추가
+    if (isPreview) {
+      prefilledVariables.memberId = 'preview'
+    }
+
+    console.log(`getResultsByMemberId execute:`, prefilledVariables)
+    if (prefilledVariables.memberId) {
+      const memberId = prefilledVariables.memberId
+      const limit = 10
+
+      const results = await getResultsQueryByMemberId({ memberId, limit })
+      if (results.data) {
+        setChatListByMemberId(results.data.results)
+      }
+
+      console.log('results:', results)
+    }
+  }
 
   const initializeBot = async () => {
     console.log(`initializeBot props:`, props)
@@ -84,6 +129,12 @@ export const Bot = (props: BotProps & { class?: string }) => {
     const isPreview =
       typeof props.typebot !== 'string' || (props.isPreview ?? false)
     const resultIdInStorage = getExistingResultIdFromStorage(typebotIdFromProps)
+
+    // preview 모드에서는 memberId를 고정하여 prefilledVariables에 추가
+    if (isPreview) {
+      prefilledVariables.memberId = 'preview'
+    }
+
     const { data, error } = await startChatQuery({
       stripeRedirectStatus: urlParams.get('redirect_status') ?? undefined,
       typebot: props.typebot,
@@ -179,6 +230,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
     // resultId가 존재하지 않거나 챗봇이 기억하기 설정이 비활성화된 경우
     // 보통 기억하기(rememberUser) 설정이 비활성화된 경우에 해당
     else {
+      // 해당 resultId를 스토리지에서 삭제
       wipeExistingChatStateInStorage(data.typebot.id)
 
       // 리턴된 데이터를 signal로 저장
@@ -195,6 +247,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
 
   createEffect(() => {
     if (isNotDefined(props.typebot) || isInitialized()) return
+    getResultsByMemberId().then()
     initializeBot().then()
   })
 
@@ -207,6 +260,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
       !initialChatReply()?.typebot.theme.general?.progressBar?.isEnabled
     ) {
       setIsInitialized(false)
+      getResultsByMemberId().then()
       initializeBot().then()
     }
   })
@@ -259,6 +313,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
                       ?.storage ?? defaultSettings.general.rememberUser.storage
                   : undefined,
             }}
+            chatListByMemberId={chatListByMemberId()}
             progressBarRef={props.progressBarRef}
             onNewInputBlock={props.onNewInputBlock}
             onNewLogs={props.onNewLogs}
@@ -276,6 +331,7 @@ type BotContentProps = {
   context: BotContext
   class?: string
   progressBarRef?: HTMLDivElement
+  chatListByMemberId?: ResultWithAnswersChatSessions[]
   onNewInputBlock?: (inputBlock: InputBlock) => void
   onAnswer?: (answer: { message: string; blockId: string }) => void
   onEnd?: () => void
@@ -385,6 +441,7 @@ const BotContent = (props: BotContentProps) => {
         <ConversationListContainer
           initialChatReply={props.initialChatReply}
           context={props.context}
+          chatListByMemberId={props.chatListByMemberId}
           menuType={currentMenuType()}
           onNewInputBlock={props.onNewInputBlock}
           onAnswer={props.onAnswer}

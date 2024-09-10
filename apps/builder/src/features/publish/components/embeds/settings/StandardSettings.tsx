@@ -53,14 +53,14 @@ export const StandardSettings = ({
 
       <Stack pl="4" spacing={4}>
         <SwitchWithLabel
-          label="Set to fullscreen?"
+          label="전체 화면으로 구성여부"
           initialValue={isFullscreenChecked}
           onCheckChange={() => setIsFullscreenChecked(!isFullscreenChecked)}
         />
         {!isFullscreenChecked && (
           <>
             <Flex justify="space-between" align="center">
-              <Text>Width</Text>
+              <Text>넓이</Text>
               <HStack>
                 <Input
                   onChange={(e) =>
@@ -80,7 +80,7 @@ export const StandardSettings = ({
               </HStack>
             </Flex>
             <Flex justify="space-between" align="center">
-              <Text>Height</Text>
+              <Text>높이</Text>
               <HStack>
                 <Input
                   onChange={(e) =>

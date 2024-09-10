@@ -116,12 +116,12 @@ export const AnalyticsGraphContainer = ({
           <Spinner color="gray" />
         </Flex>
       )}
-      <ChangePlanModal
+      {/* <ChangePlanModal
         onClose={onClose}
         isOpen={isOpen}
         type={t('billing.limitMessage.analytics')}
         excludedPlans={['STARTER']}
-      />
+      /> */}
       <StatsCards
         stats={stats}
         pos="absolute"

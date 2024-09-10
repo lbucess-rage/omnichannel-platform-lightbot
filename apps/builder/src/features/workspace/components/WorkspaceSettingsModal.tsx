@@ -199,10 +199,10 @@ const SettingsContent = ({
       return <UserPreferencesForm />
     case 'workspace-settings':
       return <WorkspaceSettingsForm onClose={onClose} />
-    case 'members':
-      return <MembersList />
-    case 'billing':
-      return <BillingSettingsLayout />
+    // case 'members':
+    //   return <MembersList />
+    // // case 'billing':
+    //   return <BillingSettingsLayout />
     case 'credentials':
       return <CredentialsSettingsForm />
     default:
