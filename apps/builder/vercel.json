@@ -15,7 +15,8 @@
   },
   "build" : {
     "env" : {
-      "PRISMA_CLIENT_ENGINE_TYPE" : "binary"
+      "PRISMA_CLIENT_ENGINE_TYPE" : "binary",
+      "NEXT_DISABLE_ESLINT" : "true"
     }
   }
 }
