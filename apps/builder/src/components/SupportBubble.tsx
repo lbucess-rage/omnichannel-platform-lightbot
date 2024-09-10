@@ -6,7 +6,7 @@ import { Bubble, BubbleProps } from '@typebot.io/nextjs'
 import { planToReadable } from '@/features/billing/helpers/planToReadable'
 import { Plan } from '@typebot.io/prisma'
 
-export const SupportBubble = (props: Omit<BubbleProps, 'typebot'>) => {
+export const SupportBubble = (props: any) => {
   const { typebot } = useTypebot()
   const { user } = useUser()
   const { workspace } = useWorkspace()
