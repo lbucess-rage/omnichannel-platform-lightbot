@@ -1,18 +1,15 @@
+/* eslint-disable no-unused-vars */
 import {
   Alert,
   AlertIcon,
   AlertProps,
-  Button,
   HStack,
   Text,
-  useDisclosure,
+  // useDisclosure,
 } from '@chakra-ui/react'
 import React from 'react'
-import {
-  ChangePlanModal,
-  ChangePlanModalProps,
-} from '@/features/billing/components/ChangePlanModal'
-import { useTranslate } from '@tolgee/react'
+import { ChangePlanModalProps } from '@/features/billing/components/ChangePlanModal'
+// import { useTranslate } from '@tolgee/react'
 
 type Props = {
   buttonLabel?: string
@@ -20,13 +17,13 @@ type Props = {
   Pick<ChangePlanModalProps, 'type' | 'excludedPlans'>
 
 export const UnlockPlanAlertInfo = ({
-  buttonLabel,
-  type,
-  excludedPlans,
+  // buttonLabel,
+  // type,
+  // excludedPlans,
   ...props
 }: Props) => {
-  const { t } = useTranslate()
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  // const { t } = useTranslate()
+  // const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Alert
       status="info"

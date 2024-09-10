@@ -28,12 +28,9 @@ type LoadState = {
 
 export async function loadChatQuery({
   lightbot,
-  isPreview,
+
   apiHost,
-  prefilledVariables,
   resultId,
-  stripeRedirectStatus,
-  startFrom,
   sessionId,
 }: Props) {
   if (isNotDefined(lightbot))

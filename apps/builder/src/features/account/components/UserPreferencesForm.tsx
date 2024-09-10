@@ -1,37 +1,27 @@
-import {
-  Stack,
-  Heading,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Button,
-  HStack,
-} from '@chakra-ui/react'
+/* eslint-disable no-unused-vars */
+import { Stack, Heading } from '@chakra-ui/react'
 import { GraphNavigation } from '@typebot.io/prisma'
 import React, { useEffect } from 'react'
 import { AppearanceRadioGroup } from './AppearanceRadioGroup'
 import { useUser } from '../hooks/useUser'
-import { ChevronDownIcon } from '@/components/icons'
-import { MoreInfoTooltip } from '@/components/MoreInfoTooltip'
-import { useTranslate, useTolgee } from '@tolgee/react'
-import { useRouter } from 'next/router'
+import { useTranslate } from '@tolgee/react'
+// import { useRouter } from 'next/router'
 import { GraphNavigationRadioGroup } from './GraphNavigationRadioGroup'
 
-const localeHumanReadable = {
-  en: 'English',
-  fr: 'Français',
-  de: 'Deutsch',
-  pt: 'Português',
-  'pt-BR': 'Português (BR)',
-  ro: 'Română',
-  es: 'Español',
-  it: 'Italiano',
-} as const
+// const localeHumanReadable = {
+//   en: 'English',
+//   fr: 'Français',
+//   de: 'Deutsch',
+//   pt: 'Português',
+//   'pt-BR': 'Português (BR)',
+//   ro: 'Română',
+//   es: 'Español',
+//   it: 'Italiano',
+// } as const
 
 export const UserPreferencesForm = () => {
-  const { getLanguage } = useTolgee()
-  const router = useRouter()
+  // const { getLanguage } = useTolgee()
+  // const router = useRouter()
   const { t } = useTranslate()
   const { user, updateUser } = useUser()
 
@@ -44,23 +34,23 @@ export const UserPreferencesForm = () => {
     updateUser({ preferredAppAppearance: value })
   }
 
-  const updateLocale = (locale: keyof typeof localeHumanReadable) => () => {
-    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`
-    router.replace(
-      {
-        pathname: router.pathname,
-        query: router.query,
-      },
-      undefined,
-      { locale }
-    )
-  }
+  // const updateLocale = (locale: keyof typeof localeHumanReadable) => () => {
+  //   document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`
+  //   router.replace(
+  //     {
+  //       pathname: router.pathname,
+  //       query: router.query,
+  //     },
+  //     undefined,
+  //     { locale }
+  //   )
+  // }
 
   const changeGraphNavigation = async (value: string) => {
     updateUser({ graphNavigation: value as GraphNavigation })
   }
 
-  const currentLanguage = getLanguage()
+  // const currentLanguage = getLanguage()
 
   return (
     <Stack spacing={12}>

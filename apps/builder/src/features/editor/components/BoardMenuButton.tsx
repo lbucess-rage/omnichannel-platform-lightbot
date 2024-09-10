@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   HStack,
   IconButton,
@@ -11,7 +12,6 @@ import {
 } from '@chakra-ui/react'
 import assert from 'assert'
 import {
-  BookIcon,
   BracesIcon,
   DownloadIcon,
   MoreVerticalIcon,
@@ -48,8 +48,8 @@ export const BoardMenuButton = (props: StackProps) => {
     setIsDownloading(false)
   }
 
-  const redirectToDocumentation = () =>
-    window.open('https://docs.typebot.io/editor/graph', '_blank')
+  // const redirectToDocumentation = () =>
+  //   window.open('https://docs.typebot.io/editor/graph', '_blank')
 
   return (
     <HStack rounded="md" spacing="4" {...props}>

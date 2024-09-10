@@ -4,7 +4,7 @@ import prettier from 'prettier/standalone'
 import { isDefined } from '@typebot.io/lib'
 import { Typebot } from '@typebot.io/schemas'
 import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
-import packageJson from '../../../../../../../../packages/embeds/js/package.json'
+// import packageJson from '../../../../../../../../packages/embeds/js/package.json'
 import { env } from '@typebot.io/env'
 
 export const parseStringParam = (

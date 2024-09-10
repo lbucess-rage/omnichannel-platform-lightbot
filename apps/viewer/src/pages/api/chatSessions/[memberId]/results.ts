@@ -3,7 +3,6 @@ import { ResultWithAnswersChatSessions } from '@typebot.io/schemas'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { methodNotAllowed } from '@typebot.io/lib/api'
 import cors from 'nextjs-cors'
-import { ChatSession } from '@typebot.io/prisma'
 
 // 한 달 전 날짜 계산
 const getOneMonthAgo = () => {

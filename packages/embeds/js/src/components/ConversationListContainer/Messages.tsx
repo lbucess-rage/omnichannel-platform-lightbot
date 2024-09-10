@@ -1,9 +1,4 @@
-import {
-  ResultWithAnswers,
-  ResultWithAnswersChatSessions,
-  SessionState,
-  Typebot,
-} from '@typebot.io/schemas'
+import { ResultWithAnswersChatSessions, Typebot } from '@typebot.io/schemas'
 import { BotContext, ChatUIModeType } from '../../types'
 import { For, Show } from 'solid-js'
 import { timeDifference } from '../../utils/timeProcessing'
@@ -62,7 +57,7 @@ const Messages = (props: Props) => {
                 <div class="pb-20">
                   <ul class="list-none pl-0">
                     <For each={props.chatListByMemberId}>
-                      {(chat, index) => (
+                      {(chat) => (
                         <li class="list-item group">
                           <div
                             data-testid="conversation-list-item"
@@ -121,7 +116,7 @@ const Messages = (props: Props) => {
                             <div class="mr-auto flex-1 text-sm min-w-0">
                               <div
                                 class="flex flex-col cursor-pointer"
-                                onClick={(e) =>
+                                onClick={() =>
                                   chatListClickHandler(chat.lastChatSessionId)
                                 }
                               >

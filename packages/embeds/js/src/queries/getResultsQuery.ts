@@ -1,10 +1,7 @@
 import { isNotDefined, isNotEmpty } from '../../../../lib'
 import ky from 'ky'
 import { guessApiHost } from '@/utils/guessApiHost'
-import {
-  ResultWithAnswers,
-  ResultWithAnswersChatSessions,
-} from '../../../../schemas'
+import { ResultWithAnswersChatSessions } from '../../../../schemas'
 
 type Props = {
   memberId: string

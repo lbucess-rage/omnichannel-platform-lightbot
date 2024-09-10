@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   Flex,
   Spinner,
@@ -14,10 +15,9 @@ import {
 } from '@typebot.io/schemas'
 import React, { useMemo } from 'react'
 import { StatsCards } from './StatsCards'
-import { ChangePlanModal } from '@/features/billing/components/ChangePlanModal'
 import { Graph } from '@/features/graph/components/Graph'
 import { GraphProvider } from '@/features/graph/providers/GraphProvider'
-import { useTranslate } from '@tolgee/react'
+// import { useTranslate } from '@tolgee/react'
 import { trpc } from '@/lib/trpc'
 import { isDefined } from '@typebot.io/lib'
 import { EventsCoordinatesProvider } from '@/features/graph/providers/EventsCoordinateProvider'
@@ -37,8 +37,8 @@ export const AnalyticsGraphContainer = ({
   onTimeFilterChange,
   stats,
 }: Props) => {
-  const { t } = useTranslate()
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  // const { t } = useTranslate()
+  const { onOpen } = useDisclosure()
   const { typebot, publishedTypebot } = useTypebot()
   const { data } = trpc.analytics.getInDepthAnalyticsData.useQuery(
     {

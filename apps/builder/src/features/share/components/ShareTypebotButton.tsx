@@ -1,18 +1,11 @@
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  Button,
-  chakra,
-  Portal,
-} from '@chakra-ui/react'
-import { UsersIcon } from '@/components/icons'
+/* eslint-disable no-unused-vars */
+import { Popover, PopoverContent, Portal } from '@chakra-ui/react'
 import React from 'react'
 import { SharePopoverContent } from './SharePopoverContent'
-import { useTranslate } from '@tolgee/react'
+// import { useTranslate } from '@tolgee/react'
 
-export const ShareTypebotButton = ({ isLoading }: { isLoading: boolean }) => {
-  const { t } = useTranslate()
+export const ShareTypebotButton = () => {
+  // const { t } = useTranslate()
 
   return (
     <Popover isLazy placement="bottom-end">

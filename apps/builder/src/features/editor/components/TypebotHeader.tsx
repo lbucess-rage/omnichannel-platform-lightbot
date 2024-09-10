@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   Flex,
   HStack,
@@ -12,7 +13,6 @@ import {
   chakra,
 } from '@chakra-ui/react'
 import {
-  BuoyIcon,
   ChevronLeftIcon,
   CopyIcon,
   PlayIcon,
@@ -83,148 +83,148 @@ export const TypebotHeader = () => {
   )
 }
 
-const LeftElements = ({
-  onHelpClick,
-  ...props
-}: StackProps & { onHelpClick: () => void }) => {
-  const { t } = useTranslate()
-  const router = useRouter()
-  const {
-    typebot,
-    updateTypebot,
-    canUndo,
-    canRedo,
-    undo,
-    redo,
-    currentUserMode,
-    isSavingLoading,
-  } = useTypebot()
+const LeftElements = ({ ...props }: StackProps) =>
+  // & { onHelpClick: () => void }
 
-  const [isRedoShortcutTooltipOpen, setRedoShortcutTooltipOpen] =
-    useState(false)
+  {
+    const { t } = useTranslate()
+    const router = useRouter()
+    const {
+      typebot,
+      updateTypebot,
+      canUndo,
+      canRedo,
+      undo,
+      redo,
+      currentUserMode,
+      isSavingLoading,
+    } = useTypebot()
 
-  const [isUndoShortcutTooltipOpen, setUndoShortcutTooltipOpen] =
-    useState(false)
+    const [isRedoShortcutTooltipOpen, setRedoShortcutTooltipOpen] =
+      useState(false)
 
-  const hideUndoShortcutTooltipLater = useDebouncedCallback(() => {
-    setUndoShortcutTooltipOpen(false)
-  }, 1000)
+    const [isUndoShortcutTooltipOpen, setUndoShortcutTooltipOpen] =
+      useState(false)
 
-  const hideRedoShortcutTooltipLater = useDebouncedCallback(() => {
-    setRedoShortcutTooltipOpen(false)
-  }, 1000)
+    const hideUndoShortcutTooltipLater = useDebouncedCallback(() => {
+      setUndoShortcutTooltipOpen(false)
+    }, 1000)
 
-  const handleNameSubmit = (name: string) =>
-    updateTypebot({ updates: { name } })
+    const hideRedoShortcutTooltipLater = useDebouncedCallback(() => {
+      setRedoShortcutTooltipOpen(false)
+    }, 1000)
 
-  const handleChangeIcon = (icon: string) =>
-    updateTypebot({ updates: { icon } })
+    const handleNameSubmit = (name: string) =>
+      updateTypebot({ updates: { name } })
 
-  useKeyboardShortcuts({
-    undo: () => {
-      if (!canUndo) return
-      hideUndoShortcutTooltipLater.flush()
-      setUndoShortcutTooltipOpen(true)
-      hideUndoShortcutTooltipLater()
-      undo()
-    },
-    redo: () => {
-      if (!canRedo) return
-      hideUndoShortcutTooltipLater.flush()
-      setRedoShortcutTooltipOpen(true)
-      hideRedoShortcutTooltipLater()
-      redo()
-    },
-  })
+    const handleChangeIcon = (icon: string) =>
+      updateTypebot({ updates: { icon } })
 
-  return (
-    <HStack justify="center" align="center" spacing="6" {...props}>
-      <HStack alignItems="center" spacing={3}>
-        <IconButton
-          as={Link}
-          aria-label="Navigate back"
-          icon={<ChevronLeftIcon fontSize={25} />}
-          href={{
-            pathname: router.query.parentId
-              ? '/typebots/[typebotId]/edit'
-              : typebot?.folderId
-              ? '/typebots/folders/[id]'
-              : '/typebots',
-            query: {
-              id: typebot?.folderId ?? [],
-              parentId: Array.isArray(router.query.parentId)
-                ? router.query.parentId.slice(0, -1)
-                : [],
-              typebotId: Array.isArray(router.query.parentId)
-                ? [...router.query.parentId].pop()
-                : router.query.parentId ?? [],
-            },
-          }}
-          size="sm"
-        />
-        <HStack spacing={1}>
-          {typebot && (
-            <EditableEmojiOrImageIcon
-              uploadFileProps={{
-                workspaceId: typebot.workspaceId,
-                typebotId: typebot.id,
-                fileName: 'icon',
-              }}
-              icon={typebot?.icon}
-              onChangeIcon={handleChangeIcon}
-            />
-          )}
-          (
-          <EditableTypebotName
-            key={`lightbot-name-${typebot?.name ?? ''}`}
-            defaultName={typebot?.name ?? ''}
-            onNewName={handleNameSubmit}
+    useKeyboardShortcuts({
+      undo: () => {
+        if (!canUndo) return
+        hideUndoShortcutTooltipLater.flush()
+        setUndoShortcutTooltipOpen(true)
+        hideUndoShortcutTooltipLater()
+        undo()
+      },
+      redo: () => {
+        if (!canRedo) return
+        hideUndoShortcutTooltipLater.flush()
+        setRedoShortcutTooltipOpen(true)
+        hideRedoShortcutTooltipLater()
+        redo()
+      },
+    })
+
+    return (
+      <HStack justify="center" align="center" spacing="6" {...props}>
+        <HStack alignItems="center" spacing={3}>
+          <IconButton
+            as={Link}
+            aria-label="Navigate back"
+            icon={<ChevronLeftIcon fontSize={25} />}
+            href={{
+              pathname: router.query.parentId
+                ? '/typebots/[typebotId]/edit'
+                : typebot?.folderId
+                ? '/typebots/folders/[id]'
+                : '/typebots',
+              query: {
+                id: typebot?.folderId ?? [],
+                parentId: Array.isArray(router.query.parentId)
+                  ? router.query.parentId.slice(0, -1)
+                  : [],
+                typebotId: Array.isArray(router.query.parentId)
+                  ? [...router.query.parentId].pop()
+                  : router.query.parentId ?? [],
+              },
+            }}
+            size="sm"
           />
-          )
-        </HStack>
-
-        {currentUserMode === 'write' && (
-          <HStack>
-            <Tooltip
-              label={
-                isUndoShortcutTooltipOpen
-                  ? t('editor.header.undo.tooltip.label')
-                  : t('editor.header.undoButton.label')
-              }
-              isOpen={isUndoShortcutTooltipOpen ? true : undefined}
-              hasArrow={isUndoShortcutTooltipOpen}
-            >
-              <IconButton
-                display={['none', 'flex']}
-                icon={<UndoIcon />}
-                size="sm"
-                aria-label={t('editor.header.undoButton.label')}
-                onClick={undo}
-                isDisabled={!canUndo}
+          <HStack spacing={1}>
+            {typebot && (
+              <EditableEmojiOrImageIcon
+                uploadFileProps={{
+                  workspaceId: typebot.workspaceId,
+                  typebotId: typebot.id,
+                  fileName: 'icon',
+                }}
+                icon={typebot?.icon}
+                onChangeIcon={handleChangeIcon}
               />
-            </Tooltip>
-
-            <Tooltip
-              label={
-                isRedoShortcutTooltipOpen
-                  ? t('editor.header.undo.tooltip.label')
-                  : t('editor.header.redoButton.label')
-              }
-              isOpen={isRedoShortcutTooltipOpen ? true : undefined}
-              hasArrow={isRedoShortcutTooltipOpen}
-            >
-              <IconButton
-                display={['none', 'flex']}
-                icon={<RedoIcon />}
-                size="sm"
-                aria-label={t('editor.header.redoButton.label')}
-                onClick={redo}
-                isDisabled={!canRedo}
-              />
-            </Tooltip>
+            )}
+            (
+            <EditableTypebotName
+              key={`lightbot-name-${typebot?.name ?? ''}`}
+              defaultName={typebot?.name ?? ''}
+              onNewName={handleNameSubmit}
+            />
+            )
           </HStack>
-        )}
-        {/* <Button
+
+          {currentUserMode === 'write' && (
+            <HStack>
+              <Tooltip
+                label={
+                  isUndoShortcutTooltipOpen
+                    ? t('editor.header.undo.tooltip.label')
+                    : t('editor.header.undoButton.label')
+                }
+                isOpen={isUndoShortcutTooltipOpen ? true : undefined}
+                hasArrow={isUndoShortcutTooltipOpen}
+              >
+                <IconButton
+                  display={['none', 'flex']}
+                  icon={<UndoIcon />}
+                  size="sm"
+                  aria-label={t('editor.header.undoButton.label')}
+                  onClick={undo}
+                  isDisabled={!canUndo}
+                />
+              </Tooltip>
+
+              <Tooltip
+                label={
+                  isRedoShortcutTooltipOpen
+                    ? t('editor.header.undo.tooltip.label')
+                    : t('editor.header.redoButton.label')
+                }
+                isOpen={isRedoShortcutTooltipOpen ? true : undefined}
+                hasArrow={isRedoShortcutTooltipOpen}
+              >
+                <IconButton
+                  display={['none', 'flex']}
+                  icon={<RedoIcon />}
+                  size="sm"
+                  aria-label={t('editor.header.redoButton.label')}
+                  onClick={redo}
+                  isDisabled={!canRedo}
+                />
+              </Tooltip>
+            </HStack>
+          )}
+          {/* <Button
           leftIcon={<BuoyIcon />}
           onClick={onHelpClick}
           size="sm"
@@ -234,18 +234,18 @@ const LeftElements = ({
             {t('editor.header.helpButton.label')}
           </chakra.span>
         </Button> */}
-      </HStack>
-      {isSavingLoading && (
-        <HStack>
-          <Spinner speed="0.7s" size="sm" color="gray.400" />
-          <Text fontSize="sm" color="gray.400">
-            {t('editor.header.savingSpinner.label')}
-          </Text>
         </HStack>
-      )}
-    </HStack>
-  )
-}
+        {isSavingLoading && (
+          <HStack>
+            <Spinner speed="0.7s" size="sm" color="gray.400" />
+            <Text fontSize="sm" color="gray.400">
+              {t('editor.header.savingSpinner.label')}
+            </Text>
+          </HStack>
+        )}
+      </HStack>
+    )
+  }
 
 const RightElements = ({
   isResultsDisplayed,

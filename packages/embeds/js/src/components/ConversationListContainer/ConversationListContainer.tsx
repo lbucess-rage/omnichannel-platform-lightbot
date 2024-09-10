@@ -8,7 +8,6 @@ import Messages from './Messages'
 // import { ConversationContainer } from '../ConversationContainer'
 import {
   InputBlock,
-  ResultWithAnswers,
   ResultWithAnswersChatSessions,
   StartChatResponse,
 } from '@typebot.io/schemas'
