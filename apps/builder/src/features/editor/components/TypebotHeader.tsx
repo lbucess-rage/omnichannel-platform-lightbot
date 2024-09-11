@@ -49,7 +49,7 @@ export const TypebotHeader = () => {
   const handleHelpClick = () => {
     isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
       ? onOpen()
-      : window.open('https://docs.typebot.io/guides/how-to-get-help', '_blank')
+      : window.open('https://lightcall.co.kr', '_blank')
   }
 
   if (currentUserMode === 'guest') return <GuestTypebotHeader />
@@ -349,7 +349,7 @@ const TypebotNav = ({
       >
         {t('editor.header.settingsButton.label')}
       </Button>
-      <Button
+      {/* <Button
         as={Link}
         href={`/typebots/${typebotId}/share`}
         colorScheme={router.pathname.endsWith('share') ? 'blue' : 'gray'}
@@ -357,7 +357,7 @@ const TypebotNav = ({
         size="sm"
       >
         {t('share.button.label')}
-      </Button>
+      </Button> */}
       {isResultsDisplayed && (
         <Button
           as={Link}

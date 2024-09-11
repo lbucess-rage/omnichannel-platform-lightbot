@@ -6,49 +6,16 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react'
-import {
-  WordpressLogo,
-  ShopifyLogo,
-  WixLogo,
-  GtmLogo,
-  JavascriptLogo,
-  ReactLogo,
-  NotionLogo,
-  WebflowLogo,
-  IframeLogo,
-} from './logos'
+import { JavascriptLogo, IframeLogo } from './logos'
 import React from 'react'
-import {
-  WordpressModal,
-  ShopifyModal,
-  WebflowModal,
-  GtmModal,
-  JavascriptModal,
-  ReactModal,
-  NotionModal,
-  IframeModal,
-  WixModal,
-} from './modals'
+import { JavascriptModal, IframeModal } from './modals'
 import { ScriptModal } from './modals/Script/ScriptModal'
 import { CodeIcon } from '@/components/icons'
 import { ApiModal } from './modals/ApiModal'
 import { ScriptIcon } from '@/features/blocks/logic/script/components/ScriptIcon'
-import { FlutterFlowLogo } from './logos/FlutterFlowLogo'
-import { FlutterFlowModal } from './modals/FlutterFlowModal'
-import { NextjsLogo } from './logos/NextjsLogo'
-import { NextjsModal } from './modals/Nextjs/NextjsModal'
-import {
-  WhatsAppLogo,
-  whatsAppBrandColor,
-} from '@/components/logos/WhatsAppLogo'
-import { WhatsAppModal } from './modals/WhatsAppModal/WhatsAppModal'
 import { ParentModalProvider } from '@/features/graph/providers/ParentModalProvider'
-import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
-import { hasProPerks } from '@/features/billing/helpers/hasProPerks'
 import { LockTag } from '@/features/billing/components/LockTag'
 import { Plan } from '@typebot.io/prisma'
-import { FramerModal } from './modals/FramerModal'
-import { FramerLogo } from './logos/FramerLogo'
 
 export type ModalProps = {
   publicId: string
@@ -100,11 +67,11 @@ export const EmbedButton = ({
 
 export const integrationsList = [
   (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => {
-    const { workspace } = useWorkspace()
+    // const { workspace } = useWorkspace()
 
     return (
       <ParentModalProvider>
-        <EmbedButton
+        {/* <EmbedButton
           logo={
             <WhatsAppLogo
               height={100}
@@ -119,67 +86,75 @@ export const integrationsList = [
           )}
           {...props}
         />
+         */}
+
+        <EmbedButton
+          logo={<JavascriptLogo height={100} width="70px" />}
+          label="HTML & Javascript"
+          modal={(modalProps) => <JavascriptModal {...modalProps} {...props} />}
+          {...props}
+        />
       </ParentModalProvider>
     )
   },
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<WordpressLogo height={100} width="70px" />}
-      label="Wordpress"
-      modal={({ onClose, isOpen }) => (
-        <WordpressModal isOpen={isOpen} onClose={onClose} {...props} />
-      )}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<ShopifyLogo height={100} width="65px" />}
-      label="Shopify"
-      modal={(modalProps) => <ShopifyModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<WixLogo height={100} width="90px" />}
-      label="Wix"
-      modal={(modalProps) => <WixModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<GtmLogo height={100} width="70px" />}
-      label="Google Tag Manager"
-      modal={(modalProps) => <GtmModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<JavascriptLogo height={100} width="70px" />}
-      label="HTML & Javascript"
-      modal={(modalProps) => <JavascriptModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<ReactLogo height={100} width="70px" />}
-      label="React"
-      modal={(modalProps) => <ReactModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<NextjsLogo height={100} width="70px" />}
-      label="Nextjs"
-      modal={(modalProps) => <NextjsModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<WordpressLogo height={100} width="70px" />}
+  //     label="Wordpress"
+  //     modal={({ onClose, isOpen }) => (
+  //       <WordpressModal isOpen={isOpen} onClose={onClose} {...props} />
+  //     )}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<ShopifyLogo height={100} width="65px" />}
+  //     label="Shopify"
+  //     modal={(modalProps) => <ShopifyModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<WixLogo height={100} width="90px" />}
+  //     label="Wix"
+  //     modal={(modalProps) => <WixModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<GtmLogo height={100} width="70px" />}
+  //     label="Google Tag Manager"
+  //     modal={(modalProps) => <GtmModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<JavascriptLogo height={100} width="70px" />}
+  //     label="HTML & Javascript"
+  //     modal={(modalProps) => <JavascriptModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<ReactLogo height={100} width="70px" />}
+  //     label="React"
+  //     modal={(modalProps) => <ReactModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<NextjsLogo height={100} width="70px" />}
+  //     label="Nextjs"
+  //     modal={(modalProps) => <NextjsModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
   (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
     <EmbedButton
       logo={<CodeIcon height={100} width="60px" />}
@@ -188,38 +163,38 @@ export const integrationsList = [
       {...props}
     />
   ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<NotionLogo height={100} width="60px" />}
-      label="Notion"
-      modal={(modalProps) => <NotionModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<WebflowLogo height={100} width="70px" />}
-      label="Webflow"
-      modal={(modalProps) => <WebflowModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<FlutterFlowLogo height={100} width="60px" />}
-      label="FlutterFlow"
-      modal={(modalProps) => <FlutterFlowModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
-  (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
-    <EmbedButton
-      logo={<FramerLogo height={100} width="60px" />}
-      label="Framer"
-      modal={(modalProps) => <FramerModal {...modalProps} {...props} />}
-      {...props}
-    />
-  ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<NotionLogo height={100} width="60px" />}
+  //     label="Notion"
+  //     modal={(modalProps) => <NotionModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<WebflowLogo height={100} width="70px" />}
+  //     label="Webflow"
+  //     modal={(modalProps) => <WebflowModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<FlutterFlowLogo height={100} width="60px" />}
+  //     label="FlutterFlow"
+  //     modal={(modalProps) => <FlutterFlowModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
+  // (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
+  //   <EmbedButton
+  //     logo={<FramerLogo height={100} width="60px" />}
+  //     label="Framer"
+  //     modal={(modalProps) => <FramerModal {...modalProps} {...props} />}
+  //     {...props}
+  //   />
+  // ),
   (props: Pick<ModalProps, 'publicId' | 'isPublished'>) => (
     <EmbedButton
       logo={

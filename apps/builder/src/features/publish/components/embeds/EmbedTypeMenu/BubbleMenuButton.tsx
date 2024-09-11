@@ -26,7 +26,7 @@ export const BubbleMenuButton = (props: Props) => {
         <Text fontSize="lg" fontWeight="semibold">
           Bubble
         </Text>
-        <Text textColor="gray.500">Embed in a chat bubble</Text>
+        <Text textColor="gray.500">버블 형태의 버튼으로 추가</Text>
       </Stack>
     </MotionStack>
   )

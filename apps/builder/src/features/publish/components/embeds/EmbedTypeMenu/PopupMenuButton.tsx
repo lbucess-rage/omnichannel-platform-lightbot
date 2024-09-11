@@ -26,9 +26,7 @@ export const PopupMenuButton = (props: Props) => {
         <Text fontSize="lg" fontWeight="semibold">
           Popup
         </Text>
-        <Text textColor="gray.500">
-          Embed in a popup on top of your website
-        </Text>
+        <Text textColor="gray.500">사이트 내에 팝업으로 추가</Text>
       </Stack>
     </MotionStack>
   )

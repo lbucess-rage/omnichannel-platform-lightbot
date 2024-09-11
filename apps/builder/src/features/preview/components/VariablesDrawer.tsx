@@ -112,7 +112,7 @@ export const VariablesDrawer = ({ onClose }: Props) => {
         <HStack as="form" onSubmit={handleCreateSubmit}>
           <Input
             width="full"
-            placeholder="Search or create..."
+            placeholder="검색 또는 생성..."
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
