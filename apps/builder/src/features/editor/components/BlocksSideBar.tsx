@@ -27,7 +27,27 @@ import { useDebouncedCallback } from 'use-debounce'
 import { forgedBlockIds } from '@typebot.io/forge-repository/constants'
 
 // Integration blocks migrated to forged blocks
-const legacyIntegrationBlocks = [IntegrationBlockType.OPEN_AI]
+const legacyIntegrationBlocks = [
+  IntegrationBlockType.OPEN_AI,
+
+  IntegrationBlockType.CHATWOOT,
+  IntegrationBlockType.MAKE_COM,
+  IntegrationBlockType.PABBLY_CONNECT,
+  IntegrationBlockType.PIXEL,
+  IntegrationBlockType.ZAPIER,
+]
+
+const excludeItems = [
+  'dify-ai',
+  'mistral',
+  'elevenlabs',
+  'cal-com',
+  'chat-node',
+  'anthropic',
+  'together-ai',
+  'open-router',
+  'nocodb',
+]
 
 export const BlocksSideBar = () => {
   const { t } = useTranslate()
@@ -172,7 +192,11 @@ export const BlocksSideBar = () => {
           <SimpleGrid columns={2} spacing="3">
             {Object.values(IntegrationBlockType)
               .concat(forgedBlockIds as any)
-              .filter((type) => !legacyIntegrationBlocks.includes(type))
+              .filter(
+                (type) =>
+                  !legacyIntegrationBlocks.includes(type) &&
+                  !excludeItems.includes(type)
+              )
               .map((type) => (
                 <BlockCard
                   key={type}
