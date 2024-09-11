@@ -39,11 +39,11 @@ ${parseInitStandardCode({
         onUpdateWindowSettings={(settings) => setInputValues({ ...settings })}
       />
       <Text>
-        Make sure you have this <Code>typebot-standard</Code> element in your{' '}
-        <Code>{'<body>'}</Code>:
+        <Code>typebot-standard</Code> 스크립트를 HTML 코드 내{' '}
+        <Code>{'<body>'}</Code> 추가하세요:
       </Text>
       <CodeEditor isReadOnly value={standardElementSnippet} lang="html" />
-      <Text>Then, run this script to initialize the typebot:</Text>
+      <Text>라잇봇 초기화를 위해 아래 코드를 추가하세요:</Text>
       <CodeEditor isReadOnly value={scriptSnippet} lang="javascript" />
     </Stack>
   )

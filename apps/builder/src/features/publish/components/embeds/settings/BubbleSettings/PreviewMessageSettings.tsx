@@ -46,7 +46,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
     setIsPreviewMessageEnabled(isChecked)
     const newPreviewMessage = {
       autoShowDelay: isAutoShowEnabled ? autoShowDelay : undefined,
-      message: previewMessage?.message ?? 'I have a question for you!',
+      message: previewMessage?.message ?? '👋 무엇이든 물어보세요~',
       avatarUrl: previewMessage?.avatarUrl ?? defaultAvatar,
     }
     if (isChecked) setPreviewMessage(newPreviewMessage)
@@ -67,7 +67,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
     <Stack spacing={4}>
       <HStack justifyContent="space-between">
         <FormLabel htmlFor="preview" mb="0">
-          Preview message
+          프리뷰 메세지
         </FormLabel>
         <Switch
           id="preview"
@@ -78,7 +78,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
       {isPreviewMessageEnabled && (
         <Stack pl="4" spacing={4}>
           <HStack justify="space-between">
-            <Text>Avatar URL</Text>
+            <Text>아바타 URL</Text>
             <Input
               onChange={(e) => updateAvatarUrl(e.target.value)}
               value={previewMessage?.avatarUrl}
@@ -86,21 +86,20 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
             />
           </HStack>
           <HStack justify="space-between">
-            <Text>Message</Text>
+            <Text>메세지</Text>
             <Input
               onChange={(e) => updateMessage(e.target.value)}
               value={previewMessage?.message}
             />
           </HStack>
           <HStack>
-            <Text>Auto show</Text>
+            <Text>자동 버블</Text>
             <Switch
               isChecked={isAutoShowEnabled}
               onChange={(e) => updateAutoShowDelayCheck(e.target.checked)}
             />
             {isAutoShowEnabled && (
               <>
-                <Text>After</Text>
                 <NumberInput
                   size="sm"
                   w="70px"
@@ -110,7 +109,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
                   }
                   withVariableButton={false}
                 />
-                <Text>seconds</Text>
+                <Text>초 이후에</Text>
               </>
             )}
           </HStack>

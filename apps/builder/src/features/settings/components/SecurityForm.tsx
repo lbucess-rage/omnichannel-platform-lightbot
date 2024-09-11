@@ -25,8 +25,8 @@ export const SecurityForm = ({ security, onUpdate }: Props) => {
         <FormLabel display="flex" flexShrink={0} gap="1" mr="0" mb="4">
           Allowed origins
           <MoreInfoTooltip>
-            Restrict the execution of your typebot to specific website origins.
-            By default your bot can be executed on any website.
+            라잇봇의 실행을 특정 웹사이트로 제한할 경우 설정. 기본적으로,
+            라잇봇은 모든 웹사이트에서 실행될 수 있습니다.
           </MoreInfoTooltip>
         </FormLabel>
         <TagsInput

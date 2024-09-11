@@ -18,13 +18,11 @@ import {
 import { EmojiOrImageIcon } from '@/components/EmojiOrImageIcon'
 import { User, WorkspaceRole } from '@typebot.io/prisma'
 import { useState } from 'react'
-import { MembersList } from './MembersList'
 import { WorkspaceSettingsForm } from './WorkspaceSettingsForm'
 import { WorkspaceInApp, useWorkspace } from '../WorkspaceProvider'
 import packageJson from '../../../../../../package.json'
 import { UserPreferencesForm } from '@/features/account/components/UserPreferencesForm'
 import { MyAccountForm } from '@/features/account/components/MyAccountForm'
-import { BillingSettingsLayout } from '@/features/billing/components/BillingSettingsLayout'
 import { useTranslate } from '@tolgee/react'
 import { useParentModal } from '@/features/graph/providers/ParentModalProvider'
 import { CredentialsSettingsForm } from '@/features/credentials/components/CredentialsSettingsForm'
@@ -199,10 +197,10 @@ const SettingsContent = ({
       return <UserPreferencesForm />
     case 'workspace-settings':
       return <WorkspaceSettingsForm onClose={onClose} />
-    case 'members':
-      return <MembersList />
-    case 'billing':
-      return <BillingSettingsLayout />
+    // case 'members':
+    //   return <MembersList />
+    // case 'billing':
+    //   return <BillingSettingsLayout />
     case 'credentials':
       return <CredentialsSettingsForm />
     default:

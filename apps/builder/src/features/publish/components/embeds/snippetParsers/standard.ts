@@ -9,7 +9,7 @@ export const parseInitStandardCode = ({
 }: Pick<BotProps, 'typebot' | 'apiHost'>) => {
   const botProps = parseBotProps({ typebot, apiHost })
 
-  return prettier.format(`Typebot.initStandard({${botProps}});`, {
+  return prettier.format(`Lightbot.initStandard({${botProps}});`, {
     parser: 'babel',
     plugins: [parserBabel],
   })

@@ -18,7 +18,7 @@ export const JavascriptStandardInstructions = () => {
         onUpdateWindowSettings={(settings) => setInputValues({ ...settings })}
       />
       <Text>
-        Paste this anywhere in the <Code>{'<body>'}</Code>:
+        HTML 코드 내 <Code>{'<body>'}</Code>에 붙여넣으세요:
       </Text>
       <JavascriptStandardSnippet {...inputValues} />
     </Stack>

@@ -53,7 +53,7 @@ export const StandardSettings = ({
 
       <Stack pl="4" spacing={4}>
         <SwitchWithLabel
-          label="Set to fullscreen?"
+          label="전체 화면"
           initialValue={isFullscreenChecked}
           onCheckChange={() => setIsFullscreenChecked(!isFullscreenChecked)}
         />
