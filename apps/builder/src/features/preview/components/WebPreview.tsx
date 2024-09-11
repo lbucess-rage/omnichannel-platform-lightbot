@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { ThunderIcon } from '@/components/icons'
 import { useUser } from '@/features/account/hooks/useUser'
 import { useEditor } from '@/features/editor/providers/EditorProvider'
@@ -50,7 +52,6 @@ export const WebPreview = () => {
           ? { type: 'event', eventId: startPreviewAtEvent }
           : undefined
       }
-      /* eslint-disable @typescript-eslint/no-explicit-any */
       onNewInputBlock={(block) =>
         setPreviewingBlock({
           id: block.id,
