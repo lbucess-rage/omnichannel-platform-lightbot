@@ -164,7 +164,7 @@ export const useTemplates = (): TemplateProps[] => {
       name: 'OpenAI Assistant Chat',
       emoji: '🤖',
       fileName: 'openai-assistant-chat.json',
-      description: 'A simple conversation with your OpenAI assistant.',
+      description: 'OpenAI assistant와의 대화를 시작할 수 있는 챗봇입니다.',
     },
     {
       name: '비용 절감 추정기',
