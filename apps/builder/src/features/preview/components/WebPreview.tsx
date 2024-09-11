@@ -52,6 +52,7 @@ export const WebPreview = () => {
           ? { type: 'event', eventId: startPreviewAtEvent }
           : undefined
       }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onNewInputBlock={(block) =>
         setPreviewingBlock({
           id: block.id,
