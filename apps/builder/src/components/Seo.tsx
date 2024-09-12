@@ -11,7 +11,7 @@ const getOrigin = () => {
 
 export const Seo = ({
   title,
-  description = 'Create and publish conversational forms that collect 4 times more answers and feel native to your product',
+  description = '엘비유세스에서 제공하는 빌더를 통해 쉽고 빠르게 챗봇을 만들어보세요.',
   imagePreviewUrl = `${getOrigin()}/images/og.png`,
 }: {
   title: string
