@@ -444,6 +444,13 @@ export type FlowComponent = {
   sequence: number
 }
 
+export enum ChatUIModeType {
+  INIT = 'init',
+  NEW = 'new',
+  CONTINUE = 'continue',
+  END = 'end',
+}
+
 // <div className="content">
 // <div className="content-head">
 //   <div className="name">엘비유세스 IT개발/운영팀</div>
