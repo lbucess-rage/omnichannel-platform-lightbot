@@ -66,8 +66,8 @@ export const NewVersionPopup = () => {
                 </HStack>
 
                 <Text fontSize="sm" color="gray.100">
-                  An improved version of Typebot is available. Please reload now
-                  to upgrade.
+                  새로운 라잇봇 버전이 출시되었습니다. 지금 업그레이드를 위해
+                  새로고침 해주세요.
                 </Text>
               </Stack>
               <Flex justifyContent="flex-end">
