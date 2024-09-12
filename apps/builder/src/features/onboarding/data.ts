@@ -16,17 +16,17 @@ export const onboardingVideos: Partial<
 > = {
   editor: {
     key: 'editor',
-    youtubeId: 'jp3ggg_42-M',
+    youtubeId: 'jp3ggg_42-M1122222222222',
     deployedAt: new Date('2024-06-04'),
   },
   [IntegrationBlockType.ZAPIER]: {
     key: IntegrationBlockType.ZAPIER,
-    youtubeId: '2ZskGItI_Zo',
+    youtubeId: '2ZskGItI_Zo2321312321321',
     deployedAt: new Date('2024-06-04'),
   },
   [IntegrationBlockType.MAKE_COM]: {
     key: IntegrationBlockType.MAKE_COM,
-    youtubeId: 'V-y1Orys_kY',
+    youtubeId: 'V-y1Orys_kYfew fewfewfwe',
     deployedAt: new Date('2024-06-04'),
   },
 }
